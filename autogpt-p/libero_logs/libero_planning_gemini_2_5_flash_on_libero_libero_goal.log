@@ -1,0 +1,81 @@
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        wine_bottle0 - wine_bottle
+        akita_black_bowl0 - akita_black_bowl
+        robot0 - robot_profile
+        wooden_cabinet0 - wooden_cabinet
+        cream_cheese0 - cream_cheese
+        flat_stove0 - flat_stove
+        human0 - human
+        wine_rack0 - wine_rack
+        table0 - table
+        plate0 - plate
+    )
+    
+    (:init 
+        (on  wooden_cabinet0 table0)
+        (closed  wooden_cabinet0)
+        (on  flat_stove0 table0)
+        (on  wine_rack0 table0)
+        (at  robot0 table0)
+        (at  human0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (on  wine_bottle0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the wine bottle on the top of the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+

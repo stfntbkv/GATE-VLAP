@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from autogpt_p.helpers.singleton import Singleton
 from autogpt_p.llm.chat_gpt_interface import ChatGPTInterface, GPT_4, GPT_3, GPT_5
-from autogpt_p.llm.gemini_interface import GeminiInterface, GEMINI_1_5_FLASH, GEMINI_1_5_PRO, GEMINI_2_0_FLASH_EXP, GEMINI_1_5_FLASH_8B
+from autogpt_p.llm.gemini_interface import (
+    GeminiInterface, GEMINI_1_5_FLASH, GEMINI_1_5_PRO, GEMINI_1_5_FLASH_8B,
+    GEMINI_2_0_FLASH, GEMINI_2_0_FLASH_EXP, GEMINI_2_5_FLASH, GEMINI_2_5_PRO,
+    GEMINI_EXP_1121, GEMINI_EXP_1114
+)
 from autogpt_p.llm.llm_interface import LLMInterface
 
 GPT = "GPT"
@@ -36,7 +40,17 @@ class LLMFactory(Singleton):
                 return GeminiInterface(GEMINI_1_5_FLASH_8B)
             elif self.version == "1.5-pro":
                 return GeminiInterface(GEMINI_1_5_PRO)
+            elif self.version == "2.0-flash":
+                return GeminiInterface(GEMINI_2_0_FLASH)
             elif self.version == "2.0-flash-exp":
                 return GeminiInterface(GEMINI_2_0_FLASH_EXP)
+            elif self.version == "2.5-flash":
+                return GeminiInterface(GEMINI_2_5_FLASH)
+            elif self.version == "2.5-pro":
+                return GeminiInterface(GEMINI_2_5_PRO)
+            elif self.version == "exp-1121":
+                return GeminiInterface(GEMINI_EXP_1121)
+            elif self.version == "exp-1114":
+                return GeminiInterface(GEMINI_EXP_1114)
             else:
                 return GeminiInterface(GEMINI_1_5_FLASH)

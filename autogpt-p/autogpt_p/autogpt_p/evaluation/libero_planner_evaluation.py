@@ -23,7 +23,11 @@ from planning_memory.static_capability_provider import StaticCapabilityProvider
 
 from autogpt_p.execution.actor_skill_mapping import ActorSkillMapping
 from autogpt_p.llm.chat_gpt_interface import ChatGPTInterface, GPT_4, GPT_3, GPT_5
-from autogpt_p.llm.gemini_interface import GeminiInterface, GEMINI_1_5_FLASH, GEMINI_1_5_PRO, GEMINI_2_0_FLASH_EXP, GEMINI_1_5_FLASH_8B
+from autogpt_p.llm.gemini_interface import (
+    GeminiInterface, GEMINI_1_5_FLASH, GEMINI_1_5_PRO, GEMINI_1_5_FLASH_8B,
+    GEMINI_2_0_FLASH, GEMINI_2_0_FLASH_EXP, GEMINI_2_5_FLASH, GEMINI_2_5_PRO,
+    GEMINI_EXP_1121, GEMINI_EXP_1114
+)
 from autogpt_p.execution.pddl_scenario import define_domain, define_problem
 from autogpt_p.planning.autogpt_planner import AutoGPTPlanner
 from autogpt_p.helpers.scene_read_write import read_scene
@@ -192,8 +196,18 @@ class LiberoPlannerEvaluation:
             llm = GeminiInterface(GEMINI_1_5_FLASH_8B)
         elif config.model == ModelEnum.GEMINI_1_5_PRO:
             llm = GeminiInterface(GEMINI_1_5_PRO)
+        elif config.model == ModelEnum.GEMINI_2_0_FLASH:
+            llm = GeminiInterface(GEMINI_2_0_FLASH)
         elif config.model == ModelEnum.GEMINI_2_0_FLASH_EXP:
             llm = GeminiInterface(GEMINI_2_0_FLASH_EXP)
+        elif config.model == ModelEnum.GEMINI_2_5_FLASH:
+            llm = GeminiInterface(GEMINI_2_5_FLASH)
+        elif config.model == ModelEnum.GEMINI_2_5_PRO:
+            llm = GeminiInterface(GEMINI_2_5_PRO)
+        elif config.model == ModelEnum.GEMINI_EXP_1121:
+            llm = GeminiInterface(GEMINI_EXP_1121)
+        elif config.model == ModelEnum.GEMINI_EXP_1114:
+            llm = GeminiInterface(GEMINI_EXP_1114)
         else:
             # Default to GPT-3
             model = GPT_3
@@ -283,7 +297,9 @@ if __name__ == "__main__":
     parser.add_argument('model', type=str, 
                        choices=['GPT_3', 'GPT_4', 'GPT_5', 
                                'GEMINI_1_5_FLASH', 'GEMINI_1_5_FLASH_8B', 
-                               'GEMINI_1_5_PRO', 'GEMINI_2_0_FLASH_EXP'],
+                               'GEMINI_1_5_PRO', 'GEMINI_2_0_FLASH', 'GEMINI_2_0_FLASH_EXP',
+                               'GEMINI_2_5_FLASH', 'GEMINI_2_5_PRO',
+                               'GEMINI_EXP_1121', 'GEMINI_EXP_1114'],
                        help='Model to use for evaluation')
     parser.add_argument('--suite', type=str, default='LIBERO_90',
                        choices=['LIBERO_GOAL', 'LIBERO_10', 'LIBERO_90', 

@@ -8,10 +8,22 @@ from autogpt_p.llm.llm_interface import LLMInterface
 USER_ROLE = "user"
 MODEL_ROLE = "model"
 
+# Gemini 1.5 models (stable)
 GEMINI_1_5_FLASH = "gemini-1.5-flash"
 GEMINI_1_5_FLASH_8B = "gemini-1.5-flash-8b"
 GEMINI_1_5_PRO = "gemini-1.5-pro"
+
+# Gemini 2.0 models
+GEMINI_2_0_FLASH = "gemini-2.0-flash"
 GEMINI_2_0_FLASH_EXP = "gemini-2.0-flash-exp"
+
+# Gemini 2.5 models (latest with thinking capabilities)
+GEMINI_2_5_FLASH = "gemini-2.5-flash"
+GEMINI_2_5_PRO = "gemini-2.5-pro"
+
+# Experimental models
+GEMINI_EXP_1121 = "gemini-exp-1121"  # Powerful experimental model
+GEMINI_EXP_1114 = "gemini-exp-1114"  # Another experimental model
 
 
 class GeminiInterface(LLMInterface, ABC):

@@ -8,7 +8,12 @@ class ModelEnum(Enum):
     GEMINI_1_5_FLASH = auto()
     GEMINI_1_5_FLASH_8B = auto()
     GEMINI_1_5_PRO = auto()
+    GEMINI_2_0_FLASH = auto()
     GEMINI_2_0_FLASH_EXP = auto()
+    GEMINI_2_5_FLASH = auto()
+    GEMINI_2_5_PRO = auto()
+    GEMINI_EXP_1121 = auto()
+    GEMINI_EXP_1114 = auto()
 
     def __str__(self):
         return self.name.lower()
