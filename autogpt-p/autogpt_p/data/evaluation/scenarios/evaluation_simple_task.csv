@@ -1,0 +1,31 @@
+task,scene_file,desired_goal,min_costs
+Put the spoon on the table,simple_kitchen.txt,and (on spoon0 table0),4
+Move the bowl to the counter,simple_kitchen.txt,and (on bowl0 counter0),3
+Lay the tomato on the cutting board,simple_kitchen.txt,and (on tomato0 cutting_board0),2
+Bring me the apple,simple_kitchen.txt,and (inhand apple0 human0),3
+Fetch me the plate,simple_kitchen.txt,and (inhand plate0 human0),3
+Get me the sponge,simple_kitchen.txt,and (inhand sponge0 human0),4
+Take the spatula,simple_kitchen.txt,and (inhand spatula0 robot0),2
+Pick up the bottle,simple_kitchen.txt,and (inhand bottle0 robot0),1
+Grasp the hammer,simple_kitchen.txt,and (inhand hammer0 robot0),2
+Put the tomato in the refrigerator,simple_kitchen.txt,and (in tomato0 refrigerator0),6
+Throw the cornflakes in the bowl,simple_kitchen.txt,and (in cornflakes0 bowl0),4
+Store the tissues in the box,simple_kitchen.txt,and (in tissue0 box0),3
+Fill the milk in the bowl,simple_kitchen.txt,and (liquid_in milk0 bowl0),2
+Pour water to be in a plastic cup,simple_kitchen.txt,or (liquid_in water0 plastic_cup0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2),3
+Fill the watering can with water,simple_kitchen.txt,and (liquid_in water0 watering_can0),4
+Move to the table,simple_kitchen.txt,and (at robot0 table0),0
+Go to the refrigerator,simple_kitchen.txt,and (at robot0 refrigerator0),1
+Come to me,simple_kitchen.txt,or (at robot0 human0) (at robot0 table0),1
+Cut the tomato,simple_kitchen.txt,and (chopped tomato0),6
+Chop the cucumber,simple_kitchen.txt,and (chopped cucumber0),9
+Slice the apple,simple_kitchen.txt,and (chopped apple0),6
+Open the bottle,simple_kitchen.txt,and (opened bottle0),1
+Open the door,simple_kitchen.txt,and (opened door0),2
+Open the refrigerator,simple_kitchen.txt,and (opened refrigerator0),2
+Close the bottle,simple_kitchen_opened.txt,and (closed bottle0),2
+Shut the door,simple_kitchen_opened.txt,and (closed door0),2
+Close the refrigerator,simple_kitchen_opened.txt,and (closed refrigerator0),2
+Wipe the counter,simple_kitchen.txt,and (clean counter0),8
+Clear the counter,simple_kitchen_counter_clearing.txt,and (free counter0),12
+Tidy the table,clearing.txt,and (free table0),8

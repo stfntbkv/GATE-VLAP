@@ -1,0 +1,675 @@
+object,affordances
+Sink,grasp
+Sink,contain
+Sink,liquid-contain
+Sink,rotate
+Sink,push
+Sink,pull
+Sink,close
+Chopsticks,grasp
+Chopsticks,carry
+Chopsticks,rotate
+Chopsticks,push
+Chopsticks,pull
+Chopsticks,stir
+Towel,grasp
+Towel,carry
+Towel,rotate
+Towel,axis-roll
+Towel,push
+Towel,pull
+Towel,stack
+Towel,vertical-support
+Towel,scoop
+Towel,wet-swipe
+Teapot,grasp
+Teapot,carry
+Teapot,contain
+Teapot,liquid-contain
+Teapot,pour
+Teapot,precise-pour
+Teapot,drink
+Teapot,rotate
+Teapot,push
+Teapot,pull
+Teapot,open
+Teapot,close
+Teapot,scoop
+Toaster,grasp
+Toaster,carry
+Toaster,rotate
+Toaster,push
+Toaster,pull
+Toaster,heat
+Scissors,grasp
+Scissors,carry
+Scissors,cut
+Scissors,rotate
+Scissors,push
+Scissors,pull
+Chair,grasp
+Chair,carry
+Chair,assisted-carry
+Chair,rotate
+Chair,push
+Chair,pull
+Chair,stack
+Chair,vertical-support
+Clock,grasp
+Clock,carry
+Clock,enclosed-contain
+Clock,constrained-move
+Clock,rotate
+Clock,push
+Clock,pull
+Clock,stack
+Box,grasp
+Box,carry
+Box,assisted-carry
+Box,contain
+Box,constrained-move
+Box,rotate
+Box,push
+Box,pull
+Box,open
+Box,close
+Box,support
+Box,stack
+Box,sturdy-support
+Box,vertical-support
+Wine rack,grasp
+Wine rack,carry
+Wine rack,assisted-carry
+Wine rack,contain
+Wine rack,constrained-move
+Wine rack,rotate
+Wine rack,axis-roll
+Wine rack,push
+Wine rack,pull
+Wine rack,close
+Wine rack,support
+Wine rack,stack
+Spatula,grasp
+Spatula,carry
+Spatula,liquid-contain
+Spatula,pour
+Spatula,rotate
+Spatula,push
+Spatula,pull
+Spatula,close
+Spatula,stack
+Spatula,scoop
+Spatula,stir
+Door,grasp
+Door,carry
+Door,assisted-carry
+Door,constrained-move
+Door,rotate
+Door,push
+Door,pull
+Door,open
+Door,close
+Door,vertical-support
+Dagger,grasp
+Dagger,cut
+Dagger,rotate
+Dagger,axis-roll
+Dagger,push
+Dagger,pull
+Dagger,vertical-support
+Dagger,stir
+Dagger,pierce
+Tin can,grasp
+Tin can,carry
+Tin can,contain
+Tin can,liquid-contain
+Tin can,rotate
+Tin can,axis-roll
+Tin can,push
+Tin can,pull
+Tin can,open
+Tin can,close
+Tin can,support
+Tin can,stack
+Mug,grasp
+Mug,carry
+Mug,contain
+Mug,liquid-contain
+Mug,pour
+Mug,precise-pour
+Mug,drink
+Mug,rotate
+Mug,push
+Mug,pull
+Mug,open
+Mug,close
+Mug,scoop
+Tap,grasp
+Tap,carry
+Tap,assisted-carry
+Tap,contain
+Tap,liquid-contain
+Tap,pour
+Tap,precise-pour
+Tap,drink
+Tap,constrained-move
+Tap,rotate
+Tap,push
+Tap,pull
+Tap,open
+Tap,close
+Tap,support
+Tap,stack
+Tap,drinkable
+Can opener,grasp
+Can opener,carry
+Can opener,rotate
+Can opener,push
+Can opener,pull
+Coffee cup,grasp
+Coffee cup,carry
+Coffee cup,contain
+Coffee cup,liquid-contain
+Coffee cup,pour
+Coffee cup,precise-pour
+Coffee cup,drink
+Coffee cup,rotate
+Coffee cup,push
+Coffee cup,pull
+Cutting board,grasp
+Cutting board,carry
+Cutting board,rotate
+Cutting board,push
+Cutting board,pull
+Cutting board,stack
+Cutting board,sturdy-support
+Vase,grasp
+Vase,carry
+Vase,assisted-carry
+Vase,contain
+Vase,liquid-contain
+Vase,rotate
+Vase,push
+Vase,pull
+Vase,close
+Slow cooker,grasp
+Slow cooker,carry
+Slow cooker,contain
+Slow cooker,liquid-contain
+Slow cooker,enclosed-contain
+Slow cooker,rotate
+Slow cooker,push
+Slow cooker,pull
+Slow cooker,open
+Slow cooker,close
+Slow cooker,heat
+Slow cooker,heat-resistance
+Whisk,grasp
+Whisk,carry
+Whisk,liquid-contain
+Whisk,rotate
+Whisk,push
+Whisk,pull
+Whisk,open
+Whisk,close
+Whisk,stir
+Paper towel,grasp
+Paper towel,carry
+Paper towel,rotate
+Paper towel,axis-roll
+Paper towel,push
+Paper towel,pull
+Paper towel,stack
+Paper towel,scoop
+Paper towel,wet-swipe
+Gas stove,grasp
+Gas stove,carry
+Gas stove,constrained-move
+Gas stove,rotate
+Gas stove,push
+Gas stove,pull
+Gas stove,open
+Gas stove,close
+Gas stove,heat
+Window blind,grasp
+Window blind,carry
+Window blind,assisted-carry
+Window blind,constrained-move
+Window blind,rotate
+Window blind,axis-roll
+Window blind,push
+Window blind,pull
+Window blind,stack
+Power plugs and sockets,grasp
+Power plugs and sockets,carry
+Power plugs and sockets,rotate
+Power plugs and sockets,push
+Power plugs and sockets,pull
+Power plugs and sockets,stack
+Door handle,grasp
+Door handle,carry
+Door handle,constrained-move
+Door handle,rotate
+Door handle,push
+Door handle,pull
+Mixing bowl,grasp
+Mixing bowl,carry
+Mixing bowl,contain
+Mixing bowl,liquid-contain
+Mixing bowl,rotate
+Mixing bowl,push
+Mixing bowl,pull
+Mixing bowl,stack
+Saucer,grasp
+Saucer,carry
+Saucer,assisted-carry
+Saucer,contain
+Saucer,rotate
+Saucer,push
+Saucer,pull
+Saucer,support
+Heater,grasp
+Heater,carry
+Heater,enclosed-contain
+Heater,rotate
+Heater,push
+Heater,pull
+Heater,stack
+Heater,heat
+Kettle,grasp
+Kettle,carry
+Kettle,contain
+Kettle,liquid-contain
+Kettle,pour
+Kettle,precise-pour
+Kettle,rotate
+Kettle,push
+Kettle,pull
+Kettle,open
+Kettle,close
+Kettle,heat
+Scale,grasp
+Scale,carry
+Scale,assisted-carry
+Scale,constrained-move
+Scale,rotate
+Scale,push
+Scale,pull
+Scale,close
+Scale,support
+Scale,stack
+Drinking straw,grasp
+Drinking straw,carry
+Drinking straw,liquid-contain
+Drinking straw,drink
+Drinking straw,rotate
+Drinking straw,axis-roll
+Drinking straw,push
+Drinking straw,pull
+Drinking straw,stack
+Food processor,grasp
+Food processor,carry
+Food processor,contain
+Food processor,rotate
+Food processor,axis-roll
+Food processor,push
+Food processor,pull
+Food processor,open
+Food processor,close
+Food processor,sturdy-support
+Refrigerator,grasp
+Refrigerator,assisted-carry
+Refrigerator,contain
+Refrigerator,enclosed-contain
+Refrigerator,constrained-move
+Refrigerator,rotate
+Refrigerator,axis-roll
+Refrigerator,push
+Refrigerator,pull
+Refrigerator,open
+Refrigerator,close
+Cocktail shaker,grasp
+Cocktail shaker,carry
+Cocktail shaker,liquid-contain
+Cocktail shaker,enclosed-contain
+Cocktail shaker,pour
+Cocktail shaker,rotate
+Cocktail shaker,axis-roll
+Cocktail shaker,push
+Cocktail shaker,pull
+Cocktail shaker,open
+Cocktail shaker,close
+Alarm clock,grasp
+Alarm clock,carry
+Alarm clock,rotate
+Alarm clock,push
+Alarm clock,pull
+Alarm clock,stack
+Table,grasp
+Table,carry
+Table,assisted-carry
+Table,rotate
+Table,push
+Table,pull
+Table,open
+Table,close
+Table,support
+Table,stack
+Table,vertical-support
+Knife,grasp
+Knife,carry
+Knife,cut
+Knife,rotate
+Knife,push
+Knife,pull
+Knife,stir
+Knife,pierce
+Knife,pick
+Bottle,grasp
+Bottle,carry
+Bottle,assisted-carry
+Bottle,contain
+Bottle,liquid-contain
+Bottle,enclosed-contain
+Bottle,pour
+Bottle,precise-pour
+Bottle,drink
+Bottle,rotate
+Bottle,axis-roll
+Bottle,push
+Bottle,pull
+Bottle,open
+Bottle,close
+Bottle,scoop
+Bottle opener,grasp
+Bottle opener,carry
+Bottle opener,constrained-move
+Bottle opener,rotate
+Bottle opener,push
+Bottle opener,pull
+Bowl,grasp
+Bowl,carry
+Bowl,contain
+Bowl,liquid-contain
+Bowl,rotate
+Bowl,axis-roll
+Bowl,push
+Bowl,pull
+Bowl,support
+Bowl,stack
+Frying pan,grasp
+Frying pan,carry
+Frying pan,rotate
+Frying pan,push
+Frying pan,pull
+Frying pan,heat
+Frying pan,heat-resistance
+Plate,grasp
+Plate,carry
+Plate,rotate
+Plate,push
+Plate,pull
+Plate,support
+Plate,stack
+Kitchen knife,grasp
+Kitchen knife,carry
+Kitchen knife,cut
+Kitchen knife,rotate
+Kitchen knife,push
+Kitchen knife,pull
+Kitchen knife,stir
+Kitchen knife,pierce
+Kitchen knife,pick
+Mixer,grasp
+Mixer,carry
+Mixer,contain
+Mixer,liquid-contain
+Mixer,drink
+Mixer,rotate
+Mixer,axis-roll
+Mixer,push
+Mixer,pull
+Mixer,open
+Mixer,close
+Mixer,liquid
+Cupboard,grasp
+Cupboard,carry
+Cupboard,assisted-carry
+Cupboard,contain
+Cupboard,constrained-move
+Cupboard,rotate
+Cupboard,push
+Cupboard,pull
+Cupboard,open
+Cupboard,close
+Cupboard,support
+Cupboard,stack
+Cupboard,vertical-support
+Coffee table,grasp
+Coffee table,carry
+Coffee table,assisted-carry
+Coffee table,rotate
+Coffee table,push
+Coffee table,pull
+Coffee table,support
+Coffee table,stack
+Coffee table,vertical-support
+Television,grasp
+Television,carry
+Television,assisted-carry
+Television,rotate
+Television,push
+Television,pull
+Measuring cup,grasp
+Measuring cup,carry
+Measuring cup,liquid-contain
+Measuring cup,rotate
+Measuring cup,push
+Measuring cup,pull
+Measuring cup,stack
+Measuring cup,scoop
+Coffeemaker,grasp
+Coffeemaker,carry
+Coffeemaker,liquid-contain
+Coffeemaker,rotate
+Coffeemaker,push
+Coffeemaker,pull
+Coffeemaker,open
+Coffeemaker,close
+Coffeemaker,heat
+Wok,grasp
+Wok,carry
+Wok,liquid-contain
+Wok,rotate
+Wok,push
+Wok,pull
+Wok,scoop
+Wok,heat
+Pizza cutter,grasp
+Pizza cutter,carry
+Pizza cutter,cut
+Pizza cutter,rotate
+Pizza cutter,axis-roll
+Pizza cutter,push
+Pizza cutter,pull
+Platter,grasp
+Platter,carry
+Platter,assisted-carry
+Platter,contain
+Platter,constrained-move
+Platter,rotate
+Platter,push
+Platter,pull
+Platter,open
+Platter,close
+Platter,support
+Wine glass,grasp
+Wine glass,carry
+Wine glass,contain
+Wine glass,liquid-contain
+Wine glass,pour
+Wine glass,precise-pour
+Wine glass,drink
+Wine glass,rotate
+Wine glass,axis-roll
+Wine glass,push
+Wine glass,pull
+Countertop,grasp
+Countertop,rotate
+Countertop,push
+Countertop,pull
+Countertop,support
+Waste container,grasp
+Waste container,carry
+Waste container,assisted-carry
+Waste container,contain
+Waste container,rotate
+Waste container,axis-roll
+Waste container,push
+Waste container,pull
+Waste container,open
+Waste container,close
+Waste container,stack
+Waste container,scoop
+Spoon,grasp
+Spoon,carry
+Spoon,precise-pour
+Spoon,rotate
+Spoon,axis-roll
+Spoon,push
+Spoon,pull
+Spoon,close
+Spoon,scoop
+Fork,grasp
+Fork,carry
+Fork,rotate
+Fork,push
+Fork,pull
+Fork,scoop
+Fork,stir
+Fork,pierce
+Fork,pick
+Lamp,grasp
+Lamp,carry
+Lamp,rotate
+Lamp,push
+Lamp,pull
+Lamp,heat
+Drawer,grasp
+Drawer,carry
+Drawer,assisted-carry
+Drawer,contain
+Drawer,constrained-move
+Drawer,rotate
+Drawer,axis-roll
+Drawer,push
+Drawer,pull
+Drawer,open
+Drawer,close
+Drawer,stack
+Stool,grasp
+Stool,carry
+Stool,assisted-carry
+Stool,liquid-contain
+Stool,rotate
+Stool,push
+Stool,pull
+Stool,stack
+Microwave oven,grasp
+Microwave oven,carry
+Microwave oven,contain
+Microwave oven,liquid-contain
+Microwave oven,rotate
+Microwave oven,axis-roll
+Microwave oven,push
+Microwave oven,pull
+Microwave oven,open
+Microwave oven,close
+Microwave oven,heat
+Shelf,grasp
+Shelf,contain
+Shelf,rotate
+Shelf,push
+Shelf,pull
+Shelf,open
+Shelf,close
+Shelf,support
+Shelf,stack
+Watch,grasp
+Watch,carry
+Watch,rotate
+Watch,push
+Watch,pull
+Grinder,grasp
+Grinder,carry
+Grinder,cut
+Grinder,constrained-move
+Grinder,rotate
+Grinder,push
+Grinder,pull
+Grinder,open
+Grinder,close
+Grinder,stack
+Light bulb,grasp
+Light bulb,rotate
+Light bulb,push
+Light bulb,pull
+Light bulb,heat
+Wall clock,grasp
+Wall clock,enclosed-contain
+Wall clock,rotate
+Wall clock,push
+Wall clock,pull
+Serving tray,grasp
+Serving tray,carry
+Serving tray,assisted-carry
+Serving tray,contain
+Serving tray,rotate
+Serving tray,push
+Serving tray,pull
+Serving tray,support
+Serving tray,stack
+Kitchen & dining room table,assisted-carry
+Kitchen & dining room table,liquid-contain
+Kitchen & dining room table,rotate
+Kitchen & dining room table,push
+Kitchen & dining room table,pull
+Kitchen & dining room table,support
+Kitchen & dining room table,vertical-support
+Cake stand,grasp
+Cake stand,carry
+Cake stand,rotate
+Cake stand,push
+Cake stand,pull
+Cake stand,support
+Cake stand,stack
+Pressure cooker,carry
+Pressure cooker,contain
+Pressure cooker,liquid-contain
+Pressure cooker,enclosed-contain
+Pressure cooker,rotate
+Pressure cooker,push
+Pressure cooker,pull
+Pressure cooker,open
+Pressure cooker,close
+Pressure cooker,heat
+Pressure cooker,heat-resistance
+Glasses,grasp
+Glasses,carry
+Glasses,rotate
+Glasses,push
+Glasses,pull
+Dishwasher,grasp
+Dishwasher,carry
+Dishwasher,assisted-carry
+Dishwasher,contain
+Dishwasher,liquid-contain
+Dishwasher,constrained-move
+Dishwasher,rotate
+Dishwasher,axis-roll
+Dishwasher,push
+Dishwasher,pull
+Dishwasher,open
+Dishwasher,close
+Dishwasher,support
+Dishwasher,stack

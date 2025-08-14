@@ -1,0 +1,31 @@
+task,scene_file,explored,substitutions_file,desired_goal,min_tool_calls,min_costs
+I want either a glass of water or a sliced apple,complex_kitchen2_partial1.txt,all,no_substitutions.csv,and (inhand apple0 human0)),1,4
+Give me the banana in the bowl,complex_kitchen2_partial1.txt,all,no_substitutions.csv,and (inhand banana0 human0),1,3
+Put milk into the plastic cup and water into the glass,complex_kitchen3_partial.txt,all,no_substitutions.csv,and (liquid_in milk0 plastic_cup0),1,5
+I want either the apple and the banana to be on the plate or the salad and the cucumber in the bowl,complex_kitchen2_partial2.txt,all,no_substitutions.csv,and (in cucumber0 bowl0),1,4
+I want either the apple and the banana to be on the plate or the salad and the cucumber in the bowl,complex_kitchen2_partial3.txt,all,no_substitutions.csv,and (on apple0 plate0),1,3
+Give me the plastic cup on the counter,complex_kitchen2_partial4.txt,all,no_substitutions.csv,and (inhand plastic_cup0 human0),1,4
+Store all books in the box on the table and all silverware in the box on the counter,silver_books_partial1.txt,all,no_substitutions.csv,and (in book0 box1) (in book1 box1),1,6
+Store all books in the box on the table and all silverware in the box on the counter,silver_books_partial2.txt,all,no_substitutions.csv,and (in spoon0 box0) (in spoon1 box0) (in fork0 box0),1,10
+The sink is leaking. Give me something to clean up the water and fix the leaking,complex_kitchen4_partial1.txt,all,no_substitutions.csv,or (inhand paper_towel0 human0) (inhand cloth0 human0) (inhand tissue0 human0),1,3
+The sink is leaking. Give me something to clean up the water and fix the leaking,complex_kitchen4_partial2.txt,all,no_substitutions.csv,and (inhand tape0 human0),1,3
+I want to have breakfast with cut banana and apple in a bowl,simple_kitchen_partial1.txt,all,no_substitutions.csv,and (in apple0 bowl0) (in banana0 bowl0),1,8
+I want to have breakfast with cut banana and apple in a bowl,simple_kitchen_partial2.txt,all,no_substitutions.csv,and (in apple0 bowl0) (chopped apple0),1,13
+I want to have breakfast with cut banana and apple in a bowl,simple_kitchen_partial3.txt,all,no_substitutions.csv,and (in banana0 bowl0) (chopped banana0),1,13
+I want to have an apple and an orange,simple_kitchen_partial4.txt,all,no_substitutions.csv,and (inhand apple0 human0),1,3
+I want to have an apple and an orange,simple_kitchen_partial5.txt,all,no_substitutions.csv,and (inhand orange0 human0),1,3
+Cook me a steak,complex_kitchen4.txt,all,no_substitutions.csv,and (on pan0 stove0),1,3
+Cook me pasta,complex_kitchen4.txt,all,no_substitutions.csv,and (on pot0 stove0) (liquid_in water0 pot0),1,8
+Give me a cup of hot milk,simple_kitchen_coffee_cup.txt,all,no_substitutions.csv,and (inhand coffee_cup0 human0) (liquid_in milk0 coffee_cup0),1,6
+Put two plates in the dishwasher,eating.txt,all,no_substitutions.csv,and (in plate0 dishwasher0),1,8
+Give me two bananas,simple_kitchen.txt,all,no_substitutions.csv,and (inhand banana0 human0),1,3
+Pour me 4 plastic cups of water,simple_kitchen.txt,all,no_substitutions.csv,or (liquid_in water0 plastic_cup0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2),1,3
+Open 2 bottles,simple_kitchen.txt,all,no_substitutions.csv,and (opened bottle0),1,1
+Give me a wet sponge,simple_kitchen_no_water.txt,all,no_substitutions.csv,and (inhand sponge0 human0),1,4
+Put chopped cucumber in the bowl,complex_kitchen2_partial5.txt,all,no_substitutions.csv,and (in cucumber0 bowl0),1,4
+Put chopped cucumber in the bowl,simple_kitchen_no_bowl.txt,all,no_substitutions.csv,and (chopped cucumber0),1,9
+Put chopped cucumber in the bowl,simple_kitchen_no_board.txt,all,no_substitutions.csv,and (in cucumber0 bowl0),1,5
+Put two tomatoes in the fridge,simple_kitchen.txt,all,no_substitutions.csv,and (in tomato0 refrigerator0),1,6
+Grasp a hammer and a spatula,simple_kitchen.txt,all,no_substitutions.csv,and (inhand hammer0 robot0),1,2
+Put either an apple and an orange or a cucumber and a pear in the bowl,simple_kitchen.txt,all,no_substitutions.csv,or (in apple0 bowl0) (in cucumber0 bowl0),5,2
+If you can chop the cucumber also chop the salad,simple_kitchen_no_salad.txt,all,no_substitutions.csv,and (chopped cucumber0),1,9

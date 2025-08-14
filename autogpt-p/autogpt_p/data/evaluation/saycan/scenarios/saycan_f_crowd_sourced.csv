@@ -1,0 +1,16 @@
+task,scene_file,desired_goal,min_costs
+I opened a pepsi earlier. can you bring me an open can?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (inhand  pepsi0 human0))),4
+"I spilled my coke, can you bring me a replacement?",saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (inhand  coke0 human0))),3
+"I spilled my coke, can you bring me something to clean up?",saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (inhand  sponge0 human0))),3
+I accidentally dropped that jalapeno chip bag after eating it. Would you mind throwing it away?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (in  jalapeno_chips0 trash_can0))),4
+"I like fruits, can you bring me something I’d like?",saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (inhand  apple0 human0))),4
+"There are two counters, and table. Can you visit all the locations?",saycan_f_crowd_sourced/simple_kitchen.txt,and (visited table0) (visited counter1) (visited counter2),2
+"There is a close counter, trash can, and table. Can you visit all the locations?",saycan_f_crowd_sourced/simple_kitchen.txt,and (visited counter1) (visited trash_can0) (visited table0),2
+"Redbull is my favorite drink, can I have one please?",saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (inhand  red_bull0 human0))),4
+Would you bring me a coke can?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (inhand  coke0 human0))),3
+"Please, move the pepsi to the first counter",saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (on  pepsi0 counter1))),4
+"Please, move the ppsi to the first cuonter",saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (on  pepsi0 counter1))),4
+Can you move the coke can to the second counter?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (on  coke0 counter2))),3
+Can you move coke can to second counter?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (on  coke0 counter2))),3
+Would you throw away the bag of chips for me?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (in  jalapeno_chips0 trash_can0))),4
+Would you throw away the bag of chpis for me?,saycan_f_crowd_sourced/simple_kitchen.txt,and (and (or (in  jalapeno_chips0 trash_can0))),4

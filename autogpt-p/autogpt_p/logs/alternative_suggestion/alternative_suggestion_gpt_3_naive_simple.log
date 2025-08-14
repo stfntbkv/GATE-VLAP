@@ -1,0 +1,180 @@
+Q:Which of these objects can replace a apple the best for the following task stated by the user.
+I want an apple
+The object(s) are: table,salad,plate,water,banana 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: banana
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Which of these objects can replace a apple the best for the following task stated by the user.
+I want to have an apple
+The object(s) are: table,salad,plate,water,banana 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: banana
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Which of these objects can replace a apple the best for the following task stated by the user.
+I want dine an apple
+The object(s) are: table,salad,plate,water,banana 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: banana
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Which of these objects can replace a apple the best for the following task stated by the user.
+I want an orange
+The object(s) are: table,salad,plate,water,banana 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: banana
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Which of these objects can replace a banana the best for the following task stated by the user.
+Give me a banana
+The object(s) are: table,apple,salad,plate,water 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: apple
+Missing: banana - Substitution: apple - Desired: ['apple', 'orange', 'tomato']
+Q:Which of these objects can replace a plastic_cup the best for the following task stated by the user.
+Pour me a cup of water
+The object(s) are: table,watering_can,salad,plate,glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: glass
+Missing: plastic_cup - Substitution: glass - Desired: ['glass', 'wine_glass']
+Q:Which of these objects can replace a water the best for the following task stated by the user.
+Pour me a cup of water
+The object(s) are: table,milk,coffee_cup,apple,glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: glass
+Missing: water - Substitution: glass - Desired: ['milk']
+Q:Which of these objects can replace a water the best for the following task stated by the user.
+I want a glass of water
+The object(s) are: table,milk,coffee_cup,apple,glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: glass
+Missing: water - Substitution: glass - Desired: ['milk']
+Q:Which of these objects can replace a milk the best for the following task stated by the user.
+I want to drink a glass of milk
+The object(s) are: table,coffee_cup,apple,water,glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: glass
+Missing: milk - Substitution: glass - Desired: ['water']
+Q:Which of these objects can replace a glass the best for the following task stated by the user.
+I want to drink a glass of milk
+The object(s) are: table,coffee_cup,apple,water,plastic_cup 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: plastic_cup
+Missing: glass - Substitution: plastic_cup - Desired: ['coffee_cup', 'plastic_cup', 'wine_glass']
+Q:Which of these objects can replace a cucumber the best for the following task stated by the user.
+I want to eat a salad with cucumber and salad
+The object(s) are: table,bowl,tomato,apple,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: tomato
+Missing: cucumber - Substitution: tomato - Desired: ['tomato']
+Q:Which of these objects can replace a tomato the best for the following task stated by the user.
+I want to eat a salad with tomato and salad
+The object(s) are: table,bowl,cucumber,apple,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:cucumber
+Missing: tomato - Substitution: cucumber - Desired: ['cucumber']
+Q:Which of these objects can replace a kitchen_knife the best for the following task stated by the user.
+Bring me a kitchen knife for cutting vegetables
+The object(s) are: table,cutting_board,cucumber,bread_knife,fork 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:bread_knife
+Missing: kitchen_knife - Substitution: bread_knife - Desired: ['bread_knife']
+Q:Which of these objects can replace a scissors the best for the following task stated by the user.
+Bring me scissors to open the package
+The object(s) are: box,table,cutting_board,cucumber,kitchen_knife 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:kitchen_knife
+Missing: scissors - Substitution: kitchen_knife - Desired: ['kitchen_knife']
+Q:Which of these objects can replace a cloth the best for the following task stated by the user.
+Bring me a cloth to clean the table
+The object(s) are: paper_towel,sponge,table,water,bucket 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: paper_towel
+Missing: cloth - Substitution: paper_towel - Desired: ['sponge']
+Q:Which of these objects can replace a sponge the best for the following task stated by the user.
+Clean the table with the sponge
+The object(s) are: paper_towel,table,cloth,water,bucket 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: cloth
+Missing: sponge - Substitution: cloth - Desired: ['cloth']
+Q:Which of these objects can replace a mop the best for the following task stated by the user.
+Bring me a mop to clean the floor
+The object(s) are: sponge,broom,cloth,water,bucket 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: sponge
+Missing: mop - Substitution: sponge - Desired: ['cloth', 'sponge']
+Q:Which of these objects can replace a pot the best for the following task stated by the user.
+Cook the vegetables in the pot
+The object(s) are: tomato,apple,salad,stove,pan 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: pan
+Missing: pot - Substitution: pan - Desired: ['pan']
+Q:Which of these objects can replace a oven the best for the following task stated by the user.
+Heat the lasagne in the oven
+The object(s) are: microwave,tomato,stove,pot,pan 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: stove
+Missing: oven - Substitution: stove - Desired: ['stove', 'microwave']
+Q:Which of these objects can replace a coffee_cup the best for the following task stated by the user.
+Bring me a coffee cup to put salt into
+The object(s) are: chair,table,water,wine_glass,pot 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:wine_glass
+Missing: coffee_cup - Substitution: wine_glass - Desired: ['plastic_cup', 'glass', 'wine_glass']
+Q:Which of these objects can replace a coffee_cup the best for the following task stated by the user.
+Bring me a coffee cup to put salt into
+The object(s) are: chair,table,bowl,water,pot 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:bowl
+Missing: coffee_cup - Substitution: bowl - Desired: ['bowl']
+Q:Which of these objects can replace a chair the best for the following task stated by the user.
+Move a chair to the table so I can sit on it
+The object(s) are: table,couch,bench,desk,stool 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: stool
+Missing: chair - Substitution: stool - Desired: ['stool']
+Q:Which of these objects can replace a watering_can the best for the following task stated by the user.
+I want to water the plant with a watering can
+The object(s) are: milk,plant,water,plastic_cup,glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: plastic_cup
+Missing: watering_can - Substitution: plastic_cup - Desired: ['glass', 'wine_glass', 'coffe_cup', 'plastic_cup']
+Q:Which of these objects can replace a bowl the best for the following task stated by the user.
+I want breakfast with cornflakes and milk
+The object(s) are: cornflakes,milk,water,plastic_cup,pot 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: plastic_cup
+Missing: bowl - Substitution: plastic_cup - Desired: ['pot']
+Q:Which of these objects can replace a cutting_board the best for the following task stated by the user.
+Cut the vegetables on the cutting board
+The object(s) are: table,tomato,apple,kitchen_knife,tablet 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: table
+Missing: cutting_board - Substitution: table - Desired: ['tablet']
+Q:Which of these objects can replace a bowl the best for the following task stated by the user.
+I want to eat salad out of the bowl
+The object(s) are: table,kitchen_knife,salad,plate,pan 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: plate
+Missing: bowl - Substitution: plate - Desired: ['pot', 'plate']
+Q:Which of these objects can replace a fork the best for the following task stated by the user.
+I want to eat noodles with a fork
+The object(s) are: spoon,kitchen_knife,apple,plate,pot 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: spoon
+Missing: fork - Substitution: spoon - Desired: ['spoon']
+Q:Which of these objects can replace a box the best for the following task stated by the user.
+Store all items from the table in a box and put the box in the living room
+The object(s) are: microwave,basket,apple,refrigerator,bucket 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:basket
+Missing: box - Substitution: basket - Desired: ['basket']
+Q:Which of these objects can replace a broom the best for the following task stated by the user.
+Wipe the broken glass on the floor with the broom
+The object(s) are: paper_towel,mop,hand_brush,glass,bucket 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: mop
+Missing: broom - Substitution: mop - Desired: ['hand_brush']
+Q:Which of these objects can replace a tea_pot the best for the following task stated by the user.
+I want to heat the tea in the tea pot
+The object(s) are: coffee_cup,water,stove,pot,pan 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: stove
+Missing: tea_pot - Substitution: stove - Desired: ['pot']

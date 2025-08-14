@@ -1,0 +1,75 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+table:0
+counter:0
+apple:0
+banana:0
+tomato:0
+cucumber:0
+salad:0
+sponge:0
+spoon:0
+bowl:0
+plate:0
+hammer:0
+kitchen_knife:0
+cornflakes:0
+tissue:0
+box:0
+watering_can:0
+spatula:0
+milk_cartoon:0
+milk:0
+bottle:0
+water:0
+cutting_board:0
+plastic_cup:0
+plastic_cup:1
+plastic_cup:2
+door:0
+sink:0
+window:0
+refrigerator:0
+END-OBJECTS
+RELATIONS
+on spoon:0 counter:0
+on bowl:0 table:0
+in tomato:0 bowl:0
+in salad:0 refrigerator:0
+in cucumber:0 refrigerator:0
+on tissue:0 counter:0
+on apple:0 table:0
+on banana:0 table:0
+on plate:0 table:0
+on cutting_board:0 table:0
+on sponge:0 counter:0
+on spatula:0 counter:0
+on bottle:0 table:0
+on box:0 counter:0
+on cornflakes:0 counter:0
+on watering_can:0 counter:0
+on kitchen_knife:0 counter:0
+on plastic_cup:0 table:0
+on plastic_cup:1 table:0
+on plastic_cup:2 table:0
+on milk_cartoon:0 table:0
+in hammer:0 box:0
+liquid_in milk:0 milk_cartoon:0
+liquid_in water:0 bottle:0
+at robot:0 table:0
+at human:0 table:0
+opened milk_cartoon:0
+closed refrigerator:0
+closed bottle:0
+closed door:0
+closed window:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 bowl:0 tomato:0 apple:0 banana:0 plate:0 cutting_board:0 bottle:0 plastic_cup:0 plastic_cup:1 plastic_cup:2 milk_cartoon:0 milk:0 water:0
+counter0 counter:0 tissue:0 sponge:0 spatula:0 box:0 watering_can:0 kitchen_knife:0 hammer:0 spoon:0
+refrigerator0 refrigerator:0 cucumber:0 salad:0
+door0 door:0
+sink0 sink:0
+window0 window:0
+END-LOCATIONS

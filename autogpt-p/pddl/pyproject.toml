@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "pddl"
+version = "0.1.0"
+description = "An autonomous planning agent that uses the benefits of classical logic planning and the creativity and flexibility of gpt4"
+packages = [{include = "pddl"}]
+authors = ["Hidden F. Review"]
+readme = "README.md"
+keywords = ["robotics", "humanoid robots", "toolbox"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Robot Framework "
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.0"
+scipy = "*"
+matplotlib = "*"
+openai = "*"
+sympy = "1.12"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+Sphinx = "^4.5.0"
+sphinx-rtd-theme = "^0.5.2"
+toml = "^0.10.2"
+
+[tool.poetry.extras]
+docs = ["sphinx"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

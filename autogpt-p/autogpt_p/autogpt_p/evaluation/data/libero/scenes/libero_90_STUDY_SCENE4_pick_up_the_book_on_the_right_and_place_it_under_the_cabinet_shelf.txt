@@ -1,0 +1,21 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+robot:0
+black_book:0
+yellow_book:0
+yellow_book:1
+table:0
+wooden_two_layer_shelf:0
+END-OBJECTS
+RELATIONS
+on wooden_two_layer_shelf:0 table:0
+on yellow_book:0 table:0
+on yellow_book:1 table:0
+on black_book:0 table:0
+at robot:0 table:0
+at human:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 black_book:0 yellow_book:0 yellow_book:1 wooden_two_layer_shelf:0
+END-LOCATIONS

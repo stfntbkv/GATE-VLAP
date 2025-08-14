@@ -1,0 +1,14 @@
+subset([], _)
+subset([X|Rest], B) :- member(X, B), subset(Rest, B)
+remove_from_set(_, [], [])
+remove_from_set(P, [P|T], S_new) :- remove_from_set(P, T, S_new)
+remove_from_set(P, [H|T], [H|S_new]) :- dif(P, H), remove_from_set(P, T, S_new)
+add_to_set(P, S, S) :- member(P, S)
+add_to_set(P, S, [P|S]) :- \+ member(P, S)
+change_state(S, [], S)
+change_state(S, [add(P)|T], S_new) :- change_state(S, T, S2), add_to_set(P, S2, S_new), !
+change_state(S, [del(P)|T], S_new) :- change_state(S, T, S2), remove_from_set(P, S2, S_new), !
+execute(State,[],State)
+execute(State, Actions, Result):- change_state(State, Actions, Result)
+execute(State,[Action|Actions], Result):- change_state(State, Action, Child_State), execute(Child_State,Actions,Result)
+check_valid(State,Moves,Goal):- execute(State,Moves,Result), subset(Goal,Result)

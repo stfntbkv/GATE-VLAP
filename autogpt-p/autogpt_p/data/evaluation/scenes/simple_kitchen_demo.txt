@@ -1,0 +1,22 @@
+SCENE-DESCRIPTION
+OBJECTS
+table:0:0.0,1015.0,0.0,800.0,1200.0,1000.0
+table:1:5960.0,430.0, 0.0, 6700.0, 2215.0,1000.0
+counter:0:-3330.0,2170.0,0.0,-2500.0,4000.0,1000.0
+plastic_cup:0:-3100.0,1500.0,1000.0,-2900.0,1600.0,1100.0
+milk_cartoon:0:-3100.0,1700.0,1000.0,-2900.0,1900.0,1200.0
+milk:0:-3100.0,1700.0,1000.0,-2900.0,1900.0,1200.0
+END-OBJECTS
+RELATIONS
+on plastic_cup:0 counter:0
+on milk_cartoon:0 counter:0
+at robot:0 table:0
+at human:0 table:0
+at table:1 table:1
+liquid_in milk:0 milk_cartoon:0
+END-RELATIONS
+LOCATIONS
+table0 table:0
+counter0 counter:0 plastic_cup:0 milk_cartoon:0 milk:0
+table1 table:1
+END-LOCATIONS

@@ -1,0 +1,708 @@
+{
+    "oams": [
+        {
+            "object": "lime_soda",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "rice_chips",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "counter",
+            "affordances": [
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        },
+        {
+            "object": "apple",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "free-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "drawer",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "constrained-move"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                }
+            ]
+        },
+        {
+            "object": "trash_can",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        },
+        {
+            "object": "red_bull",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "pepsi",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "coke",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "tea",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "liquid"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "energy_bar",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "sponge",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "wet-swipe"
+                }
+            ]
+        },
+        {
+            "object": "multigrain_chips",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "table",
+            "affordances": [
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        },
+        {
+            "object": "7up",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "drinkable"
+                }
+            ]
+        },
+        {
+            "object": "grapefruit_soda",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "water",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "sprite",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "jalapeno_chips",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        }
+    ]
+}

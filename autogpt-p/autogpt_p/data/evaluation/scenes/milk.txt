@@ -1,0 +1,62 @@
+SCENE-DESCRIPTION
+OBJECTS
+cloth:0
+bench:0
+tissue:0
+milk:0
+water:0
+sink:0
+table:0
+bottle_opener:0
+salad:0
+book:0
+cucumber:0
+bottle:0
+mop:0
+coffee_table:0
+chair:0
+remote:0
+stove:0
+pan:0
+paper_towel:0
+counter:0
+pot:0
+milk_cartoon:0
+tape:0
+watering_can:0
+coffee_cup:0
+broom:0
+human:0
+END-OBJECTS
+RELATIONS
+on remote:0 coffee_table:0
+on tissue:0 coffee_table:0
+on paper_towel:0 counter:0
+at chair:0 table:0
+on bottle_opener:0 counter:0
+on cloth:0 counter:0
+on pan:0 counter:0
+on pot:0 counter:0
+on milk_cartoon:0 table:0
+on cucumber:0 table:0
+on coffee_cup:0 table:0
+on salad:0 table:0
+on bottle:0 table:0
+liquid_in water:0 bottle:0
+liquid_in milk:0 coffee_cup:0
+on watering_can:0 counter:0
+on tape:0 counter:0
+on mop:0 counter:0
+on broom:0 counter:0
+on human:0 chair:0
+at robot:0 counter:0
+END-RELATIONS
+LOCATIONS
+coffee_table0 coffee_table:0 remote:0 tissue:0
+counter0 counter:0 paper_towel:0 bottle_opener:0 cloth:0 pan:0 pot:0 watering_can:0 tape:0 mop:0 broom:0
+chair0 chair:0
+bench0 bench:0
+stove0 stove:0
+table0 table:0 milk:0 cucumber:0 salad:0 bottle:0 water:0 chair:0 coffee_cup:0
+sink0 sink:0
+END-LOCATIONS

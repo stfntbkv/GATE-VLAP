@@ -1,0 +1,41 @@
+SCENE-DESCRIPTION
+OBJECTS
+apple:0
+jalapeno_chips:0
+red_bull:0
+trash_can:0
+sponge:0
+energy_bar:0
+sprite:0
+grapefruit_soda:0
+rice_chips:0
+coke:0
+7up:0
+counter:2
+table:0
+water:0
+counter:1
+robot:0
+human:0
+END-OBJECTS
+RELATIONS
+on coke:0 counter:1
+on sponge:0 counter:1
+on grapefruit_soda:0 counter:1
+on 7up:0 counter:2
+on apple:0 counter:2
+on rice_chips:0 table:0
+on jalapeno_chips:0 counter:2
+on sprite:0 table:0
+on energy_bar:0 table:0
+on red_bull:0 table:0
+on water:0 table:0
+at robot:0 counter:1
+END-RELATIONS
+LOCATIONS
+human0 human:0
+counter1 robot:0 sponge:0 grapefruit_soda:0 coke:0 counter:1
+counter2 apple:0 jalapeno_chips:0 7up:0 counter:2
+table0 red_bull:0 energy_bar:0 sprite:0 rice_chips:0 table:0 water:0
+trash_can0 trash_can:0
+END-LOCATIONS

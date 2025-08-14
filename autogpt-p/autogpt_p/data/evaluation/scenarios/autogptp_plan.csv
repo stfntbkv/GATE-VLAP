@@ -1,0 +1,31 @@
+task,scene_file,explored,substitutions_file,desired_goal,min_tool_calls,min_costs
+Fetch me the plate,simple_kitchen.txt,all,no_substitutions.csv,and (inhand plate0 human0),1,3
+Take the spatula,simple_kitchen.txt,all,no_substitutions.csv,and (inhand spatula0 robot0),1,2
+Pour water to be in a plastic cup,simple_kitchen.txt,all,no_substitutions.csv,or (liquid_in water0 plastic_cup0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2),1,3
+Go to the refrigerator,simple_kitchen.txt,all,no_substitutions.csv,and (at robot0 refrigerator0),1,1
+Cut the tomato,simple_kitchen.txt,all,no_substitutions.csv,and (chopped tomato0),1,6
+Open the bottle,simple_kitchen.txt,all,no_substitutions.csv,and (opened bottle0),1,1
+I want the hammer to be in your hand,simple_kitchen.txt,all,no_substitutions.csv,and (inhand hammer0 robot0),1,2
+I want the tomato to be on the cutting board,simple_kitchen.txt,all,no_substitutions.csv,and (on tomato0 cutting_board0),1,2
+I want water to be in a plastic cup,simple_kitchen.txt,all,no_substitutions.csv,or (liquid_in water0 plastic_cup0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2),1,3
+I want the cucumber to be chopped,simple_kitchen.txt,all,no_substitutions.csv,and (chopped cucumber0),1,9
+I want the door to be closed,simple_kitchen_opened.txt,all,no_substitutions.csv,and (closed door0),1,2
+I want the counter to be cleaned,simple_kitchen.txt,all,no_substitutions.csv,and (clean counter0),1,9
+I spilled my drink. Give me something to clean it up,kitchen_clean.txt,all,no_substitutions.csv,or (inhand paper_towel0 human0) (inhand cloth0 human0),1,4
+I need something to cut the apple,simple_kitchen.txt,all,no_substitutions.csv,and (inhand kitchen_knife0 human0),1,4
+Put all tools in the box,complex_kitchen1.txt,all,no_substitutions.csv,and (in hammer0 box0) (in screwdriver0 box0) (in stapler0 box0),1,9
+Give me something that keeps the documents together,complex_kitchen4.txt,all,no_substitutions.csv,and (inhand stapler0 human0),1,4
+Prepare the stove for cooking pasta,complex_kitchen4.txt,all,no_substitutions.csv,and (on pot0 stove0) (liquid_in water0 pot0),1,8
+I want to read something on the bench,complex_kitchen4.txt,all,no_substitutions.csv,or (on book0 bench0) (inhand book0 human0),1,4
+Get rid of the old water,simple_kitchen.txt,all,no_substitutions.csv,and (liquid_in water0 sink0),1,4
+I am thirsty,simple_kitchen.txt,all,no_substitutions.csv,or (liquid_in water0 plastic_cup0) (inhand bottle0 human0) (inhand milk_cartoon0 human0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2) (liquid_in milk0 plastic_cup0) (liquid_in milk0 plastic_cup1) (liquid_in milk0 plastic_cup2),1,2
+I am missing something to eat my soup,soup.txt,all,no_substitutions.csv,and (or (inhand spoon0 human0) (on spoon0 table0)),1,3
+Do not let dangerous objects lay on the kitchen table the kids are around,dangerous.txt,all,no_substitutions.csv,and (not (on kitchen_knife0 table0)) (not (on scissors0 table0)),1,4
+There is too much stuff on the desk - I cannot work like this,desk_cleaning.txt,all,no_substitutions.csv,and (on monitor0 desk0) (on keyboard0 desk0) (not (on plate0 desk0)) (not (on cloth0 desk0)) (not (on bowl0 desk0))(not (on bottle0 desk0)),1,8
+I want to use my new keyboard,keyboard.txt,all,no_substitutions.csv,and (on keyboard0 desk0),1,4
+Give me what is in the box,complex_kitchen2.txt,all,no_substitutions.csv,and (inhand tape0 human0),1,3
+Put milk into the plastic cup and water into the glass,complex_kitchen3.txt,all,no_substitutions.csv,and (liquid_in milk0 plastic_cup0) (liquid_in water0 wine_glass0),1,10
+Throw away the apple and the bananas into the basket,complex_kitchen2.txt,all,no_substitutions.csv,and (in apple0 basket0) (in banana0 basket0) (in banana1 basket0),1,11
+If the fridge is empty just close it,empty_fridge.txt,all,no_substitutions.csv,and (closed refrigerator0),1,2
+Put all nails and screws from the counter in the bowl,screws_nails.txt,all,no_substitutions.csv,and (in screw1 bowl0) (in screw2 bowl0) (in nail0 bowl0),1,11
+Go to the place that has a banana in a bowl,goto1.txt,all,no_substitutions.csv,and (at robot0 counter0),1,1

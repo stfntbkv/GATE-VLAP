@@ -1,0 +1,31 @@
+task,scene_file,desired_goal,min_costs
+I want either a glass of water or a sliced apple,complex_kitchen2.txt,or (and (liquid_in water0 wine_glass0) (inhand wine_glass0 human0)) (and (chopped apple0) (inhand apple0 human0)),8
+Give me what is in the box,complex_kitchen2.txt,and (inhand tape0 human0),3
+Give me the plastic cup on the counter,complex_kitchen2.txt,and (inhand plastic_cup0 human0),3
+Give me the banana in the bowl,complex_kitchen2.txt,and (inhand banana1 human0),4
+I want to drink water from the plastic cup or the wine glass,complex_kitchen3.txt,or (liquid_in water0 wine_glass0) (liquid_in water0 plastic_cup0),4
+Put milk into the plastic cup and water into the glass,complex_kitchen3.txt,and (liquid_in milk0 plastic_cup0) (liquid_in water0 wine_glass0),10
+I want either the table or the coffee table cleaned,complex_kitchen5.txt,or (clean coffee_table0) (clean table0),7
+Throw away the apple and the bananas into the basket,complex_kitchen2.txt,and (in apple0 basket0) (in banana0 basket0) (in banana1 basket0),11
+I want either the apple and the banana to be on the plate or the salad and the cucumber in the bowl,complex_kitchen2.txt,or (and (on apple0 plate0) (on banana0 plate0)) (and (in salad0 bowl0) (in cucumber0 bowl0)),5
+Give me either the apple or the banana,complex_kitchen2.txt,or (inhand banana0 human0) (inhand apple0 human0),3
+Put what is in the fridge in the b<ox,complex_kitchen2.txt,and (in cucumber0 box0) (in salad0 box0),8
+Everything from the counter should be in the box,complex_kitchen3.txt,and (in tape0 box0) (in plastic_cup0 box0) (in plate0 box0) (in fork0 box0),8
+Put either the pan or the pot on the stove. If the pan is on the stove open the window - otherwise open the door,complex_kitchen4.txt,or (and (on pan0 stove0) (opened window0)) (and (on pot0 stove0) (opened door0)),6
+If the fridge is empty just close it,empty_fridge.txt,and (closed refrigerator0),2
+If the fridge is empty just close it,complex_kitchen2.txt,and (opened refrigerator0),0
+As long as there is something in the bowl put it on the counter,complex_kitchen1.txt,and (on banana0 counter0) (on banana1 counter0),8
+If the window is open close the door,complex_kitchen1.txt,and (closed door0),0
+Put all nails and screws in the box,screws_nails.txt,and (in screw0 box0) (in screw1 box0) (in screw2 box0) (in screw3 box0) (in nail0 box0) (in nail1 box0),15
+Put all nails and screws from the counter in the bowl,screws_nails.txt,and (in screw1 bowl0) (in screw2 bowl0) (in nail1 bowl0),11
+Give me all knifes,complex_kitchen1.txt,and (inhand kitchen_knife0 human0) (inhand dinner_knife0 human0),8
+Put all silverware from the counter on the plate that is on the table,complex_kitchen1.txt,and (on fork0 plate1) (on fork1 plate1) (on spoon1 plate1) (on dinner_knife2 plate1),12
+Put all silverware from the counter on the table next to you,complex_kitchen1.txt,and (on fork0 table1) (on fork1 table1) (on spoon1 table1) (on dinner_knife2 table1),16
+Put the apple on the table where I am at,complex_kitchen1.txt,and (on apple0 table0),4
+Put the apple on the other table,complex_kitchen1.txt,and (on apple0 table0),4
+Put the object that is in your hand away,inhand.txt,and (not (inhand hammer0 robot0)),1
+Go to the place that has a banana in a bowl,goto1.txt,and (at robot0 counter0),1
+Go to the place that has a banana in a bowl,goto2.txt,and (at robot0 table0),1
+If there is a bottle in the fridge pour a cup of water. If not just go to the counter,pour1.txt,and (liquid_in water0 plastic_cup0),4
+If there is a bottle in the fridge pour a cup of water. If not just go to the counter,pour2.txt,and (at robot0 counter0),1
+Put either all objects from the table on the counter or the other way around depending on what is faster,table_counter_cleaning.txt,and (free table0),16

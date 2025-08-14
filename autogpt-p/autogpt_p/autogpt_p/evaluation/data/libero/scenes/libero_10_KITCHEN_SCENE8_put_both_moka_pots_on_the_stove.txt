@@ -1,0 +1,20 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+robot:0
+moka_pot:0
+moka_pot:1
+table:0
+flat_stove:0
+END-OBJECTS
+RELATIONS
+on flat_stove:0 table:0
+on moka_pot:0 table:0
+on moka_pot:1 table:0
+turn_on flat_stove:0
+at robot:0 table:0
+at human:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 moka_pot:0 moka_pot:1 flat_stove:0
+END-LOCATIONS

@@ -1,0 +1,31 @@
+task,scene_file,explored,substitutions_file,desired_goal,min_tool_calls,min_costs
+Give me the apple from the table,simple_kitchen_window.txt,window0,no_substitutions.csv,and (inhand apple0 human0),2,3
+Give me the salad from the fridge,simple_kitchen.txt,table0,no_substitutions.csv,and (inhand salad0 human0),2,4
+Grab the hammer from the box on the counter,simple_kitchen_window.txt,window0,no_substitutions.csv,and (inhand hammer0 robot0),2,2
+Move the spoon from the counter to the table,simple_kitchen_window.txt,window0,no_substitutions.csv,and (on spoon0 table0),3,3
+Open the fridge,simple_kitchen.txt,table0,no_substitutions.csv,and (opened refrigerator0),2,1
+Put the tomato from the table into the box on the counter,simple_kitchen.txt,table0,no_substitutions.csv,and (in tomato0 box0),3,4
+Put the tomato from the table into the box on the counter,simple_kitchen_window.txt,window0,no_substitutions.csv,and (in tomato0 box0),3,3
+Pour the water from the bottle on the table into the sink,complex_kitchen5_bench.txt,bench0,no_substitutions.csv,and (liquid_in water0 sink0),3,3
+The bottle opener should be on the counter. Give it to me,complex_kitchen5_bench.txt,bench0,no_substitutions.csv,and (inhand bottle_opener0 human0),2,3
+I forgot the book on the chair. I want to read it now,complex_kitchen5_bench.txt,bench0,no_substitutions.csv,and (inhand book0 human0),2,3
+Cut the tomato on the table with the kitchen_knife,simple_kitchen_window.txt,window0,no_substitutions.csv,and (chopped tomato0),3,6
+Cut the tomato,simple_kitchen_window.txt,window0,no_substitutions.csv,and (chopped tomato0),3,6
+Put the salad on the table,simple_kitchen.txt,table0,no_substitutions.csv,and (on salad0 table0),2,4
+Give me the tissues from the living room,complex_kitchen5.txt,counter0,no_substitutions.csv,and (inhand tissue0 human0),2,3
+Prepare the dining room table for two,dining_room_prep_basket.txt,basket0,no_substitutions.csv,and (on plate0 table0) (on plate1 table0) (on fork0 table0) (on fork1 table0) (on dinner_knife0 table0) (on dinner_knife0 table0),3,19
+I want to drink something cooled,cooled.txt,counter0,no_substitutions.csv,and (inhand bottle2 human0),2,4
+As long as there is something in the bowl put it on the counter,complex_kitchen1.txt,table1,no_substitutions.csv,and (on banana0 counter0) (on banana1 counter0),3,8
+Put all tools in the box,complex_kitchen1.txt,table1,no_substitutions.csv,and (in hammer0 box0) (in screwdriver0 box0) (in stapler0 box0),3,9
+Pour the used cleaning water in the sink,complex_kitchen5.txt,counter0,no_substitutions.csv,and (liquid_in water0 sink0),4,3
+I need the watering can. It is neither on the table nor the coffee table,complex_kitchen5_bench.txt,bench0,no_substitutions.csv,and (inhand watering_can0 human0),2,3
+Put all silverware from the counter on the plate that is on the table,complex_kitchen1.txt,table1,no_substitutions.csv,and (on fork0 plate1) (on fork1 plate1) (on spoon1 plate1) (on dinner_knife2 plate1),3,12
+Give me something to stop my nosebleed,complex_kitchen4.txt,counter0,no_substitutions.csv,or (inhand tissue0 human0) (inhand paper_towel0 human0),1,4
+Give me something to dust off the dining room table,complex_kitchen4.txt,counter0,no_substitutions.csv,and (inhand cloth0 human0),1,4
+Put everything that needs to be cooled in the refrigerator,complex_kitchen4.txt,counter0,no_substitutions.csv,and (in milk_cartoon0 refrigerator0) (in cucumber0 refrigerator0) (in salad0 refrigerator0),5,13
+Throw away the used cloth in the basket,used_cloth.txt,counter0,no_substitutions.csv,and (in cloth0 basket0),3,3
+Go to the place that has a banana in a bowl,goto1.txt,table1,no_substitutions.csv,and (at robot0 counter0),2,0
+Go to the place that has a banana in a bowl,goto2.txt,table1,no_substitutions.csv,and (at robot0 table0),2,0
+The sink is leaking. Give me something to clean up the water and fix the leaking,complex_kitchen4.txt,counter0,no_substitutions.csv,and (or (inhand paper_towel0 human0) (inhand mop0 human0) (inhand cloth0 human0)) (inhand tape0 human0),2,7
+Do not let dangerous objects lay on the kitchen table the kids are around,dangerous.txt,counter0,no_substitutions.csv,and (not (on kitchen_knife0 table0)) (not (on scissors0 table0)),2,4
+Put all nails and screws from the counter in the bowl,screws_nails.txt,counter0,no_substitutions.csv,and (in screw1 bowl0) (in screw2 bowl0) (in nail0 bowl0),2,11

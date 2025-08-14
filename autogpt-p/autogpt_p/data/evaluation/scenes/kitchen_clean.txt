@@ -1,0 +1,37 @@
+SCENE-DESCRIPTION
+OBJECTS
+robot:0
+table:0
+bowl:0
+kitchen_knife:0
+human:0
+milk_cartoon:0
+sponge:0
+hammer:0
+paper_towel:0
+remote:0
+cloth:0
+counter:0
+watering_can:0
+plastic_cup:0
+box:0
+END-OBJECTS
+RELATIONS
+on plastic_cup:0 table:0
+on bowl:0 table:0
+on milk_cartoon:0 table:0
+on remote:0 table:0
+on paper_towel:0 counter:0
+on sponge:0 counter:0
+on cloth:0 counter:0
+on box:0 counter:0
+on watering_can:0 counter:0
+on kitchen_knife:0 counter:0
+on hammer:0 counter:0
+at human:0 table:0
+at robot:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 plastic_cup:0 bowl:0 milk_cartoon:0 remote:0
+counter0 counter:0 paper_towel:0 sponge:0 cloth:0 box:0 watering_can:0 kitchen_knife:0 hammer:0
+END-LOCATIONS

@@ -1,0 +1,385 @@
+Waiting for memory server 'Planning/Actor' ...
+Resolved memory server 'Planning/Actor'.
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot HIDDEN_FOR_REVIEW assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        apple0 - apple
+        counter2 - counter
+        human0 - human
+        trash_can0 - trash_can
+        multigrain_chips0 - multigrain_chips
+        table0 - table
+        lime_soda0 - lime_soda
+        tea0 - tea
+        sponge0 - sponge
+        sprite0 - sprite
+        7up0 - 7up
+        red_bull0 - red_bull
+        pepsi0 - pepsi
+        energy_bar0 - energy_bar
+        counter1 - counter
+        coke0 - coke
+        jalapeno_chips0 - jalapeno_chips
+        water0 - water
+        drawer0 - drawer
+        robot0 - robot_profile
+        grapefruit_soda0 - grapefruit_soda
+    )
+    
+    (:init 
+        (on  pepsi0 table0)
+        (on  energy_bar0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  lime_soda0 counter2)
+        (at  robot0 counter1)
+        (on  tea0 counter2)
+        (on  grapefruit_soda0 counter1)
+        (on  coke0 counter1)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  multigrain_chips0 counter2)
+        (on  red_bull0 table0)
+        (on  7up0 counter2)
+        (closed  drawer0)
+        (on  sponge0 counter1)
+        (on  sprite0 table0)
+        (= total-cost 0)
+        (= (cost human0) 100)
+        (= (cost robot0) 1)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "restock the coke and pepsi into the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+Example: Bring me a banana -> (goal: and(inhand banana human))
+The user request is "restock the coke and pepsi into the drawer". This implies that the coke and pepsi should be in the drawer. 
+
+Step 1: Identify the objects involved in the request. In this case, the objects are "coke", "pepsi", and "drawer".
+
+Step 2: Identify the action or state that needs to be achieved. In this case, the coke and pepsi need to be "in" the drawer.
+
+Step 3: Map the request to the appropriate predicate from the domain. The predicate that describes an object being in a container is "(in ?o - carry ?c - contain)". 
+
+Step 4: Replace the variables in the predicate with the identified objects. In this case, replace "?o" with "coke" and "pepsi", and "?c" with "drawer".
+
+The goal state in PDDL syntax would be:
+
+(:goal (and (in coke0 drawer0) (in pepsi0 drawer0))) 
+
+This goal state represents that the coke and pepsi are in the drawer.
+----------------------------Results:----------------------------------
+Task: restock the coke and pepsi into the drawer
+Generated Plan:
+grasp robot0 coke0 counter1 counter1
+move robot0 counter1 table0
+putin robot0 coke0 pepsi0 table0
+move robot0 table0 drawer0
+open robot0 drawer0 drawer0
+move robot0 drawer0 table0
+grasp robot0 pepsi0 table0 table0
+move robot0 table0 drawer0
+pour robot0 pepsi0 coke0 drawer0 drawer0
+putin robot0 pepsi0 drawer0 drawer0
+; cost = 10.0 (union cost)
+Generated Goal: (and (in  coke0 drawer0) (in  pepsi0 drawer0))
+Desired Goal: (and (in  coke0 drawer0) (in  pepsi0 drawer0))
+Goal Reached: True
+Costs are: 10 -- minimal costs: 10
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot HIDDEN_FOR_REVIEW assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        apple0 - apple
+        counter2 - counter
+        human0 - human
+        trash_can0 - trash_can
+        multigrain_chips0 - multigrain_chips
+        table0 - table
+        lime_soda0 - lime_soda
+        tea0 - tea
+        sponge0 - sponge
+        sprite0 - sprite
+        7up0 - 7up
+        red_bull0 - red_bull
+        pepsi0 - pepsi
+        energy_bar0 - energy_bar
+        counter1 - counter
+        coke0 - coke
+        jalapeno_chips0 - jalapeno_chips
+        water0 - water
+        drawer0 - drawer
+        robot0 - robot_profile
+        grapefruit_soda0 - grapefruit_soda
+    )
+    
+    (:init 
+        (on  pepsi0 table0)
+        (on  energy_bar0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  lime_soda0 counter2)
+        (at  robot0 counter1)
+        (on  tea0 counter2)
+        (on  grapefruit_soda0 counter1)
+        (on  coke0 counter1)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  multigrain_chips0 counter2)
+        (on  red_bull0 table0)
+        (on  7up0 counter2)
+        (closed  drawer0)
+        (on  sponge0 counter1)
+        (on  sprite0 table0)
+        (= total-cost 0)
+        (= (cost human0) 100)
+        (= (cost robot0) 1)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "hide the 7up in the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+Example: Bring me a banana -> (goal: and(inhand banana human))
+The user request is "hide the 7up in the drawer". This implies that the 7up should be in the drawer and the drawer should be closed. 
+
+Step 1: Identify the objects involved in the request. In this case, the objects are "7up" and "drawer". 
+
+Step 2: Identify the actions or states that need to be achieved. In this case, the 7up needs to be "in" the drawer and the drawer needs to be "closed". 
+
+Step 3: Map these actions or states to the predicates defined in the domain. The predicate for an object being in a container is "(in ?o - carry ?c - contain)" and the predicate for an object being closed is "(closed ?cl - close)". 
+
+Step 4: Replace the variables in the predicates with the identified objects. The object "?o" in the "in" predicate is replaced with "7up0" and the container "?c" is replaced with "drawer0". The object "?cl" in the "closed" predicate is replaced with "drawer0". 
+
+Step 5: Combine these predicates to form the goal state. The goal state is achieved when both these predicates are true. Therefore, they are combined using the "and" operator. 
+
+The goal state in PDDL syntax is:
+
+(:goal (and (in 7up0 drawer0) (closed drawer0)))
+----------------------------Results:----------------------------------
+Task: hide the 7up in the drawer
+Generated Plan:
+move robot0 counter1 drawer0
+open robot0 drawer0 drawer0
+move robot0 drawer0 counter2
+grasp robot0 7up0 counter2 counter2
+move robot0 counter2 drawer0
+putin robot0 7up0 drawer0 drawer0
+close robot0 drawer0 drawer0
+; cost = 7.0 (union cost)
+Generated Goal: (and (in  7up0 drawer0) (closed  drawer0))
+Desired Goal: (and (in  7up0 drawer0))
+Goal Reached: True
+Costs are: 7 -- minimal costs: 6
+Costs minimal: False
+Costs Rate: 1.1666666666666667
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot HIDDEN_FOR_REVIEW assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        apple0 - apple
+        counter2 - counter
+        human0 - human
+        trash_can0 - trash_can
+        multigrain_chips0 - multigrain_chips
+        table0 - table
+        lime_soda0 - lime_soda
+        tea0 - tea
+        sponge0 - sponge
+        sprite0 - sprite
+        7up0 - 7up
+        red_bull0 - red_bull
+        pepsi0 - pepsi
+        energy_bar0 - energy_bar
+        counter1 - counter
+        coke0 - coke
+        jalapeno_chips0 - jalapeno_chips
+        water0 - water
+        drawer0 - drawer
+        robot0 - robot_profile
+        grapefruit_soda0 - grapefruit_soda
+    )
+    
+    (:init 
+        (on  pepsi0 table0)
+        (on  energy_bar0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  lime_soda0 counter2)
+        (at  robot0 counter1)
+        (on  tea0 counter2)
+        (on  grapefruit_soda0 counter1)
+        (on  coke0 counter1)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  multigrain_chips0 counter2)
+        (on  red_bull0 table0)
+        (on  7up0 counter2)
+        (closed  drawer0)
+        (on  sponge0 counter1)
+        (on  sprite0 table0)
+        (= total-cost 0)
+        (= (cost human0) 100)
+        (= (cost robot0) 1)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "restock the coke into the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+Example: Bring me a banana -> (goal: and(inhand banana human))
+The user request is "restock the coke into the drawer". This implies that the coke needs to be moved from its current location and placed inside the drawer. 
+
+Step 1: Identify the objects involved in the request. In this case, the objects are "coke" and "drawer".
+
+Step 2: Identify the action that needs to be performed. The action is "restock", which implies moving the coke from its current location and placing it inside the drawer.
+
+Step 3: Identify the current state of the objects. From the problem definition, we know that the coke is currently on the counter1 and the drawer is closed.
+
+Step 4: Define the goal state. The goal state would be that the coke is in the drawer. 
+
+Step 5: Express the goal state in PDDL syntax. In PDDL, the "in" predicate is used to describe an object being in a container. Therefore, the goal state can be expressed as follows:
+
+(:goal (and (in coke0 drawer0)))
+
+This goal state represents that the coke (coke0) is in the drawer (drawer0).
+----------------------------Results:----------------------------------
+Task: restock the coke into the drawer
+Generated Plan:
+move robot0 counter1 drawer0
+open robot0 drawer0 drawer0
+move robot0 drawer0 counter1
+grasp robot0 coke0 counter1 counter1
+move robot0 counter1 drawer0
+putin robot0 coke0 drawer0 drawer0
+; cost = 6.0 (union cost)
+Generated Goal: (and (in  coke0 drawer0))
+Desired Goal: (and (in  coke0 drawer0))
+Goal Reached: True
+Costs are: 6 -- minimal costs: 6
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------

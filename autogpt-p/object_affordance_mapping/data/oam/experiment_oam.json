@@ -1,0 +1,1858 @@
+{
+    "oams": [
+        {
+            "object": "water_bottle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "scoop"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "food_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "salt_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "sponge",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "wet-swipe"
+                }
+            ]
+        },
+        {
+            "object": "pan",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "heat"
+                },
+                {
+                    "name": "heat-resistance"
+                }
+            ]
+        },
+        {
+            "object": "screw_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "contact-connect"
+                },
+                {
+                    "name": "pierce"
+                }
+            ]
+        },
+        {
+            "object": "coffee_filter",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "coffee_machine",
+            "affordances": [
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "heat"
+                }
+            ]
+        },
+        {
+            "object": "bowl",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "ladder",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        },
+        {
+            "object": "plate",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "sturdy-support"
+                }
+            ]
+        },
+        {
+            "object": "food_can",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "soap",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "wet-swipe"
+                }
+            ]
+        },
+        {
+            "object": "spice_shaker",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                }
+            ]
+        },
+        {
+            "object": "pot",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "probiotic_drink_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "liquid"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "coffee_filters",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "spraybottle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                }
+            ]
+        },
+        {
+            "object": "sugar_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "coffee_cup",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "sauce_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                }
+            ]
+        },
+        {
+            "object": "coffee_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "dishwasher",
+            "affordances": [
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "heat"
+                }
+            ]
+        },
+        {
+            "object": "box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "oil_bottle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "toothpaste",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                }
+            ]
+        },
+        {
+            "object": "whipped_cream",
+            "affordances": [
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "grease",
+            "affordances": [
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                }
+            ]
+        },
+        {
+            "object": "guard_support",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "constrained-move"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        },
+        {
+            "object": "cleaning_agent_bottle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "liquid"
+                }
+            ]
+        },
+        {
+            "object": "fridge",
+            "affordances": [
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "vertical-support"
+                },
+                {
+                    "name": "heat"
+                }
+            ]
+        },
+        {
+            "object": "cable_ties",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                }
+            ]
+        },
+        {
+            "object": "coke_bottle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "fruit_juice_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "liquid"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "grapefruit_juice_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "liquid"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "counter",
+            "affordances": [
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        },
+        {
+            "object": "cloth",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "dry-swipe"
+                },
+                {
+                    "name": "wet-swipe"
+                }
+            ]
+        },
+        {
+            "object": "apple_juice_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "drink"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "liquid"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "butter",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "spread_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "contact-connect"
+                }
+            ]
+        },
+        {
+            "object": "decorative_object",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "ladle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "deodorant",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "liquid"
+                }
+            ]
+        },
+        {
+            "object": "tea_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "milk_box",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "drinkable"
+                },
+                {
+                    "name": "consumable"
+                }
+            ]
+        },
+        {
+            "object": "sauce_bottle",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "liquid-contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "pour"
+                },
+                {
+                    "name": "precise-pour"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "brush",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stir"
+                },
+                {
+                    "name": "wet-swipe"
+                }
+            ]
+        },
+        {
+            "object": "mounting_adhesive",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "contact-connect"
+                }
+            ]
+        },
+        {
+            "object": "whisk",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stir"
+                }
+            ]
+        },
+        {
+            "object": "torch",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "heat"
+                }
+            ]
+        },
+        {
+            "object": "drops_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "contain"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "close"
+                },
+                {
+                    "name": "stack"
+                }
+            ]
+        },
+        {
+            "object": "powder_packaging",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "axis-roll"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                }
+            ]
+        },
+        {
+            "object": "patches",
+            "affordances": [
+                {
+                    "name": "grasp"
+                },
+                {
+                    "name": "enclosed-contain"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "stack"
+                },
+                {
+                    "name": "contact-connect"
+                },
+                {
+                    "name": "wet-swipe"
+                },
+                {
+                    "name": "heat"
+                }
+            ]
+        },
+        {
+            "object": "table",
+            "affordances": [
+                {
+                    "name": "assisted-carry"
+                },
+                {
+                    "name": "rotate"
+                },
+                {
+                    "name": "push"
+                },
+                {
+                    "name": "pull"
+                },
+                {
+                    "name": "support"
+                },
+                {
+                    "name": "vertical-support"
+                }
+            ]
+        }
+    ]
+}

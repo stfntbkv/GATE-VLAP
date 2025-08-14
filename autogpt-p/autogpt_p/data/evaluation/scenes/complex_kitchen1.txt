@@ -1,0 +1,65 @@
+SCENE-DESCRIPTION
+OBJECTS
+table:0
+table:1
+kitchen_knife:0
+plate:0
+apple:0
+door:0
+screw:0
+counter:0
+stapler:0
+fork:0
+dinner_knife:0
+dinner_knife:1
+fork:1
+dinner_knife:2
+human:0
+window:0
+banana:0
+box:0
+banana:1
+spoon:0
+spoon:1
+bowl:0
+screwdriver:0
+hammer:0
+plate:1
+nail:0
+END-OBJECTS
+RELATIONS
+on bowl:0 table:0
+in banana:0 bowl:0
+in banana:1 bowl:0
+on stapler:0 table:0
+on dinner_knife:0 table:0
+on plate:1 table:0
+on plate:0 counter:0
+on apple:0 counter:0
+on hammer:0 counter:0
+on screwdriver:0 counter:0
+on nail:0 counter:0
+on screw:0 counter:0
+on box:0 counter:0
+opened window:0
+opened door:0
+on kitchen_knife:0 counter:0
+on dinner_knife:1 table:1
+on spoon:0 table:0
+on fork:0 counter:0
+on fork:1 counter:0
+on spoon:1 counter:0
+on dinner_knife:2 counter:0
+closed bottle:0
+opened window:0
+closed door:0
+at robot:0 table:1
+at human:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 plate:1 bowl:0 stapler:0 dinner_knife:0 banana:0 banana:1 spoon:0
+counter0 counter:0 apple:0 hammer:0 screwdriver:0 nail:0 screw:0 box:0 kitchen_knife:0 fork:0 fork:1 spoon:1 dinner_knife:2 plate:0
+window0 window:0
+door0 door:0
+table1 table:1 dinner_knife:1
+END-LOCATIONS

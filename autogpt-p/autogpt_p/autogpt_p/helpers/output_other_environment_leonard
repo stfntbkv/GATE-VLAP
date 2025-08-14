@@ -1,0 +1,3956 @@
+/common/homes/students/uqqbd_mayr/anaconda3/envs/llm_planner/bin/python /common/homes/all/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/llm_planner/fake_api_environment.py /common/homes/all/uqqbd_mayr/code/h2t/student_projects/ba_marion_mayr/autogpt-p-standalone/autogpt_p/data/evaluation/scenarios/evaluation_memory_other_environment.json 
+ArmarX not available!
+ArmarX not available!
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 0
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+/common/homes/students/uqqbd_mayr/anaconda3/envs/llm_planner/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches: 100%|██████████| 1/1 [00:00<00:00,  2.21it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will help you prepare a salad with tomatoes')
+Robot says: "Ok, I will help you prepare a salad with tomatoes"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.42it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.50it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by getting the tomatoes from the bowl')
+Robot says: "I will start by getting the tomatoes from the bowl"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.61it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('tomato0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.36it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval grab('tomato0')
+Updated/Defined variables after execution: {}
+{'stop': ['>>>', '```']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.46it/s]
+
+
+ ============================== 
+
+
+eval say('Now I will get the salad from the refrigerator')
+Robot says: "Now I will get the salad from the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.42it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.05it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.44it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval grab('salad0')
+Updated/Defined variables after execution: {}
+{'stop': ['>>>', '```']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.83it/s]
+
+
+ ============================== 
+
+
+eval put_down('tomato0', get_obj_pos('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.67it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval grab('salad0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.46it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the salad and tomatoes, what would you like me to do next?')
+Robot says: "I have the salad and tomatoes, what would you like me to do next?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.67it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'Help me prepare a salad with tomatoes'}
+>>> say('Ok, I will help you prepare a salad with tomatoes')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plastic_cup1', 'plastic_cup2', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I will start by getting the tomatoes from the bowl')
+>>> move_to(get_obj_pos('tomato0'))
+'success'
+>>> grab('tomato0')
+'success'
+>>> say('Now I will get the salad from the refrigerator')
+>>> move_to(get_obj_pos('refrigerator0'))
+'success'
+>>> open('refrigerator0')
+'success'
+>>> grab('salad0')
+'hand_occupied'
+>>> put_down('tomato0', get_obj_pos('table0'))
+'success'
+>>> grab('salad0')
+'success'
+>>> say('I have the salad and tomatoes, what would you like me to do next?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 1
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+/common/homes/students/uqqbd_mayr/anaconda3/envs/llm_planner/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.86it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will prepare breakfast with cut banana and apple')
+Robot says: "Ok, I will prepare breakfast with cut banana and apple"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.11it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('apple0', 'refrigerator0'), ('banana0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cucumber0', 'refrigerator0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'table0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('salad0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('tomato0', 'refrigerator0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.30it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by getting the banana from the table')
+Robot says: "I will start by getting the banana from the table"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.85it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.05it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('banana0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.33it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Now I will get the apple from the refrigerator')
+Robot says: "Now I will get the apple from the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.38it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.28it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('apple0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.57it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('banana0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.99it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('apple0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.17it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the apple, I will now cut it')
+Robot says: "I have the apple, I will now cut it"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.86it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.90it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('apple0', get_obj_pos('cutting_board0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.51it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('kitchen_knife0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.86it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('kitchen_knife0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.28it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval cut('kitchen_knife0', 'apple0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.10it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('kitchen_knife0', get_obj_pos('cutting_board0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.91it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will now cut the banana')
+Robot says: "I will now cut the banana"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.08it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('banana0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.88it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.57it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('banana0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.01it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('cutting_board0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.94it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval put_down('banana0', get_obj_pos('cutting_board0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.53it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('kitchen_knife0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.78it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval cut('kitchen_knife0', 'banana0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.97it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('kitchen_knife0', get_obj_pos('cutting_board0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.21it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The banana and apple are now cut. What would you like me to do next?')
+Robot says: "The banana and apple are now cut. What would you like me to do next?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.20it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I want to have breakfast with cut banana and apple'}
+>>> say('Ok, I will prepare breakfast with cut banana and apple')
+>>> detect_object_locations()
+[('apple0', 'refrigerator0'), ('banana0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cucumber0', 'refrigerator0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'table0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('salad0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('tomato0', 'refrigerator0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+>>> say('I will start by getting the banana from the table')
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> grab('banana0')
+'success'
+>>> say('Now I will get the apple from the refrigerator')
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> grab('apple0')
+'hand_occupied'
+>>> put_down('banana0', get_location_coordinates('table0'))
+'success'
+>>> grab('apple0')
+'success'
+>>> say('I have the apple, I will now cut it')
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> put_down('apple0', get_obj_pos('cutting_board0'))
+'success'
+>>> move_to(get_obj_pos('kitchen_knife0'))
+'success'
+>>> grab('kitchen_knife0')
+'success'
+>>> cut('kitchen_knife0', 'apple0')
+'success'
+>>> put_down('kitchen_knife0', get_obj_pos('cutting_board0'))
+'success'
+>>> say('I will now cut the banana')
+>>> grab('banana0')
+'not_near_object'
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> grab('banana0')
+'success'
+>>> move_to(get_obj_pos('cutting_board0'))
+'success'
+>>> put_down('banana0', get_obj_pos('cutting_board0'))
+'success'
+>>> grab('kitchen_knife0')
+'success'
+>>> cut('kitchen_knife0', 'banana0')
+'success'
+>>> put_down('kitchen_knife0', get_obj_pos('cutting_board0'))
+'success'
+>>> say('The banana and apple are now cut. What would you like me to do next?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 2
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.34it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.33s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will put everything that needs to be cooled in the refrigerator')
+Robot says: "Ok, I will put everything that needs to be cooled in the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.44it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('bench0', 'bench0'), ('book0', 'chair0'), ('bottle0', 'table0'), ('bottle_opener0', 'counter0'), ('broom0', 'counter0'), ('chair0', 'chair0'), ('cloth0', 'counter0'), ('coffee_table0', 'coffee_table0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cucumber0', 'table0'), ('door0', 'door0'), ('milk_cartoon0', 'table0'), ('mop0', 'counter0'), ('pan0', 'counter0'), ('paper_towel0', 'counter0'), ('pot0', 'counter0'), ('refrigerator0', 'refrigerator0'), ('remote0', 'coffee_table0'), ('sink0', 'sink0'), ('stapler0', 'table0'), ('stove0', 'stove0'), ('table0', 'table0'), ('tape0', 'counter0'), ('tissue0', 'coffee_table0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.55it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by putting the milk in the refrigerator')
+Robot says: "I will start by putting the milk in the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.61it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.22it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.15it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.79it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.94it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_in('milk_cartoon0', 'refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.14it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Now I will put the salad in the refrigerator')
+Robot says: "Now I will put the salad in the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.66it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('salad0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.03it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.50it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval say('It seems there is no salad available.')
+Robot says: "It seems there is no salad available."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.84it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'Put everything that needs to be cooled in the refrigerator'}
+>>> say('Ok, I will put everything that needs to be cooled in the refrigerator')
+>>> detect_object_locations()
+[('bench0', 'bench0'), ('book0', 'chair0'), ('bottle0', 'table0'), ('bottle_opener0', 'counter0'), ('broom0', 'counter0'), ('chair0', 'chair0'), ('cloth0', 'counter0'), ('coffee_table0', 'coffee_table0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cucumber0', 'table0'), ('door0', 'door0'), ('milk_cartoon0', 'table0'), ('mop0', 'counter0'), ('pan0', 'counter0'), ('paper_towel0', 'counter0'), ('pot0', 'counter0'), ('refrigerator0', 'refrigerator0'), ('remote0', 'coffee_table0'), ('sink0', 'sink0'), ('stapler0', 'table0'), ('stove0', 'stove0'), ('table0', 'table0'), ('tape0', 'counter0'), ('tissue0', 'coffee_table0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+>>> say('I will start by putting the milk in the refrigerator')
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> grab('milk_cartoon0')
+'success'
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> open('refrigerator0')
+'success'
+>>> put_in('milk_cartoon0', 'refrigerator0')
+'success'
+>>> say('Now I will put the salad in the refrigerator')
+>>> move_to(get_obj_pos('salad0'))
+'failure_no_such_location'
+>>> detect_objects()
+['bench0', 'book0', 'bottle0', 'bottle_opener0', 'broom0', 'chair0', 'cloth0', 'coffee_table0', 'cornflakes0', 'counter0', 'cucumber0', 'door0', 'milk_cartoon0', 'mop0', 'pan0', 'paper_towel0', 'pot0', 'refrigerator0', 'remote0', 'sink0', 'stapler0', 'stove0', 'table0', 'tape0', 'tissue0', 'watering_can0', 'window0', 'bench0', 'chair0', 'coffee_table0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'stove0', 'table0', 'window0']
+>>> say('It seems there is no salad available.')
+>>> wait_for_trigger()
+RESULT
+False
+Object cucumber0 is not at refrigerator0
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 3
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 48.13it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.35s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will wet-clean the floor')
+detect_objects()
+
+
+ ============================== 
+
+
+eval say('Ok, I will wet-clean the floor')
+Robot says: "Ok, I will wet-clean the floor"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.02it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by getting the mop and bucket')
+move_to(get_obj_pos('mop0'))
+
+
+ ============================== 
+
+
+eval say('I will start by getting the mop and bucket')
+Robot says: "I will start by getting the mop and bucket"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('mop0'))
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.69it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('mop0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.70it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('bucket0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.10it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('mop0', get_obj_pos('bucket0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.03it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bucket0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.97it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will now fill the bucket with water and start cleaning')
+detect_object_locations()
+
+
+ ============================== 
+
+
+eval say('I will now fill the bucket with water and start cleaning')
+Robot says: "I will now fill the bucket with water and start cleaning"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('book0', 'chair0'), ('bottle_opener0', 'counter0'), ('broom0', 'table0'), ('bucket0', 'righthand'), ('coffee_table0', 'coffee_table0'), ('counter0', 'counter0'), ('cucumber0', 'table0'), ('milk_cartoon0', 'table0'), ('mop0', 'bucket0'), ('pan0', 'counter0'), ('paper_towel0', 'counter0'), ('pot0', 'counter0'), ('remote0', 'coffee_table0'), ('salad0', 'table0'), ('sponge0', 'counter0'), ('table0', 'table0'), ('tape0', 'counter0'), ('tissue0', 'coffee_table0'), ('watering_can0', 'counter0')]
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.43it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I found the sink')
+move_to(get_location_coordinates('sink0'))
+
+
+ ============================== 
+
+
+eval say('I found the sink')
+Robot says: "I found the sink"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('sink0'))
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.86it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I am unable to locate the sink. Please guide me to the correct location.')
+wait_for_trigger()
+
+
+ ============================== 
+
+
+eval say('I am unable to locate the sink. Please guide me to the correct location.')
+Robot says: "I am unable to locate the sink. Please guide me to the correct location."
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'The floor is dirty and I want to wet-clean it'}
+>>> say('Ok, I will wet-clean the floor')
+... detect_objects()
+['book0', 'bottle_opener0', 'broom0', 'bucket0', 'coffee_table0', 'counter0', 'cucumber0', 'milk_cartoon0', 'mop0', 'pan0', 'paper_towel0', 'pot0', 'remote0', 'salad0', 'sponge0', 'table0', 'tape0', 'tissue0', 'watering_can0', 'bucket0', 'chair0', 'coffee_table0', 'counter0', 'person', 'table0']
+>>> say('I will start by getting the mop and bucket')
+... move_to(get_obj_pos('mop0'))
+'success'
+>>> grab('mop0')
+'success'
+>>> move_to(get_obj_pos('bucket0'))
+'success'
+>>> put_down('mop0', get_obj_pos('bucket0'))
+'success'
+>>> grab('bucket0')
+'success'
+>>> say('I will now fill the bucket with water and start cleaning')
+... detect_object_locations()
+[('book0', 'chair0'), ('bottle_opener0', 'counter0'), ('broom0', 'table0'), ('bucket0', 'righthand'), ('coffee_table0', 'coffee_table0'), ('counter0', 'counter0'), ('cucumber0', 'table0'), ('milk_cartoon0', 'table0'), ('mop0', 'bucket0'), ('pan0', 'counter0'), ('paper_towel0', 'counter0'), ('pot0', 'counter0'), ('remote0', 'coffee_table0'), ('salad0', 'table0'), ('sponge0', 'counter0'), ('table0', 'table0'), ('tape0', 'counter0'), ('tissue0', 'coffee_table0'), ('watering_can0', 'counter0')]
+>>> say('I found the sink')
+... move_to(get_location_coordinates('sink0'))
+'failure_no_such_location'
+>>> say('I am unable to locate the sink. Please guide me to the correct location.')
+... wait_for_trigger()
+RESULT
+False
+Object mop0 is not at person
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 4
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.50it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.34s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Could you please clarify what you mean by "like this" with the cucumber?')
+Robot says: "Could you please clarify what you mean by "like this" with the cucumber?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.95it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'How should I eat the cucumber like this'}
+>>> say('Could you please clarify what you mean by "like this" with the cucumber?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 5
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.63it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.31s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will water the plant now')
+Robot says: "I will water the plant now"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.59it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.81it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get the watering can to water the plant')
+move_to(get_obj_pos('watering_can0'))
+
+
+ ============================== 
+
+
+eval say('I will get the watering can to water the plant')
+Robot says: "I will get the watering can to water the plant"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('watering_can0'))
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.31it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('watering_can0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.33it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('plant0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.50it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I am now watering the plant')
+pour('watering_can0', 'plant0')
+
+
+ ============================== 
+
+
+eval say('I am now watering the plant')
+Robot says: "I am now watering the plant"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval pour('watering_can0', 'plant0')
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.57it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The plant has been watered')
+wait_for_trigger()
+
+
+ ============================== 
+
+
+eval say('The plant has been watered')
+Robot says: "The plant has been watered"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'The plant has not been watered for a week'}
+>>> say('I will water the plant now')
+>>> detect_objects()
+['apple0', 'banana0', 'banana1', 'basket0', 'bowl0', 'box0', 'coffee_cup0', 'counter0', 'cucumber0', 'cutting_board0', 'plant0', 'plastic_cup0', 'plastic_cup1', 'plate0', 'refrigerator0', 'salad0', 'table0', 'tape0', 'vase0', 'watering_can0', 'basket0', 'bowl0', 'box0', 'counter0', 'person', 'refrigerator0', 'table0', 'vase0']
+>>> say('I will get the watering can to water the plant')
+... move_to(get_obj_pos('watering_can0'))
+'success'
+>>> grab('watering_can0')
+'success'
+>>> move_to(get_obj_pos('plant0'))
+'success'
+>>> say('I am now watering the plant')
+... pour('watering_can0', 'plant0')
+'success'
+>>> say('The plant has been watered')
+... wait_for_trigger()
+RESULT
+False
+None of water0 at vase0
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 6
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.52it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.36s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will check the coffee table for any remaining dirty cups.')
+detect_objects()
+
+
+ ============================== 
+
+
+eval say('I will check the coffee table for any remaining dirty cups.')
+Robot says: "I will check the coffee table for any remaining dirty cups."
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.45it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will pick up the coffee cup from the coffee table')
+Robot says: "I will pick up the coffee cup from the coffee table"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.65it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('coffee_cup0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.25it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('coffee_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.09it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I am moving to the dishwasher to clean the coffee cup')
+move_to(get_obj_pos('dishwasher0'))
+
+
+ ============================== 
+
+
+eval say('I am moving to the dishwasher to clean the coffee cup')
+Robot says: "I am moving to the dishwasher to clean the coffee cup"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('dishwasher0'))
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.28it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will now put the coffee cup in the dishwasher')
+put_in('coffee_cup0', 'dishwasher0')
+
+
+ ============================== 
+
+
+eval say('I will now put the coffee cup in the dishwasher')
+Robot says: "I will now put the coffee cup in the dishwasher"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval put_in('coffee_cup0', 'dishwasher0')
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.74it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The dishwasher is closed, I will open it first')
+Robot says: "The dishwasher is closed, I will open it first"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.18it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('dishwasher0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.86it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_in('coffee_cup0', 'dishwasher0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.91it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval say('The coffee cup has been placed in the dishwasher')
+wait_for_trigger()
+
+
+ ============================== 
+
+
+eval say('The coffee cup has been placed in the dishwasher')
+Robot says: "The coffee cup has been placed in the dishwasher"
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'Why is the dirty coffee cup still on the coffee table'}
+>>> say('I will check the coffee table for any remaining dirty cups.')
+... detect_objects()
+['bench0', 'book0', 'bottle0', 'bottle_opener0', 'broom0', 'chair0', 'cloth0', 'coffee_cup0', 'coffee_cup1', 'coffee_table0', 'counter0', 'cucumber0', 'dishwasher0', 'milk_cartoon0', 'mop0', 'pan0', 'paper_towel0', 'pot0', 'remote0', 'salad0', 'sink0', 'stove0', 'table0', 'tape0', 'tissue0', 'watering_can0', 'bench0', 'chair0', 'coffee_table0', 'counter0', 'dishwasher0', 'person', 'sink0', 'stove0', 'table0']
+>>> say('I will pick up the coffee cup from the coffee table')
+>>> move_to(get_obj_pos('coffee_cup0'))
+'success'
+>>> grab('coffee_cup0')
+'success'
+>>> say('I am moving to the dishwasher to clean the coffee cup')
+... move_to(get_obj_pos('dishwasher0'))
+'success'
+>>> say('I will now put the coffee cup in the dishwasher')
+... put_in('coffee_cup0', 'dishwasher0')
+'target_container_is_closed'
+>>> say('The dishwasher is closed, I will open it first')
+>>> open('dishwasher0')
+'success'
+>>> put_in('coffee_cup0', 'dishwasher0')
+'success'
+>>> say('The coffee cup has been placed in the dishwasher')
+... wait_for_trigger()
+RESULT
+True
+
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 7
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.65it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will clear the desk for you.')
+Robot says: "I will clear the desk for you."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.05it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.44it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by removing the dinner knives from the desk.')
+Robot says: "I will start by removing the dinner knives from the desk."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.83it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval is_object_at_location('dinner_knife0', 'desk0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.58it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The dinner knife is not on the desk. I will check for other items to remove.')
+Robot says: "The dinner knife is not on the desk. I will check for other items to remove."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.69it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval is_object_at_location('dinner_knife1', 'desk0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.18it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The second dinner knife is also not on the desk. I will continue checking for other items.')
+Robot says: "The second dinner knife is also not on the desk. I will continue checking for other items."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.89it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval is_object_at_location('fork0', 'desk0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.46it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The fork is not on the desk. I will check for the second fork.')
+Robot says: "The fork is not on the desk. I will check for the second fork."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.50it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval is_object_at_location('fork1', 'desk0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.89it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The second fork is also not on the desk. I will continue checking for other items.')
+Robot says: "The second fork is also not on the desk. I will continue checking for other items."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.30it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval is_object_at_location('bottle0', 'desk0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.99it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('bottle0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.79it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bottle0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.62it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.11it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('bottle0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.34it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval say('The bottle has been removed from the desk.')
+Robot says: "The bottle has been removed from the desk."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.69it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'There is too much stuff on the desk - I cannot work like this'}
+>>> say('I will clear the desk for you.')
+>>> detect_objects()
+['apple0', 'banana1', 'basket0', 'bottle0', 'bowl0', 'box0', 'cloth0', 'coffee_cup0', 'counter0', 'cucumber0', 'desk0', 'dinner_knife0', 'dinner_knife1', 'fork0', 'fork1', 'keyboard0', 'monitor0', 'plastic_cup1', 'plate1', 'refrigerator0', 'salad0', 'table0', 'basket0', 'bowl0', 'counter0', 'desk0', 'person', 'refrigerator0', 'table0']
+>>> say('I will start by removing the dinner knives from the desk.')
+>>> is_object_at_location('dinner_knife0', 'desk0')
+False
+>>> say('The dinner knife is not on the desk. I will check for other items to remove.')
+>>> is_object_at_location('dinner_knife1', 'desk0')
+False
+>>> say('The second dinner knife is also not on the desk. I will continue checking for other items.')
+>>> is_object_at_location('fork0', 'desk0')
+False
+>>> say('The fork is not on the desk. I will check for the second fork.')
+>>> is_object_at_location('fork1', 'desk0')
+False
+>>> say('The second fork is also not on the desk. I will continue checking for other items.')
+>>> is_object_at_location('bottle0', 'desk0')
+True
+>>> move_to(get_obj_pos('bottle0'))
+'success'
+>>> grab('bottle0')
+'success'
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> put_down('bottle0', get_location_coordinates('table0'))
+'success'
+>>> say('The bottle has been removed from the desk.')
+>>> wait_for_trigger()
+RESULT
+False
+Object cloth0 should not be at desk0
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 8
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.33it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.26s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Please hand me the new monitor so I can assist you with it.')
+Robot says: "Please hand me the new monitor so I can assist you with it."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.09it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval receive_object_from_human('monitor')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.51it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I cannot find the monitor with you. Could you please check again?')
+Robot says: "I cannot find the monitor with you. Could you please check again?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.74it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I want to use my new monitor'}
+>>> say('Please hand me the new monitor so I can assist you with it.')
+>>> receive_object_from_human('monitor')
+'object_not_at_person'
+>>> say('I cannot find the monitor with you. Could you please check again?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 9
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.96it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.20s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will clean up the spilled coffee')
+Robot says: "I will clean up the spilled coffee"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.76it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.26it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will use a cloth to clean up the spilled coffee')
+Robot says: "I will use a cloth to clean up the spilled coffee"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.53it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('cloth0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.70it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cloth0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.27it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('coffee_cup0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.93it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I am now cleaning up the spilled coffee')
+Robot says: "I am now cleaning up the spilled coffee"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.80it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('cloth0', get_obj_pos('coffee_cup0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.45it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The spilled coffee has been cleaned up')
+Robot says: "The spilled coffee has been cleaned up"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.39it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I spilled my coffee'}
+>>> say('I will clean up the spilled coffee')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cloth0', 'coffee_cup0', 'cool_pack0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'paper_towel0', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I will use a cloth to clean up the spilled coffee')
+>>> move_to(get_obj_pos('cloth0'))
+'success'
+>>> grab('cloth0')
+'success'
+>>> move_to(get_obj_pos('coffee_cup0'))
+'success'
+>>> say('I am now cleaning up the spilled coffee')
+>>> put_down('cloth0', get_obj_pos('coffee_cup0'))
+'success'
+>>> say('The spilled coffee has been cleaned up')
+>>> wait_for_trigger()
+RESULT
+False
+Object tissue0 is not at person
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 10
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.26it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.35s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('What would you like me to prepare for your friend?')
+Robot says: "What would you like me to prepare for your friend?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.52it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'My friend is coming round soon. He will be hungry'}
+>>> say('What would you like me to prepare for your friend?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 11
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.62it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.28s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will prepare a vegan muesli for your friend')
+Robot says: "Ok, I will prepare a vegan muesli for your friend"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.86it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('apple0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'refrigerator0'), ('oat_milk_cartoon0', 'refrigerator0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.14it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by getting the oat milk from the refrigerator')
+Robot says: "I will start by getting the oat milk from the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.11it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.21it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.38it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('oat_milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.27it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Now I will get the cornflakes from the counter')
+Robot says: "Now I will get the cornflakes from the counter"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.68it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('oat_milk_cartoon0', get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.00it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('counter0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.86it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cornflakes0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.74it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the oat milk and cornflakes, I will now prepare the muesli')
+Robot says: "I have the oat milk and cornflakes, I will now prepare the muesli"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.61it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.63it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('cornflakes0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.51it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bowl0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.07it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the bowl, I will now add the cornflakes and oat milk to it')
+Robot says: "I have the bowl, I will now add the cornflakes and oat milk to it"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.73it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('bowl0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.14it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cornflakes0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.75it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_in('cornflakes0', 'bowl0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.38it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('oat_milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.95it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.13it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('oat_milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.33it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval pour('oat_milk_cartoon0', 'bowl0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.47it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The vegan muesli is ready. Would you like anything else?')
+Robot says: "The vegan muesli is ready. Would you like anything else?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.83it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'My friend would like to eat a vegan muesli'}
+>>> say('Ok, I will prepare a vegan muesli for your friend')
+>>> detect_object_locations()
+[('apple0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'refrigerator0'), ('oat_milk_cartoon0', 'refrigerator0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+>>> say('I will start by getting the oat milk from the refrigerator')
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> open('refrigerator0')
+'success'
+>>> grab('oat_milk_cartoon0')
+'success'
+>>> say('Now I will get the cornflakes from the counter')
+>>> put_down('oat_milk_cartoon0', get_location_coordinates('refrigerator0'))
+'success'
+>>> move_to(get_location_coordinates('counter0'))
+'success'
+>>> grab('cornflakes0')
+'success'
+>>> say('I have the oat milk and cornflakes, I will now prepare the muesli')
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> put_down('cornflakes0', get_location_coordinates('table0'))
+'success'
+>>> grab('bowl0')
+'success'
+>>> say('I have the bowl, I will now add the cornflakes and oat milk to it')
+>>> put_down('bowl0', get_location_coordinates('table0'))
+'success'
+>>> grab('cornflakes0')
+'success'
+>>> put_in('cornflakes0', 'bowl0')
+'success'
+>>> grab('oat_milk_cartoon0')
+'not_near_object'
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> grab('oat_milk_cartoon0')
+'success'
+>>> pour('oat_milk_cartoon0', 'bowl0')
+'success'
+>>> say('The vegan muesli is ready. Would you like anything else?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 12
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.89it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.37s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will prepare some normal muesli for you')
+Robot says: "Ok, I will prepare some normal muesli for you"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.02it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('apple0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'refrigerator0'), ('oat_milk_cartoon0', 'refrigerator0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.55it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by getting the milk from the refrigerator')
+Robot says: "I will start by getting the milk from the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.00it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.11it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.24it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Now I will get the cornflakes from the counter')
+Robot says: "Now I will get the cornflakes from the counter"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.77it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('milk_cartoon0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.42it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('counter0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.23it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cornflakes0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.60it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the milk and cornflakes, I will now prepare the muesli')
+Robot says: "I have the milk and cornflakes, I will now prepare the muesli"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.85it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.05it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('cornflakes0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.04it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bowl0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.35it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('bowl0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.22it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the bowl, I will now add the cornflakes and milk to it')
+Robot says: "I have the bowl, I will now add the cornflakes and milk to it"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.80it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cornflakes0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.69it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_in('cornflakes0', 'bowl0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.36it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.91it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval pour('milk_cartoon0', 'bowl0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.97it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The normal muesli is ready. Would you like anything else?')
+Robot says: "The normal muesli is ready. Would you like anything else?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.27it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I would like to eat some normal muesli'}
+>>> say('Ok, I will prepare some normal muesli for you')
+>>> detect_object_locations()
+[('apple0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'refrigerator0'), ('oat_milk_cartoon0', 'refrigerator0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+>>> say('I will start by getting the milk from the refrigerator')
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> grab('milk_cartoon0')
+'success'
+>>> say('Now I will get the cornflakes from the counter')
+>>> put_down('milk_cartoon0', get_location_coordinates('table0'))
+'success'
+>>> move_to(get_location_coordinates('counter0'))
+'success'
+>>> grab('cornflakes0')
+'success'
+>>> say('I have the milk and cornflakes, I will now prepare the muesli')
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> put_down('cornflakes0', get_location_coordinates('table0'))
+'success'
+>>> grab('bowl0')
+'success'
+>>> put_down('bowl0', get_location_coordinates('table0'))
+'success'
+>>> say('I have the bowl, I will now add the cornflakes and milk to it')
+>>> grab('cornflakes0')
+'success'
+>>> put_in('cornflakes0', 'bowl0')
+'success'
+>>> grab('milk_cartoon0')
+'success'
+>>> pour('milk_cartoon0', 'bowl0')
+'success'
+>>> say('The normal muesli is ready. Would you like anything else?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 13
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 59.34it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.31s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will open a window to freshen the air')
+Robot says: "I will open a window to freshen the air"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 54.03it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 52.89it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will open the window now')
+Robot says: "I will open the window now"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 52.15it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('window0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 52.50it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('window0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 51.70it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The window has been opened to freshen the air')
+Robot says: "The window has been opened to freshen the air"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 50.25it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'The air is stuffy'}
+>>> say('I will open a window to freshen the air')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plastic_cup1', 'plastic_cup2', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I will open the window now')
+>>> move_to(get_obj_pos('window0'))
+'success'
+>>> open('window0')
+'success'
+>>> say('The window has been opened to freshen the air')
+>>> wait_for_trigger()
+RESULT
+False
+Object door0 should be opened
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 14
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.78it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.31s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get something to help with the burn.')
+Robot says: "I will get something to help with the burn."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.36it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.34it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get a cool pack from the refrigerator.')
+Robot says: "I will get a cool pack from the refrigerator."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.74it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.80it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.53it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cool_pack0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.02it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I could not find a cool pack in the refrigerator.')
+wait_for_trigger()
+
+
+ ============================== 
+
+
+eval say('I could not find a cool pack in the refrigerator.')
+Robot says: "I could not find a cool pack in the refrigerator."
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'The coffee is too hot. I have burnt myself'}
+>>> say('I will get something to help with the burn.')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bottle1', 'bowl0', 'box0', 'coffee_cup0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plastic_cup1', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I will get a cool pack from the refrigerator.')
+>>> move_to(get_obj_pos('refrigerator0'))
+'success'
+>>> open('refrigerator0')
+'success'
+>>> grab('cool_pack0')
+'no_such_object'
+>>> say('I could not find a cool pack in the refrigerator.')
+... wait_for_trigger()
+RESULT
+False
+Object plastic_cup0 is not at person
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 15
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.84it/s]
+Batches: 100%|██████████| 5/5 [00:07<00:00,  1.52s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Ok, I will prepare yoghurt for you')
+Robot says: "Ok, I will prepare yoghurt for you"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.78it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('apple0', 'table0'), ('banana0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cucumber0', 'refrigerator0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'table0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('salad0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('tomato0', 'bowl0'), ('watering_can0', 'counter0'), ('window0', 'window0'), ('yoghurt0', 'refrigerator0')]
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.30it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get the yoghurt from the refrigerator')
+Robot says: "I will get the yoghurt from the refrigerator"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.81it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.19it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('yoghurt0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.41it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the yoghurt, would you like it in a bowl or a cup?')
+Robot says: "I have the yoghurt, would you like it in a bowl or a cup?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.43it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I would like to eat yoghurt'}
+>>> say('Ok, I will prepare yoghurt for you')
+>>> detect_object_locations()
+[('apple0', 'table0'), ('banana0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cucumber0', 'refrigerator0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'table0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('salad0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('tomato0', 'bowl0'), ('watering_can0', 'counter0'), ('window0', 'window0'), ('yoghurt0', 'refrigerator0')]
+>>> say('I will get the yoghurt from the refrigerator')
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> grab('yoghurt0')
+'success'
+>>> say('I have the yoghurt, would you like it in a bowl or a cup?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 16
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 55.47it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.33s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Please tell me where your medicine is or describe it so I can help you.')
+Robot says: "Please tell me where your medicine is or describe it so I can help you."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 50.66it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I need to take my medicine'}
+>>> say('Please tell me where your medicine is or describe it so I can help you.')
+>>> wait_for_trigger()
+RESULT
+False
+Object plastic_cup0 is not at person
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 17
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 50.28it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.37s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get you some pain relief if available, or would you prefer some water?')
+Robot says: "I will get you some pain relief if available, or would you prefer some water?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.11it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I have a headache'}
+>>> say('I will get you some pain relief if available, or would you prefer some water?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 18
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 50.39it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will check if there is anything to pour into your cup.')
+Robot says: "I will check if there is anything to pour into your cup."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.19it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 49.22it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I found a bottle that I can use to pour into your cup.')
+Robot says: "I found a bottle that I can use to pour into your cup."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.95it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('bottle1'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.43it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bottle1')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.18it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will now pour from the bottle into your cup.')
+Robot says: "I will now pour from the bottle into your cup."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.16it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval pour('bottle1', 'coffee_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.00it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Your cup has been filled.')
+Robot says: "Your cup has been filled."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.31it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'My cup is empty'}
+>>> say('I will check if there is anything to pour into your cup.')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bottle1', 'bowl0', 'box0', 'coffee_cup0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I found a bottle that I can use to pour into your cup.')
+>>> move_to(get_obj_pos('bottle1'))
+'success'
+>>> grab('bottle1')
+'success'
+>>> say('I will now pour from the bottle into your cup.')
+>>> pour('bottle1', 'coffee_cup0')
+'success'
+>>> say('Your cup has been filled.')
+>>> wait_for_trigger()
+RESULT
+False
+None of water1 at plastic_cup0
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 19
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.53it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.37s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will take care of the tea now.')
+Robot says: "I will take care of the tea now."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.98it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.77it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will pour the tea into a cup.')
+Robot says: "I will pour the tea into a cup."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.34it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('tea_pot1'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.77it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('tea_pot1')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.72it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('plastic_cup0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.76it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval pour('tea_pot1', 'plastic_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.84it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('It seems there is no tea in this teapot. I will check the other one.')
+Robot says: "It seems there is no tea in this teapot. I will check the other one."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.51it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('tea_pot1', get_obj_pos('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.91it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('tea_pot0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.81it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('tea_pot0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.46it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval pour('tea_pot0', 'plastic_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.56it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The tea has been poured into the cup.')
+Robot says: "The tea has been poured into the cup."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.31it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('tea_pot0', get_obj_pos('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.81it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'The 5 minutes are up. The tea is ready'}
+>>> say('I will take care of the tea now.')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plastic_cup1', 'plastic_cup2', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tea_bag0', 'tea_pot0', 'tea_pot1', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'tea_pot1', 'window0']
+>>> say('I will pour the tea into a cup.')
+>>> move_to(get_obj_pos('tea_pot1'))
+'success'
+>>> grab('tea_pot1')
+'success'
+>>> move_to(get_obj_pos('plastic_cup0'))
+'success'
+>>> pour('tea_pot1', 'plastic_cup0')
+'No liquid in source container'
+>>> say('It seems there is no tea in this teapot. I will check the other one.')
+>>> put_down('tea_pot1', get_obj_pos('table0'))
+'success'
+>>> move_to(get_obj_pos('tea_pot0'))
+'success'
+>>> grab('tea_pot0')
+'success'
+>>> pour('tea_pot0', 'plastic_cup0')
+'success'
+>>> say('The tea has been poured into the cup.')
+>>> put_down('tea_pot0', get_obj_pos('table0'))
+'success'
+>>> wait_for_trigger()
+RESULT
+False
+Object tea_bag0 should not be at tea_pot1
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 20
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.24it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.38s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Could you please clarify what you mean by "like this" with the walnuts?')
+Robot says: "Could you please clarify what you mean by "like this" with the walnuts?"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.71it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'How should i eat the walnuts like this?'}
+>>> say('Could you please clarify what you mean by "like this" with the walnuts?')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 21
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.87it/s]
+Batches: 100%|██████████| 5/5 [00:07<00:00,  1.51s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Would you like the walnuts to be shelled or chopped? Please let me know how you prefer them.')
+Robot says: "Would you like the walnuts to be shelled or chopped? Please let me know how you prefer them."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.79it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I would like to eat walnuts'}
+>>> say('Would you like the walnuts to be shelled or chopped? Please let me know how you prefer them.')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 22
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.76it/s]
+Batches: 100%|██████████| 5/5 [00:08<00:00,  1.62s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Would you like the peanuts to be shelled or whole? Please let me know how you prefer them.')
+Robot says: "Would you like the peanuts to be shelled or whole? Please let me know how you prefer them."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.82it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I would like to eat peanuts'}
+>>> say('Would you like the peanuts to be shelled or whole? Please let me know how you prefer them.')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 23
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.19it/s]
+Batches: 100%|██████████| 5/5 [00:07<00:00,  1.42s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will tidy up the area now.')
+Robot says: "I will tidy up the area now."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.80it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.10it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.93it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('plate0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.80it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I cannot find the plate. I will look for other items to tidy up.')
+Robot says: "I cannot find the plate. I will look for other items to tidy up."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.04it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('bottle0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.29it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bottle0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.12it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I have the bottle. I will put it in the recycling bin.')
+Robot says: "I have the bottle. I will put it in the recycling bin."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.00it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('basket0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.97it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_in('bottle0', 'basket0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.76it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The bottle has been placed in the recycling bin.')
+Robot says: "The bottle has been placed in the recycling bin."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.15it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I am full - please tidy up'}
+>>> say('I will tidy up the area now.')
+>>> detect_objects()
+['apple0', 'basket0', 'bench0', 'bottle0', 'bottle_opener0', 'broom0', 'chair0', 'cloth0', 'coffee_table0', 'counter0', 'dishwasher0', 'human0', 'milk_cartoon0', 'mop0', 'pan0', 'paper_towel0', 'pot0', 'refrigerator:0', 'remote0', 'salad0', 'sink0', 'stove0', 'table0', 'tape0', 'tissue0', 'watering_can0', 'basket0', 'bench0', 'chair0', 'coffee_table0', 'counter0', 'dishwasher0', 'plate0', 'refrigerator:0', 'sink0', 'stove0', 'table0']
+>>> move_to(get_obj_pos('table0'))
+'success'
+>>> grab('plate0')
+'no_such_object'
+>>> say('I cannot find the plate. I will look for other items to tidy up.')
+>>> move_to(get_obj_pos('bottle0'))
+'success'
+>>> grab('bottle0')
+'success'
+>>> say('I have the bottle. I will put it in the recycling bin.')
+>>> move_to(get_obj_pos('basket0'))
+'success'
+>>> put_in('bottle0', 'basket0')
+'success'
+>>> say('The bottle has been placed in the recycling bin.')
+>>> wait_for_trigger()
+RESULT
+False
+Object coffee_cup0 is not at dishwasher0
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 24
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.75it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will prepare a glass of lactose-free milk for you')
+Robot says: "I will prepare a glass of lactose-free milk for you"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 49.54it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_object_locations()
+[('apple0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'refrigerator0'), ('oat_milk_cartoon0', 'refrigerator0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 50.04it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get the oat milk from the refrigerator as it is lactose-free')
+Robot says: "I will get the oat milk from the refrigerator as it is lactose-free"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 49.25it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 55.97it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 48.38it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('oat_milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 52.09it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Now I will pour the oat milk into a cup')
+Robot says: "Now I will pour the oat milk into a cup"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 48.77it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('oat_milk_cartoon0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 52.90it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('plastic_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.52it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.42it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('plastic_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.67it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('oat_milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.37it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_down('plastic_cup0', get_location_coordinates('table0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.10it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('oat_milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.52it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval pour('oat_milk_cartoon0', 'plastic_cup0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.11it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Here is your glass of lactose-free milk. Enjoy!')
+Robot says: "Here is your glass of lactose-free milk. Enjoy!"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.50it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I want a glass of milk - I am lactose intolerant'}
+>>> say('I will prepare a glass of lactose-free milk for you')
+>>> detect_object_locations()
+[('apple0', 'table0'), ('bottle0', 'table0'), ('bowl0', 'table0'), ('box0', 'counter0'), ('cornflakes0', 'counter0'), ('counter0', 'counter0'), ('cutting_board0', 'table0'), ('door0', 'door0'), ('hammer0', 'box0'), ('kitchen_knife0', 'counter0'), ('milk_cartoon0', 'refrigerator0'), ('oat_milk_cartoon0', 'refrigerator0'), ('plastic_cup0', 'table0'), ('plastic_cup1', 'table0'), ('plastic_cup2', 'table0'), ('plate0', 'table0'), ('refrigerator0', 'refrigerator0'), ('sink0', 'sink0'), ('spatula0', 'counter0'), ('sponge0', 'counter0'), ('spoon0', 'counter0'), ('table0', 'table0'), ('tissue0', 'counter0'), ('watering_can0', 'counter0'), ('window0', 'window0')]
+>>> say('I will get the oat milk from the refrigerator as it is lactose-free')
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> open('refrigerator0')
+'success'
+>>> grab('oat_milk_cartoon0')
+'success'
+>>> say('Now I will pour the oat milk into a cup')
+>>> put_down('oat_milk_cartoon0', get_location_coordinates('table0'))
+'success'
+>>> grab('plastic_cup0')
+'not_near_object'
+>>> move_to(get_location_coordinates('table0'))
+'success'
+>>> grab('plastic_cup0')
+'success'
+>>> grab('oat_milk_cartoon0')
+'hand_occupied'
+>>> put_down('plastic_cup0', get_location_coordinates('table0'))
+'success'
+>>> grab('oat_milk_cartoon0')
+'success'
+>>> pour('oat_milk_cartoon0', 'plastic_cup0')
+'success'
+>>> say('Here is your glass of lactose-free milk. Enjoy!')
+>>> wait_for_trigger()
+RESULT
+False
+Object oat_milk_cartoon0 is not at refrigerator0
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 25
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.82it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Would you like the peanuts to be shelled or whole? Please let me know how you prefer them.')
+Robot says: "Would you like the peanuts to be shelled or whole? Please let me know how you prefer them."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.34it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I want to watch TV and snack some peanuts'}
+>>> say('Would you like the peanuts to be shelled or whole? Please let me know how you prefer them.')
+>>> wait_for_trigger()
+RESULT
+False
+Experiment aborted, agent asked a question for which there is no predefined answer.
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 26
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.34it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.31s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will check and organize the milk on the counter.')
+Robot says: "I will check and organize the milk on the counter."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.33it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.78it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('milk_cartoon0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.97it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.63it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval close('milk_cartoon0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.84it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_location_coordinates('refrigerator0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.60it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.29it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval put_in('milk_cartoon0', 'refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.47it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval close('refrigerator0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.85it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('The milk has been organized and stored in the refrigerator.')
+wait_for_trigger()
+
+
+ ============================== 
+
+
+eval say('The milk has been organized and stored in the refrigerator.')
+Robot says: "The milk has been organized and stored in the refrigerator."
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+
+
+
+
+Updated/Defined variables after execution: {}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'Why is the milk still on the counter?'}
+>>> say('I will check and organize the milk on the counter.')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plastic_cup1', 'plastic_cup2', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> move_to(get_obj_pos('milk_cartoon0'))
+'success'
+>>> grab('milk_cartoon0')
+'success'
+>>> close('milk_cartoon0')
+'success'
+>>> move_to(get_location_coordinates('refrigerator0'))
+'success'
+>>> open('refrigerator0')
+'success'
+>>> put_in('milk_cartoon0', 'refrigerator0')
+'success'
+>>> close('refrigerator0')
+'success'
+>>> say('The milk has been organized and stored in the refrigerator.')
+... wait_for_trigger()
+RESULT
+True
+
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 27
+-------------------------------------------------------------------------------- 
+
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.84it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.31s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will get you water and open the window for fresh air')
+Robot says: "I will get you water and open the window for fresh air"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.47it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.38it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will start by opening the window for fresh air')
+Robot says: "I will start by opening the window for fresh air"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 43.03it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('window0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.28it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval open('window0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.65it/s]
+{'stop': ['>>>', '```']}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ ============================== 
+
+
+eval say('The window has been opened to let in fresh air')
+Robot says: "The window has been opened to let in fresh air"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.57it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Now I will get you a bottle of water')
+Robot says: "Now I will get you a bottle of water"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.39it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('bottle0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.26it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('bottle0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.35it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Here is your water')
+Robot says: "Here is your water"
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.46it/s]
+{'stop': ['>>>', '```']}
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I feel dizzy i need water and fresh air'}
+>>> say('I will get you water and open the window for fresh air')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'plastic_cup0', 'plastic_cup1', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'sponge0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I will start by opening the window for fresh air')
+>>> move_to(get_obj_pos('window0'))
+'success'
+>>> open('window0')
+'success'
+>>> say('The window has been opened to let in fresh air')
+>>> say('Now I will get you a bottle of water')
+>>> move_to(get_obj_pos('bottle0'))
+'success'
+>>> grab('bottle0')
+'success'
+>>> say('Here is your water')
+>>> wait_for_trigger()
+RESULT
+False
+Object plastic_cup1 is not at person
+
+
+
+ --------------------------------------------------------------------------------
+Executing experiment 28
+-------------------------------------------------------------------------------- 
+
+
+
+/common/homes/students/uqqbd_mayr/code/research_projects/jubot/dialog/python/llm_planner/config/saycan/dynamic_prompt_db.json
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.86it/s]
+Batches: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will help you clean your hand.')
+Robot says: "I will help you clean your hand."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.91it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval detect_objects()
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 41.64it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('I will use a cloth to clean your hand.')
+Robot says: "I will use a cloth to clean your hand."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.51it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval move_to(get_obj_pos('cloth0'))
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.92it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval grab('cloth0')
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.80it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval say('Please show me your hand so I can clean it.')
+Robot says: "Please show me your hand so I can clean it."
+Updated/Defined variables after execution: {}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 44.42it/s]
+{'stop': ['>>>', '```']}
+
+
+ ============================== 
+
+
+eval wait_for_trigger()
+
+
+
+ Full execution trace:
+{'type': 'dialog', 'text': 'I sloshed coffee all over my hand'}
+>>> say('I will help you clean your hand.')
+>>> detect_objects()
+['apple0', 'banana0', 'bottle0', 'bowl0', 'box0', 'cloth0', 'coffee_cup0', 'cool_pack0', 'cornflakes0', 'counter0', 'cucumber0', 'cutting_board0', 'door0', 'hammer0', 'kitchen_knife0', 'milk_cartoon0', 'paper_towel0', 'plate0', 'refrigerator0', 'salad0', 'sink0', 'spatula0', 'spoon0', 'table0', 'tissue0', 'tomato0', 'watering_can0', 'window0', 'bowl0', 'box0', 'counter0', 'door0', 'person', 'refrigerator0', 'sink0', 'table0', 'window0']
+>>> say('I will use a cloth to clean your hand.')
+>>> move_to(get_obj_pos('cloth0'))
+'success'
+>>> grab('cloth0')
+'success'
+>>> say('Please show me your hand so I can clean it.')
+>>> wait_for_trigger()
+RESULT
+False
+Object cool_pack0 is not at person
+2 / 29 experiments were successful
+Failed experiments:
+Experiment 0 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 1 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 2 : Object cucumber0 is not at refrigerator0
+Experiment 3 : Object mop0 is not at person
+Experiment 4 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 5 : None of water0 at vase0
+Experiment 7 : Object cloth0 should not be at desk0
+Experiment 8 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 9 : Object tissue0 is not at person
+Experiment 10 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 11 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 12 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 13 : Object door0 should be opened
+Experiment 14 : Object plastic_cup0 is not at person
+Experiment 15 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 16 : Object plastic_cup0 is not at person
+Experiment 17 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 18 : None of water1 at plastic_cup0
+Experiment 19 : Object tea_bag0 should not be at tea_pot1
+Experiment 20 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 21 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 22 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 23 : Object coffee_cup0 is not at dishwasher0
+Experiment 24 : Object oat_milk_cartoon0 is not at refrigerator0
+Experiment 25 : Experiment aborted, agent asked a question for which there is no predefined answer.
+Experiment 27 : Object plastic_cup1 is not at person
+Experiment 28 : Object cool_pack0 is not at person
+
+Process finished with exit code 0

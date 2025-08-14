@@ -1,0 +1,88 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+table:0
+counter:0
+apple:0
+banana:0
+cucumber:0
+salad:0
+sponge:0
+spoon:0
+bowl:0
+bowl:1
+bowl:2
+bowl:3
+bowl:4
+walnuts:0
+pistachios:0
+peanuts:0
+hazelnuts:0
+nutcracker:0
+plate:0
+hammer:0
+kitchen_knife:0
+cornflakes:0
+tissue:0
+box:0
+watering_can:0
+spatula:0
+milk_cartoon:0
+milk:0
+bottle:0
+water:0
+cutting_board:0
+chair:0
+door:0
+sink:0
+window:0
+refrigerator:0
+END-OBJECTS
+RELATIONS
+on spoon:0 counter:0
+in salad:0 refrigerator:0
+in cucumber:0 refrigerator:0
+in walnuts:0 bowl:0
+in peanuts:0 bowl:1
+in pistachios:0 bowl:2
+in hazelnuts:0 bowl:4
+on bowl:0 table:0
+on bowl:1 counter:0
+on bowl:2 counter:0
+on bowl:3 counter:0
+on bowl:4 table:0
+on nutcracker:0 counter:0
+on tissue:0 counter:0
+on apple:0 table:0
+on banana:0 table:0
+on plate:0 table:0
+on cutting_board:0 table:0
+on sponge:0 counter:0
+on spatula:0 counter:0
+on bottle:0 table:0
+on box:0 counter:0
+on cornflakes:0 counter:0
+on watering_can:0 counter:0
+on kitchen_knife:0 counter:0
+on milk_cartoon:0 table:0
+in hammer:0 box:0
+liquid_in milk:0 milk_cartoon:0
+liquid_in water:0 bottle:0
+at robot:0 table:0
+on human:0 chair:0
+at chair:0 table:0
+opened milk_cartoon:0
+closed refrigerator:0
+closed bottle:0
+closed door:0
+closed window:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 apple:0 banana:0 plate:0 cutting_board:0 bottle:0 milk_cartoon:0 milk:0 water:0 walnuts:0 bowl:0 hazelnuts:0 bowl:4
+counter0 counter:0 tissue:0 sponge:0 spatula:0 box:0 watering_can:0 kitchen_knife:0 hammer:0 spoon:0 bowl:1 bowl:2 bowl:3 peanuts:0 pistachios:0 nutcracker:0
+refrigerator0 refrigerator:0 cucumber:0 salad:0
+door0 door:0
+sink0 sink:0
+chair0 chair:0
+window0 window:0
+END-LOCATIONS

@@ -1,0 +1,22 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+robot:0
+akita_black_bowl:0
+wine_bottle:0
+table:0
+white_cabinet:0
+wine_rack:0
+END-OBJECTS
+RELATIONS
+on akita_black_bowl:0 table:0
+on wine_bottle:0 table:0
+on white_cabinet:0 table:0
+on wine_rack:0 table:0
+opened white_cabinet:0
+at robot:0 table:0
+at human:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 akita_black_bowl:0 wine_bottle:0 white_cabinet:0 wine_rack:0
+END-LOCATIONS

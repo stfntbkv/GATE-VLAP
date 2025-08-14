@@ -1,0 +1,1060 @@
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the wine bottle on the top of the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+1) Identify the object to be placed: “wine bottle” maps to wine_bottle0 (present in the objects list).
+2) Identify the target surface: “top of the drawer.” There is no dedicated drawer object, but wooden_cabinet0 is the only cabinet-like furniture that plausibly contains drawers. Thus, we interpret “top of the drawer” as the top surface of wooden_cabinet0.
+3) Map “on top of” to the domain predicate on ?o ?s, which encodes an object being on a supporting surface.
+4) Compose the goal: place wine_bottle0 on wooden_cabinet0. No additional predicates (e.g., opened/closed) are required for “on top of.”
+
+Goal state (PDDL):
+(:goal
+  (and
+    (on wine_bottle0 wooden_cabinet0)
+  )
+)
+----------------------------LIBERO Results:---------------------------
+Task: Put the wine bottle on the top of the drawer
+Generated Plan:
+grasp robot0 wine_bottle0 table0 table0
+place robot0 wine_bottle0 wooden_cabinet0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (on  wine_bottle0 wooden_cabinet0))
+Desired Goal: (and (on  wine_bottle0 wooden_cabinet0))
+Goal Reached: True
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Open the top layer of the drawer and put the bowl inside". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- Identify the “drawer”: The only plausible drawer-like storage in the object list is wooden_cabinet0. It is initially (closed wooden_cabinet0), which matches something that can be opened.
+- Identify the “bowl”: The only bowl is akita_black_bowl0.
+- Interpret “top layer of the drawer”: The domain has no predicates for drawer layers; it only represents open/closed state and containment. Therefore, we model the request as opening the cabinet and placing the bowl inside that cabinet.
+- Translate to predicates:
+  - “Open …” -> (opened wooden_cabinet0)
+  - “Put the bowl inside [the drawer]” -> (in akita_black_bowl0 wooden_cabinet0)
+- No extra conditions (e.g., closing afterward) are added because they were not requested.
+
+Goal state in PDDL
+(:goal
+  (and
+    (opened wooden_cabinet0)
+    (in akita_black_bowl0 wooden_cabinet0)
+  )
+)
+----------------------------LIBERO Results:---------------------------
+Task: Open the top layer of the drawer and put the bowl inside
+Generated Plan:
+open robot0 wooden_cabinet0 table0
+grasp robot0 akita_black_bowl0 table0 table0
+putin robot0 akita_black_bowl0 wooden_cabinet0 table0
+; cost = 3.0 (union cost)
+Generated Goal: (and (opened  wooden_cabinet0) (in  akita_black_bowl0 wooden_cabinet0))
+Desired Goal: (and (in  akita_black_bowl0 wooden_cabinet0))
+Goal Reached: True
+Costs are: 3 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.6
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the bowl on the stove". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- Identify the target object from “the bowl”: in the objects list, the only bowl is akita_black_bowl0.
+- Identify the target support surface from “the stove”: in the objects list, the stove is flat_stove0.
+- Choose the appropriate predicate to express “X is on Y”: the domain provides (on ?o - carry ?s - support).
+- The user only specifies the final placement; no additional conditions (e.g., robot location, cabinet state) are required for the goal.
+- Therefore, the desired goal is that the bowl is on the stove.
+
+Goal state in PDDL:
+(:goal
+  (on akita_black_bowl0 flat_stove0)
+)
+----------------------------LIBERO Results:---------------------------
+Task: Put the bowl on the stove
+Generated Plan:
+grasp robot0 akita_black_bowl0 table0 table0
+place robot0 akita_black_bowl0 flat_stove0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (on  akita_black_bowl0 flat_stove0))
+Desired Goal: (and (on  akita_black_bowl0 flat_stove0))
+Goal Reached: True
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Turn on the stove". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- The user’s request “Turn on the stove” maps directly to the domain predicate that represents an object being switched on: turn_on.
+- The only stove-like object present in the problem objects is flat_stove0, and it is already present on the table, so it is the correct target.
+- No other predicates are required to satisfy the user’s intent (e.g., robot location, cabinet state) because they are plan details, not goal conditions.
+- The initial state does not assert either turn_on or turn_off for flat_stove0, so the minimal goal that captures the request is to make turn_on true for flat_stove0.
+
+Goal state in PDDL:
+(:goal
+  (and
+    (turn_on flat_stove0)
+  )
+)
+----------------------------LIBERO Results:---------------------------
+Task: Turn on the stove
+Generated Plan:
+turn_on robot0 flat_stove0 table0
+; cost = 1.0 (union cost)
+Generated Goal: (and (turn_on  flat_stove0))
+Desired Goal: (and (turn_on  flat_stove0))
+Goal Reached: True
+Costs are: 1 -- minimal costs: 6
+Costs minimal: False
+Costs Rate: 0.16666666666666666
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the cream cheese on the bowl". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- The request is to place cream cheese relative to the bowl.
+- In this domain, placement “on” uses predicate (on ?o ?s) where ?s must be a support. From the init, the bowl itself is placed “on” the table: (on akita_black_bowl0 table0). This shows the bowl is a carried object, not a support surface.
+- Bowls are containers; the correct predicate to express a non-liquid inside a container is (in ?o ?c).
+- Cream cheese is a non-liquid item in this domain, so the correct spatial relation with a bowl is “in,” not “on.”
+
+Goal state in PDDL:
+(:goal (in cream_cheese0 akita_black_bowl0))
+----------------------------LIBERO Results:---------------------------
+Task: Put the cream cheese on the bowl
+Generated Plan:
+grasp robot0 cream_cheese0 table0 table0
+putin robot0 cream_cheese0 akita_black_bowl0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (in  cream_cheese0 akita_black_bowl0))
+Desired Goal: (and (on  cream_cheese0 akita_black_bowl0))
+Goal Reached: False
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the bowl on the plate". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- Parse the request: “Put the bowl on the plate” describes a spatial relation where the bowl should end up resting on top of the plate.
+- Identify objects in the problem: the only bowl is akita_black_bowl0 and the only plate is plate0.
+- Select the correct predicate: The domain’s predicate (on ?o - carry ?s - support) captures an object being on top of a supporting surface. A plate serves as a support and a bowl is a carryable object, so (on akita_black_bowl0 plate0) is the correct relational goal.
+- Exclude other predicates: (in ...) is for containment, not appropriate here; (liquid_in ...) is for liquids; (at ...) is for actors’ locations; (inhand ...) is for being held, which is not the final desired state.
+- No extra conditions needed: The request only requires the final relation “bowl on plate,” not constraints about other locations or hand states.
+
+Goal state in PDDL
+(:goal
+  (and
+    (on akita_black_bowl0 plate0)
+  )
+)
+----------------------------LIBERO Results:---------------------------
+Task: Put the bowl on the plate
+Generated Plan:
+grasp robot0 akita_black_bowl0 table0 table0
+place robot0 akita_black_bowl0 plate0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (on  akita_black_bowl0 plate0))
+Desired Goal: (and (on  akita_black_bowl0 plate0))
+Goal Reached: True
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Push the plate to the front of the stove". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+Retrying request to /chat/completions in 0.420048 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- The request is about the final placement of an object, not how it is moved, so the goal should specify a state, not an action sequence.
+- The relevant object is plate0, and the reference object is flat_stove0.
+- The domain offers spatial relations only via on(o, s), in(o, c), liquid_in, and at(a, l). There is no predicate to express “in front of.”
+- Therefore, the closest representable state to “in front of the stove” is to have the plate supported by the stove itself. This is captured by on(plate0, flat_stove0).
+- No additional conditions (e.g., at, inhand, open/closed) are required by the user’s request.
+
+Goal state (PDDL)
+(:goal (on plate0 flat_stove0))
+----------------------------LIBERO Results:---------------------------
+Task: Push the plate to the front of the stove
+Generated Plan:
+grasp robot0 plate0 table0 table0
+place robot0 plate0 flat_stove0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (on  plate0 flat_stove0))
+Desired Goal: (and (on  plate0 table0))
+Goal Reached: False
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the wine bottle on the rack". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- The instruction “Put the wine bottle on the rack” specifies a final spatial relation between two known objects.
+- In the object list, “wine_bottle0” is the wine bottle and “wine_rack0” is the rack.
+- The domain uses the predicate (on ?o ?s) to represent that an object is on top of a support.
+- Therefore, the desired final condition is that the wine bottle is on the rack: (on wine_bottle0 wine_rack0).
+
+Goal (PDDL):
+(:goal (and (on wine_bottle0 wine_rack0)))
+----------------------------LIBERO Results:---------------------------
+Task: Put the wine bottle on the rack
+Generated Plan:
+grasp robot0 wine_bottle0 table0 table0
+place robot0 wine_bottle0 wine_rack0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (on  wine_bottle0 wine_rack0))
+Desired Goal: (and (on  wine_bottle0 wine_rack0))
+Goal Reached: True
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Open the middle layer of the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Reasoning steps:
+- The user intent is to have a storage component “opened.” In this domain, “open” is represented by the predicate (opened ?op - open).
+- Among the available objects, the only closable/openable storage-like object present in the initial state is wooden_cabinet0, which is currently (closed wooden_cabinet0). No explicit “drawer” or “middle layer” objects exist in the problem, and the predicate set has no way to reference layers or specific drawers.
+- Therefore, the closest achievable goal that matches the request is to have the relevant storage element opened. Since there is only one such candidate, we target wooden_cabinet0.
+- The “middle layer” detail cannot be represented with the given predicates and objects; thus it is abstracted to opening the cabinet/drawer entity available.
+
+Goal state (PDDL):
+(:goal (and (opened wooden_cabinet0)))
+----------------------------LIBERO Results:---------------------------
+Task: Open the middle layer of the drawer
+Generated Plan:
+open robot0 wooden_cabinet0 table0
+; cost = 1.0 (union cost)
+Generated Goal: (and (opened  wooden_cabinet0))
+Desired Goal: (and (opened  wooden_cabinet0))
+Goal Reached: True
+Costs are: 1 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.2
+------------------------------------------------------------------------
+NEW LIBERO CASE --------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+; Describes that ?ob is turned on
+(turn_on  ?ob - object)
+; Describes that ?ob is turned off
+(turn_off  ?ob - object)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        table0 - table
+        plate0 - plate
+        robot0 - robot_profile
+        akita_black_bowl0 - akita_black_bowl
+        cream_cheese0 - cream_cheese
+        human0 - human
+        wooden_cabinet0 - wooden_cabinet
+        flat_stove0 - flat_stove
+        wine_rack0 - wine_rack
+        wine_bottle0 - wine_bottle
+    )
+    
+    (:init 
+        (at  human0 table0)
+        (closed  wooden_cabinet0)
+        (on  wooden_cabinet0 table0)
+        (on  flat_stove0 table0)
+        (on  wine_bottle0 table0)
+        (on  wine_rack0 table0)
+        (on  plate0 table0)
+        (on  akita_black_bowl0 table0)
+        (at  robot0 table0)
+        (on  cream_cheese0 table0)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Put the bowl on the top of the drawer". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- Identify target object: “the bowl” uniquely matches akita_black_bowl0.
+- Identify destination support: “the drawer” is best grounded to wooden_cabinet0 (the only drawer/cabinet-like furniture present).
+- Map spatial relation: “on the top of” corresponds to the predicate (on ?o ?s), which describes an object being on the supporting surface.
+- No additional conditions (e.g., opened/closed) are implied by “on top of,” so we only require the placement relation.
+- Therefore, the desired world state is the bowl being on top of the drawer/cabinet.
+
+Goal state (PDDL):
+(:goal
+  (and
+    (on akita_black_bowl0 wooden_cabinet0)
+  )
+)
+----------------------------LIBERO Results:---------------------------
+Task: Put the bowl on the top of the drawer
+Generated Plan:
+grasp robot0 akita_black_bowl0 table0 table0
+place robot0 akita_black_bowl0 wooden_cabinet0 table0
+; cost = 2.0 (union cost)
+Generated Goal: (and (on  akita_black_bowl0 wooden_cabinet0))
+Desired Goal: (and (on  akita_black_bowl0 wooden_cabinet0))
+Goal Reached: True
+Costs are: 2 -- minimal costs: 5
+Costs minimal: False
+Costs Rate: 0.4
+------------------------------------------------------------------------

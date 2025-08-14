@@ -1,0 +1,46 @@
+{
+    "affordance_types": [
+        {
+            "name": "grasp",
+            "id": "0",
+            "prompt": "(Can a typical {} be grasped with one hand?)",
+            "description": "The object can be grasped in any way"
+        },
+        {
+            "name": "cut",
+            "id": "1",
+            "prompt": "(Can a typical {} be used to cut through objects and does it have a blade?)",
+            "description": "The object can be used to cut other objects"
+        },
+        {
+            "name": "scoop",
+            "id": "2",
+            "prompt": "(Can a typical {} be used to scoop material?)",
+            "description": "The object can be used to scoop or shove material like powder or objects"
+        },
+        {
+            "name": "contain",
+            "id": "3",
+            "prompt": "(Is a typical {} designed to put either objects or liquids inside of it?)",
+            "description": "The object is designed to put either objects or liquids inside of it"
+        },
+        {
+            "name": "pound",
+            "id": "4",
+            "prompt": "(Is a {} useful to pound some objects with. Do not answer yes if objects be pound on top of a {})",
+            "description": "The object can be swung to pound other objects"
+        },
+        {
+            "name": "support",
+            "id": "5",
+            "prompt": "(Does a typical {} provide good support for objects standing on it?)",
+            "description": "The object provides good support for other objects standing on it"
+        },
+        {
+            "name": "wrap-grasp",
+            "id": "6",
+            "prompt": "(Can a typical {} be grasped with one hand and is it possible to wrap ones hand around it or parts of it)",
+            "description": "Its possible to wrap ones fingers around the object or parts of it"
+        }
+    ]
+}

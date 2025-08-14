@@ -1,0 +1,24 @@
+SCENE-DESCRIPTION
+OBJECTS
+table:0
+table:1
+apple:0
+bowl:1
+counter:0
+fork:1
+fork:0
+dinner_knife:0
+dinner_knife:1
+END-OBJECTS
+RELATIONS
+on bowl:1 table:0
+in apple:0 bowl:1
+on fork:0 counter:0
+on fork:1 counter:0
+on dinner_knife:1 counter:0
+on dinner_knife:0 counter:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 apple:0 bowl:1
+counter0 fork:1 fork:0 dinner_knife:0 dinner_knife:1
+END-LOCATIONS

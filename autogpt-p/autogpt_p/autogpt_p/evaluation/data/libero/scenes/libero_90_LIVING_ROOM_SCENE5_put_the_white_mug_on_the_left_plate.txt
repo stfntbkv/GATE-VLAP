@@ -1,0 +1,23 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+robot:0
+porcelain_mug:0
+red_coffee_mug:0
+white_yellow_mug:0
+plate:0
+plate:1
+table:0
+END-OBJECTS
+RELATIONS
+on plate:0 table:0
+on plate:1 table:0
+on red_coffee_mug:0 table:0
+on white_yellow_mug:0 table:0
+on porcelain_mug:0 table:0
+at robot:0 table:0
+at human:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 porcelain_mug:0 red_coffee_mug:0 white_yellow_mug:0 plate:0 plate:1
+END-LOCATIONS

@@ -1,0 +1,34 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+table:0
+counter:0
+milk_cartoon:0
+milk:0
+banana:0
+plastic_cup:0
+door:0
+sink:0
+window:0
+refrigerator:0
+END-OBJECTS
+RELATIONS
+on plastic_cup:0 table:0
+on banana:0 table:0
+on milk_cartoon:0 table:0
+liquid_in milk:0 milk_cartoon:0
+at robot:0 table:0
+at human:0 table:0
+opened milk_cartoon:0
+closed door:0
+closed window:0
+closed refrigerator:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 banana:0 plastic_cup:0 milk_cartoon:0 milk:0
+counter0 counter:0
+door0 door:0
+sink0 sink:0
+window0 window:0
+refrigerator0 refrigerator:0
+END-LOCATIONS

@@ -1,0 +1,12 @@
+task,scene_file,desired_goal,min_costs
+put the coke can down on the second counter,saycan_e_embodiment/simple_kitchen1.txt,and (and (or (on  coke0 counter2))),4
+put the coke can down on the second counter,saycan_e_embodiment/simple_kitchen2.txt,and (and (or (on  coke0 counter2))),4
+put the coke can down on the second counter,saycan_e_embodiment/simple_kitchen3.txt,and (and (or (on  coke0 counter2))),3
+put the coke can down on the second counter,saycan_e_embodiment/simple_kitchen4.txt,and (and (or (on  coke0 counter2))),1
+put the sponge on the first counter,saycan_e_embodiment/simple_kitchen5.txt,and (and (or (on  sponge0 counter1))),4
+put the sponge on the first counter,saycan_e_embodiment/simple_kitchen6.txt,and (and (or (on  sponge0 counter1))),4
+put the sponge on the first counter,saycan_e_embodiment/simple_kitchen7.txt,and (and (or (on  sponge0 counter1))),1
+put the sponge on the first counter,saycan_e_embodiment/simple_kitchen8.txt,and (and (or (on  sponge0 counter1))),5
+pick up the drink from the second counter,saycan_e_embodiment/simple_kitchen9.txt,and (and (or (inhand  sprite0 robot0))),2
+"I left something on the table, can you throw it away?",saycan_e_embodiment/simple_kitchen10.txt,and (and (or (in  water0 trash_can0))),4
+"I left something on the table or the counter, can you bring it to me?",saycan_e_embodiment/simple_kitchen11.txt,and (and (or (inhand  grapefruit_soda0 human0))),3

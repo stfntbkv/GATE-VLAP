@@ -1,0 +1,1293 @@
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        lime_soda0 - lime_soda
+        sponge0 - sponge
+        jalapeno_chips0 - jalapeno_chips
+        human0 - human
+        counter2 - counter
+        apple0 - apple
+        red_bull0 - red_bull
+        tea0 - tea
+        robot0 - robot_profile
+        water0 - water
+        table0 - table
+        7up0 - 7up
+        pepsi0 - pepsi
+        grapefruit_soda0 - grapefruit_soda
+        counter1 - counter
+        multigrain_chips0 - multigrain_chips
+        sprite0 - sprite
+        coke0 - coke
+        energy_bar0 - energy_bar
+        trash_can0 - trash_can
+    )
+    
+    (:init 
+        (on  red_bull0 table0)
+        (on  sprite0 table0)
+        (on  lime_soda0 counter2)
+        (on  apple0 counter2)
+        (on  tea0 counter2)
+        (on  pepsi0 table0)
+        (on  sponge0 counter1)
+        (on  coke0 counter1)
+        (on  multigrain_chips0 counter2)
+        (at  robot0 counter1)
+        (on  water0 counter2)
+        (on  energy_bar0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  grapefruit_soda0 counter1)
+        (on  7up0 counter2)
+        (= total-cost 0)
+        (= (cost human0) 100)
+        (= (cost robot0) 1)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "put an energy bar and water bottle on the table". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.500000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.824000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.186000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.256000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.558000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.308000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.296000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.007000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.954000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.678000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.246000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.484000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.634000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.975000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.558000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.042000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.558000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.510000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.744000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.316000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.606000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 0.966000 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /chat/completions in 1.558000 seconds
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        jalapeno_chips0 - jalapeno_chips
+        multigrain_chips0 - multigrain_chips
+        tea0 - tea
+        7up0 - 7up
+        lime_soda0 - lime_soda
+        apple0 - apple
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        robot0 - robot_profile
+        counter1 - counter
+        sprite0 - sprite
+        counter2 - counter
+        trash_can0 - trash_can
+        sponge0 - sponge
+        pepsi0 - pepsi
+        human0 - human
+        coke0 - coke
+        grapefruit_soda0 - grapefruit_soda
+        table0 - table
+        water0 - water
+    )
+    
+    (:init 
+        (on  sponge0 counter1)
+        (on  energy_bar0 counter1)
+        (on  sprite0 table0)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  pepsi0 table0)
+        (on  7up0 counter2)
+        (on  red_bull0 table0)
+        (on  multigrain_chips0 counter2)
+        (on  coke0 counter1)
+        (on  tea0 counter2)
+        (on  jalapeno_chips0 counter2)
+        (at  robot0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  lime_soda0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "put an energy bar and water bottle on the table". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- Parse the request: “put an energy bar and water bottle on the table” implies both items should end up resting on the table surface.
+- Map words to specific objects in the problem:
+  - “energy bar” → energy_bar0 (only energy bar present)
+  - “water bottle” → water0 (the only water object, already used with on in init so it is a carryable bottle)
+  - “the table” → table0 (only table)
+- Map action outcome to predicates: “on [object] [support]” captures an object being placed on a support surface.
+- Compose the goal as a conjunction: both objects must be on the table at the end.
+
+Goal state in PDDL
+(:goal (and
+  (on energy_bar0 table0)
+  (on water0 table0)
+))
+----------------------------Results:----------------------------------
+Task: put an energy bar and water bottle on the table
+Generated Plan:
+grasp robot0 energy_bar0 counter1 counter1
+move robot0 counter1 table0
+place robot0 energy_bar0 table0 table0
+move robot0 table0 counter2
+grasp robot0 water0 counter2 counter2
+move robot0 counter2 table0
+place robot0 water0 table0 table0
+; cost = 7.0 (union cost)
+Generated Goal: (and (on  energy_bar0 table0) (on  water0 table0))
+Desired Goal: (and (on  energy_bar0 table0) (on  water0 table0))
+Goal Reached: True
+Costs are: 7 -- minimal costs: 7
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        jalapeno_chips0 - jalapeno_chips
+        multigrain_chips0 - multigrain_chips
+        tea0 - tea
+        7up0 - 7up
+        lime_soda0 - lime_soda
+        apple0 - apple
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        robot0 - robot_profile
+        counter1 - counter
+        sprite0 - sprite
+        counter2 - counter
+        trash_can0 - trash_can
+        sponge0 - sponge
+        pepsi0 - pepsi
+        human0 - human
+        coke0 - coke
+        grapefruit_soda0 - grapefruit_soda
+        table0 - table
+        water0 - water
+    )
+    
+    (:init 
+        (on  sponge0 counter1)
+        (on  energy_bar0 counter1)
+        (on  sprite0 table0)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  pepsi0 table0)
+        (on  7up0 counter2)
+        (on  red_bull0 table0)
+        (on  multigrain_chips0 counter2)
+        (on  coke0 counter1)
+        (on  tea0 counter2)
+        (on  jalapeno_chips0 counter2)
+        (at  robot0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  lime_soda0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "bring me a lime soda and a bag of chips". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+Retrying request to /chat/completions in 0.385741 seconds
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- Interpret the request: “bring me a lime soda and a bag of chips” means the human wants to have those items handed to them.
+- Map to domain objects: The unique lime soda in the problem is lime_soda0. The request for “a bag of chips” can be satisfied by any available chips; the problem includes jalapeno_chips0 and multigrain_chips0.
+- Choose the predicate that encodes “handed to the human”: The domain defines inhand ?o ?a as “object o is in the hand of actor a,” and it explicitly allows a human to hold multiple objects. This is the most direct representation of “bring me.”
+- Handle the ambiguity of “a bag of chips”: Since either jalapeno_chips0 or multigrain_chips0 suffices, use a disjunction for the chips part of the goal.
+- No additional constraints (like robot position) are necessary to satisfy the user’s request, so the goal focuses on human possession.
+
+Goal state in PDDL
+(:goal
+  (and
+    (inhand lime_soda0 human0)
+    (or
+      (inhand jalapeno_chips0 human0)
+      (inhand multigrain_chips0 human0)
+    )
+  )
+)
+----------------------------Results:----------------------------------
+Task: bring me a lime soda and a bag of chips
+Generated Plan:
+move robot0 counter1 counter2
+grasp robot0 lime_soda0 counter2 counter2
+move robot0 counter2 human0
+handover robot0 human0 lime_soda0
+move robot0 human0 counter2
+grasp robot0 multigrain_chips0 counter2 counter2
+move robot0 counter2 human0
+handover robot0 human0 multigrain_chips0
+; cost = 8.0 (union cost)
+Generated Goal: (and (inhand  lime_soda0 human0) (or (inhand  jalapeno_chips0 human0) (inhand  multigrain_chips0 human0)))
+Desired Goal: (and (inhand  lime_soda0 human0) (or (inhand  jalapeno_chips0 human0) (inhand  multigrain_chips0 human0)))
+Goal Reached: True
+Costs are: 8 -- minimal costs: 8
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        jalapeno_chips0 - jalapeno_chips
+        multigrain_chips0 - multigrain_chips
+        tea0 - tea
+        7up0 - 7up
+        lime_soda0 - lime_soda
+        apple0 - apple
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        robot0 - robot_profile
+        counter1 - counter
+        sprite0 - sprite
+        counter2 - counter
+        trash_can0 - trash_can
+        sponge0 - sponge
+        pepsi0 - pepsi
+        human0 - human
+        coke0 - coke
+        grapefruit_soda0 - grapefruit_soda
+        table0 - table
+        water0 - water
+    )
+    
+    (:init 
+        (on  sponge0 counter1)
+        (on  energy_bar0 counter1)
+        (on  sprite0 table0)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  pepsi0 table0)
+        (on  7up0 counter2)
+        (on  red_bull0 table0)
+        (on  multigrain_chips0 counter2)
+        (on  coke0 counter1)
+        (on  tea0 counter2)
+        (on  jalapeno_chips0 counter2)
+        (at  robot0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  lime_soda0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Can you throw away the apple and bring me a coke". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- “Throw away the apple” means the apple should end up inside the trash can. In this domain, putting a non-liquid object inside a container is represented by the predicate (in object container). The objects are apple0 and trash_can0, so this becomes (in apple0 trash_can0).
+- “Bring me a coke” means the coke should be handed to the human. The domain represents an object being in someone’s hand with (inhand object actor). The objects are coke0 and human0, so this becomes (inhand coke0 human0).
+- No additional predicates are required: the plan will implicitly perform any necessary movements or grasps to achieve these end states.
+
+Goal state in PDDL:
+(:goal (and
+    (in apple0 trash_can0)
+    (inhand coke0 human0)
+))
+----------------------------Results:----------------------------------
+Task: Can you throw away the apple and bring me a coke
+Generated Plan:
+grasp robot0 coke0 counter1 counter1
+move robot0 counter1 human0
+handover robot0 human0 coke0
+move robot0 human0 counter2
+grasp robot0 apple0 counter2 counter2
+move robot0 counter2 trash_can0
+putin robot0 apple0 trash_can0 trash_can0
+; cost = 7.0 (union cost)
+Generated Goal: (and (in  apple0 trash_can0) (inhand  coke0 human0))
+Desired Goal: (and (in  apple0 trash_can0) (inhand  coke0 human0))
+Goal Reached: True
+Costs are: 7 -- minimal costs: 7
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        jalapeno_chips0 - jalapeno_chips
+        multigrain_chips0 - multigrain_chips
+        tea0 - tea
+        7up0 - 7up
+        lime_soda0 - lime_soda
+        apple0 - apple
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        robot0 - robot_profile
+        counter1 - counter
+        sprite0 - sprite
+        counter2 - counter
+        trash_can0 - trash_can
+        sponge0 - sponge
+        pepsi0 - pepsi
+        human0 - human
+        coke0 - coke
+        grapefruit_soda0 - grapefruit_soda
+        table0 - table
+        water0 - water
+    )
+    
+    (:init 
+        (on  sponge0 counter1)
+        (on  energy_bar0 counter1)
+        (on  sprite0 table0)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  pepsi0 table0)
+        (on  7up0 counter2)
+        (on  red_bull0 table0)
+        (on  multigrain_chips0 counter2)
+        (on  coke0 counter1)
+        (on  tea0 counter2)
+        (on  jalapeno_chips0 counter2)
+        (at  robot0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  lime_soda0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "bring me a 7up can and a tea". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- The phrase "bring me" implies the human should end up possessing the requested items.
+- In this domain, a person possessing an object is represented by the predicate inhand ?o ?a.
+- The only human in the problem is human0, so "me" maps to human0.
+- The requested items correspond to the specific objects 7up0 (a 7up can) and tea0 (a tea).
+- No additional predicates (like at or on) are necessary to represent successful delivery; inhand suffices.
+
+Goal state in PDDL:
+(:goal
+  (and
+    (inhand 7up0 human0)
+    (inhand tea0 human0)
+  )
+)
+----------------------------Results:----------------------------------
+Task: bring me a 7up can and a tea
+Generated Plan:
+move robot0 counter1 counter2
+grasp robot0 tea0 counter2 counter2
+move robot0 counter2 human0
+handover robot0 human0 tea0
+move robot0 human0 counter2
+grasp robot0 7up0 counter2 counter2
+move robot0 counter2 human0
+handover robot0 human0 7up0
+; cost = 8.0 (union cost)
+Generated Goal: (and (inhand  7up0 human0) (inhand  tea0 human0))
+Desired Goal: (and (inhand  7up0 human0) (inhand  tea0 human0))
+Goal Reached: True
+Costs are: 8 -- minimal costs: 8
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        jalapeno_chips0 - jalapeno_chips
+        multigrain_chips0 - multigrain_chips
+        tea0 - tea
+        7up0 - 7up
+        lime_soda0 - lime_soda
+        apple0 - apple
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        robot0 - robot_profile
+        counter1 - counter
+        sprite0 - sprite
+        counter2 - counter
+        trash_can0 - trash_can
+        sponge0 - sponge
+        pepsi0 - pepsi
+        human0 - human
+        coke0 - coke
+        grapefruit_soda0 - grapefruit_soda
+        table0 - table
+        water0 - water
+    )
+    
+    (:init 
+        (on  sponge0 counter1)
+        (on  energy_bar0 counter1)
+        (on  sprite0 table0)
+        (on  apple0 counter2)
+        (on  water0 counter2)
+        (on  pepsi0 table0)
+        (on  7up0 counter2)
+        (on  red_bull0 table0)
+        (on  multigrain_chips0 counter2)
+        (on  coke0 counter1)
+        (on  tea0 counter2)
+        (on  jalapeno_chips0 counter2)
+        (at  robot0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  lime_soda0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "throw away all the items on the table". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning:
+- Interpret the request: “throw away all the items on the table” means all objects currently on table0 should end up in the trash can (trash_can0).
+- Identify the relevant items from the initial state: the objects with facts (on X table0) are sprite0, pepsi0, and red_bull0.
+- Choose the predicate that represents being thrown away: placing an object inside a trash can corresponds to the predicate (in ?o ?c). The trash can object is trash_can0, which serves as the container.
+- Formulate the goal as all these items being in the trash can: conjunctively require each to be in trash_can0.
+
+PDDL goal:
+(:goal
+  (and
+    (in sprite0 trash_can0)
+    (in pepsi0 trash_can0)
+    (in red_bull0 trash_can0)
+  )
+)
+----------------------------Results:----------------------------------
+Task: throw away all the items on the table
+Generated Plan:
+move robot0 counter1 table0
+grasp robot0 red_bull0 table0 table0
+putin robot0 red_bull0 sprite0 table0
+grasp robot0 sprite0 table0 table0
+move robot0 table0 trash_can0
+pour robot0 sprite0 red_bull0 trash_can0 trash_can0
+putin robot0 sprite0 trash_can0 trash_can0
+move robot0 trash_can0 table0
+grasp robot0 pepsi0 table0 table0
+move robot0 table0 trash_can0
+putin robot0 pepsi0 trash_can0 trash_can0
+; cost = 11.0 (union cost)
+Generated Goal: (and (in  sprite0 trash_can0) (in  pepsi0 trash_can0) (in  red_bull0 trash_can0))
+Desired Goal: (and (in  pepsi0 trash_can0) (in  red_bull0 trash_can0) (in  sprite0 trash_can0))
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        lime_soda0 - lime_soda
+        7up0 - 7up
+        apple0 - apple
+        coke0 - coke
+        pepsi0 - pepsi
+        multigrain_chips0 - multigrain_chips
+        robot0 - robot_profile
+        trash_can0 - trash_can
+        sponge0 - sponge
+        table0 - table
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        counter1 - counter
+        grapefruit_soda0 - grapefruit_soda
+        human0 - human
+        tea0 - tea
+        water0 - water
+        counter2 - counter
+        jalapeno_chips0 - jalapeno_chips
+        sprite0 - sprite
+    )
+    
+    (:init 
+        (on  red_bull0 table0)
+        (on  7up0 counter2)
+        (on  sprite0 table0)
+        (on  water0 counter2)
+        (at  robot0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  multigrain_chips0 counter2)
+        (on  apple0 counter2)
+        (on  energy_bar0 counter1)
+        (on  pepsi0 table0)
+        (on  coke0 counter1)
+        (on  lime_soda0 counter2)
+        (on  sponge0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  tea0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "put an energy bar and water bottle on the table". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- Parse the request: “put an energy bar and water bottle on the table” means the final state must have both items on the table surface.
+- Map to objects in the problem:
+  - “energy bar” → energy_bar0 (unique in objects).
+  - “water bottle” → water0 (already modeled as a carryable object since it’s initially (on water0 counter2)).
+  - “the table” → table0 (the only table and a support).
+- Choose the correct predicate:
+  - For placing discrete items on a surface, use (on ?o ?s) where ?o is a carry object and ?s is a support. This matches both energy_bar0 and water0 and the table0.
+  - Do not use (in ...) or (liquid_in ...) because we are not placing items into containers, and water0 is treated as a carryable bottle, not free liquid.
+- Formulate the goal: both items must be on table0. No additional constraints (robot location, grasp states, etc.) are needed in the goal.
+
+Goal state in PDDL
+(:goal
+  (and
+    (on energy_bar0 table0)
+    (on water0 table0)
+  )
+)
+----------------------------Results:----------------------------------
+Task: put an energy bar and water bottle on the table
+Generated Plan:
+grasp robot0 energy_bar0 counter1 counter1
+move robot0 counter1 table0
+place robot0 energy_bar0 table0 table0
+move robot0 table0 counter2
+grasp robot0 water0 counter2 counter2
+move robot0 counter2 table0
+place robot0 water0 table0 table0
+; cost = 7.0 (union cost)
+Generated Goal: (and (on  energy_bar0 table0) (on  water0 table0))
+Desired Goal: (and (on  energy_bar0 table0) (on  water0 table0))
+Goal Reached: True
+Costs are: 7 -- minimal costs: 7
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        lime_soda0 - lime_soda
+        7up0 - 7up
+        apple0 - apple
+        coke0 - coke
+        pepsi0 - pepsi
+        multigrain_chips0 - multigrain_chips
+        robot0 - robot_profile
+        trash_can0 - trash_can
+        sponge0 - sponge
+        table0 - table
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        counter1 - counter
+        grapefruit_soda0 - grapefruit_soda
+        human0 - human
+        tea0 - tea
+        water0 - water
+        counter2 - counter
+        jalapeno_chips0 - jalapeno_chips
+        sprite0 - sprite
+    )
+    
+    (:init 
+        (on  red_bull0 table0)
+        (on  7up0 counter2)
+        (on  sprite0 table0)
+        (on  water0 counter2)
+        (at  robot0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  multigrain_chips0 counter2)
+        (on  apple0 counter2)
+        (on  energy_bar0 counter1)
+        (on  pepsi0 table0)
+        (on  coke0 counter1)
+        (on  lime_soda0 counter2)
+        (on  sponge0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  tea0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "bring me a lime soda and a bag of chips". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Step-by-step reasoning
+- Interpret “bring me X” in this domain as “the human ends up holding X,” which maps to predicate (inhand ?o ?a) with the human as the actor.
+- Identify the concrete objects that satisfy “a lime soda”: lime_soda0 is the only lime_soda in the problem.
+- Identify candidates for “a bag of chips”: the problem includes multigrain_chips0 and jalapeno_chips0, both bags of chips.
+- Since the user did not specify which chips, allow either bag. This is naturally expressed with a disjunction over the two chip objects.
+- Require both items to be brought, so use a conjunction for lime soda and “some chips,” with the chips choice expressed as a disjunction.
+
+Goal in PDDL
+(:goal
+  (and
+    (inhand lime_soda0 human0)
+    (or
+      (inhand multigrain_chips0 human0)
+      (inhand jalapeno_chips0 human0)
+    )
+  )
+)
+----------------------------Results:----------------------------------
+Task: bring me a lime soda and a bag of chips
+Generated Plan:
+move robot0 counter1 counter2
+grasp robot0 lime_soda0 counter2 counter2
+move robot0 counter2 human0
+handover robot0 human0 lime_soda0
+move robot0 human0 counter2
+grasp robot0 multigrain_chips0 counter2 counter2
+move robot0 counter2 human0
+handover robot0 human0 multigrain_chips0
+; cost = 8.0 (union cost)
+Generated Goal: (and (inhand  lime_soda0 human0) (or (inhand  multigrain_chips0 human0) (inhand  jalapeno_chips0 human0)))
+Desired Goal: (and (inhand  lime_soda0 human0) (or (inhand  jalapeno_chips0 human0) (inhand  multigrain_chips0 human0)))
+Goal Reached: True
+Costs are: 8 -- minimal costs: 8
+Costs minimal: True
+Costs Rate: 1.0
+----------------------------------------------------------------------------
+NEW CASE ------------------------------------------------------------------
+You are the humanoid service robot robotXYZ assisting a human in a kitchen. Your task is to turn the user request into a goal state in PDDL. The predicates of the domain are defined as follows:
+(:predicates
+; Describes ?o being on top of the supporting ?s
+(on  ?o - carry ?s - support)
+; Do not use this predicate
+(indirect_on  ?o - carry ?s - support)
+; Describes the non liquid ?o being in the container ?c
+(in  ?o - carry ?c - contain)
+; Describes the liquid ?li being in the container ?lc
+(liquid_in  ?li - liquid ?lc - liquid-contain)
+; Describes the actor ?a being at the location ?l which can also be another actor
+(at  ?a - actor ?l - location)
+; Describes the object ?o being in the hand of a human or robot ?a. A human can have multiple objects in their hand
+(inhand  ?o - carry ?a - actor)
+; Describes the object ?ac being carried together by the actors ?a and ?r
+(carried  ?ac - assisted-carry ?a - actor ?r - actor)
+; Do not use this predicate
+(free  ?s - support)
+; Do not use this predicate
+(reachable  ?o - carry ?l - location ?a - actor)
+; Describes that ?op is open
+(opened  ?op - open)
+; Describes that ?cl is closed
+(closed  ?cl - close)
+(warm  ?co - consumable)
+(liquid_warm  ?li - liquid)
+(wet  ?ws - wet-swipe)
+; Describes that a consumable ?co is chopped
+(chopped  ?co - consumable)
+; Describes that an object ?ob has been cleaned with water
+(clean  ?ob - object)
+; Describes that the robot has visited the given location ?l
+(visited  ?l - location)
+; Do not use this predicate
+(hand_occupied  ?a - actor)
+) 
+ and the problem without the goal is:
+ (define (problem test)
+
+    (:domain robotic_planning)
+    
+    (:objects
+        lime_soda0 - lime_soda
+        7up0 - 7up
+        apple0 - apple
+        coke0 - coke
+        pepsi0 - pepsi
+        multigrain_chips0 - multigrain_chips
+        robot0 - robot_profile
+        trash_can0 - trash_can
+        sponge0 - sponge
+        table0 - table
+        red_bull0 - red_bull
+        energy_bar0 - energy_bar
+        counter1 - counter
+        grapefruit_soda0 - grapefruit_soda
+        human0 - human
+        tea0 - tea
+        water0 - water
+        counter2 - counter
+        jalapeno_chips0 - jalapeno_chips
+        sprite0 - sprite
+    )
+    
+    (:init 
+        (on  red_bull0 table0)
+        (on  7up0 counter2)
+        (on  sprite0 table0)
+        (on  water0 counter2)
+        (at  robot0 counter1)
+        (on  jalapeno_chips0 counter2)
+        (on  multigrain_chips0 counter2)
+        (on  apple0 counter2)
+        (on  energy_bar0 counter1)
+        (on  pepsi0 table0)
+        (on  coke0 counter1)
+        (on  lime_soda0 counter2)
+        (on  sponge0 counter1)
+        (on  grapefruit_soda0 counter1)
+        (on  tea0 counter2)
+        (= total-cost 0)
+        (= (cost robot0) 1)
+        (= (cost human0) 100)
+    )
+    
+    (:metric minimize (total-cost))
+    
+)
+ 
+ The user asks "Can you throw away the apple and bring me a coke". Explain step by step how you concluded that this is the desired goal state. Express the goal state in correct PDDL Syntaxwithout using the ? operator. You are allowed to use disjunctions
+
+
+
+
+
+
+
+
+ ooooooo33333
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

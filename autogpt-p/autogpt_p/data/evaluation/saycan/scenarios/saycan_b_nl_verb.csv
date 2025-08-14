@@ -1,0 +1,16 @@
+task,scene_file,desired_goal,min_costs
+throw away the apple,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  apple0 trash_can0))),4
+can you bring me a sponge?,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (inhand  sponge0 human0))),3
+bring me a coke can,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (inhand  coke0 human0))),3
+grab me an apple,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (inhand  apple0 human0))),4
+grab me a 7up from the table,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (inhand  7up0 human0))),4
+deliver the red bull to the first counter,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (on  red_bull0 counter1))),4
+throw away the jalapeno chips,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  jalapeno_chips0 trash_can0))),4
+restock the rice chips on the second counter,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (on  rice_chips0 counter2))),4
+recycle the coke can,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  coke0 trash_can0))),3
+throw away the water bottle,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  water0 trash_can0))),4
+bring me something hydrating,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (inhand  water0 human0) (inhand  grapefruit_soda0 human0) (inhand  7up0 human0) (inhand  sprite0 human0) (inhand  coke0 human0) (inhand  red_bull0 human0))),3
+put the apple back on the second counter,saycan_b_nl_verb/simple_kitchen_apple_in_hand.txt,and (and (or (on  apple0 counter2))),2
+recycle the 7up,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  7up0 trash_can0))),4
+throw away the jalapeno chips,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  jalapeno_chips0 trash_can0))),4
+compost the apple,saycan_b_nl_verb/simple_kitchen.txt,and (and (or (in  apple0 trash_can0))),4

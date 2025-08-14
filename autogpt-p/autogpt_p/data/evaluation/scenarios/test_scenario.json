@@ -1,0 +1,117 @@
+{
+  "lmp_cfg": "saycan/repl",
+  "environments": {
+"clean_floor": [
+            [
+                "remote0",
+                "coffee_table0"
+            ],
+            [
+                "tissue0",
+                "coffee_table0"
+            ],
+            [
+                "paper_towel0",
+                "counter0"
+            ],
+            [
+                "book0",
+                "chair0"
+            ],
+            [
+                "bottle_opener0",
+                "counter0"
+            ],
+            [
+                "sponge0",
+                "counter0"
+            ],
+            [
+                "pan0",
+                "counter0"
+            ],
+            [
+                "pot0",
+                "counter0"
+            ],
+            [
+                "milk_cartoon0",
+                "table0"
+            ],
+            [
+                "cucumber0",
+                "table0"
+            ],
+            [
+                "salad0",
+                "table0"
+            ],
+            [
+                "liquid",
+                "water0",
+                "watering_can0"
+            ],
+            [
+                "watering_can0",
+                "counter0"
+            ],
+            [
+                "tape0",
+                "counter0"
+            ],
+            [
+                "mop0",
+                "counter0"
+            ],
+            [
+                "broom0",
+                "counter0"
+            ],
+            [
+                null,
+                "person"
+            ],
+            [
+                "robot0",
+                "counter0"
+            ],
+            [
+                "coffee_table0",
+                "coffee_table0"
+            ],
+            [
+                "counter0",
+                "counter0"
+            ],
+            [
+                "table0",
+                "table0"
+            ],
+            [
+                "bucket0",
+                "bucket0"
+            ]
+        ]
+  },
+  "experiments": [
+        {
+            "initial_event": "The floor is dirty and I want to wet-clean it",
+            "object_locations": "@clean_floor",
+            "goal_state": {
+                "object_locations": [
+                    [
+                        "mop0",
+                        "person"
+                    ]
+                ],
+                "liquid_locations": {
+                    "water0": "bucket0"
+                },
+                "open_closed": {},
+                "chopped": [],
+                "forbidden_locations": [],
+                "correction_event": "I want to hold the mop and you should put water into the bucket"
+            }
+        }
+  ]
+}

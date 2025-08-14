@@ -1,0 +1,32 @@
+task,scene_file,desired_goal,correction
+Help me prepare a salad with tomatoes,simple_kitchen.txt,and (chopped tomato0) (chopped salad0) (in salad0 bowl0) (in tomato0 bowl0),I want salad and tomatoes be chopped in a bowl
+I want to have breakfast with cut banana and apple,simple_kitchen.txt,and (in apple0 bowl0) (in banana0 bowl0) (chopped apple0) (chopped banana0),I want cut banana and cut apple in a bowl
+Put everything that needs to be cooled in the refrigerator,complex_kitchen4.txt,and (in milk_cartoon0 refrigerator0) (in cucumber0 refrigerator0) (in salad0 refrigerator0),You should put the milk carton and the cucumber and the salad into the refrigerator
+The floor is dirty and I want to wet-clean it,clean_floor.txt,and (inhand mop0 human0) (liquid_in water0 bucket0),I want to hold the mop and you should put water into the bucket
+How should I eat the cucumber like this,steak.txt,and (chopped  cucumber0) (or (inhand fork0 human0) (on fork0 table0)) (or (inhand dinner_knife0 human0) (on dinner_knife0 table0)),I want the cucumber to be chopped and i want to have either a fork and a dinner knife on the table or in my hand.
+The plant has not been watered for a week,watering.txt,and (liquid_in water0 vase0),You should put water into the vase
+Why is the dirty coffee cup still on the coffee table,coffee_cup.txt,and (in coffee_cup1 dishwasher0),Put the coffee cup which is on the coffee table into the dishwasher
+There is too much stuff on the desk - I cannot work like this,desk_cleaning.txt,and (on monitor0 desk0) (on keyboard0 desk0) (not (on plate0 desk0)) (not (on cloth0 desk0)) (not (on bowl0 desk0))(not (on bottle0 desk0)),Only the monitor and the keyboad should be on the desk. Remove everything else
+I want to use my new keyboard,keyboard.txt,and (on keyboard0 desk0) (at  human0 desk0),I want you to put the keyboard on the desk
+I spilled my coffee,simple_kitchen_spilled.txt,or (inhand tissue0 human0) (inhand cloth0 human0) (inhand sponge0 human0) (inhand  tissue0 robot0) (inhand  cloth0 robot0) (inhand  sponge0 robot0),I want either a tissue or sponge or cloth in my or in your hand
+My friend is coming round soon. He'll be hungry,dining_room_prep.txt,and (on plate0 table0) (on plate1 table0) (on fork0 table0) (on fork1 table0) (on dinner_knife0 table0) (on dinner_knife0 table0),Prepare the table with two plates and two forks and two dinner knifes
+My friend would like to eat a vegan muesli,simple_kitchen_vegan_muesli.txt,and (in cornflakes0 bowl0) (liquid_in oat_milk0 bowl0) (inhand spoon0 human0),I want vegan milk and cornflakes in a bowl and i want to have a spoon
+I would like to eat some normal muesli,simple_kitchen_vegan_muesli.txt,and (in cornflakes0 bowl0) (liquid_in milk0 bowl0) (inhand spoon0 human0),I want normal milk and cornflakes in a bowl and i want to have a spoon
+The air is stuffy,simple_kitchen.txt,and (opened door0) (opened window0),Open the window and the door
+The coffee is too hot. I have burnt my mouth,simple_kitchen_coffee_hot.txt,and (inhand plastic_cup0 human0) (liquid_in water1 plastic_cup0),I want a glass of cooled water
+I would like to eat yoghurt,simple_kitchen_yoghurt.txt,and (inhand yoghurt0 human0) (inhand spoon0 human0),I want a yoghurt and a spoon to eat it
+I need to take my medicine,simple_kitchen_coffee_hot.txt,and (inhand plastic_cup0 human0) (liquid_in water0 plastic_cup0),I want a glass of water
+I have a headache,simple_kitchen_coffee_hot.txt,and (inhand plastic_cup0 human0) (liquid_in water0 plastic_cup0),I want a glass of water
+My cup is empty,simple_kitchen_empty_cup.txt,and (liquid_in water0 plastic_cup0),Refill my cup with water
+The 5 minutes are up. The tea is ready,simple_kitchen_tea_bag.txt,not (in tea_bag0 tea_pot0),Remove the tea bag from the teapot
+How should i eat the walnuts like this?,simple_kitchen_nutcracker.txt,and (inhand nutcracker0 human0) (on bowl3 table0),I want an empty bowl and the nutcracker
+I would like to eat walnuts,simple_kitchen_nuts.txt,and (in walnuts0 bowl0) (on bowl0 table0) (inhand nutcracker0 human0) (on bowl3 table0),I want the bowl with walnuts and an empty bowl and the nutcracker
+I would like to eat peanuts,simple_kitchen_nuts.txt,and (in peanuts0 bowl1) (on bowl1 table0) (on bowl3 table0),I want the bowl with peanuts and an empty bowl
+I'm full - please tidy up,eating_fridge.txt,and (in plate0 dishwasher0) (in coffee_cup0 dishwasher0) (in bottle0 dishwasher0) (in salad0 refrigerator0) (in milk_cartoon0 refrigerator0) (in cucumber0 refrigerator0) (closed dishwasher0),Put the plate and the coffee cup and the bottle into the dishwasher and salad and the cucumber and the milk carton into the fridge. Close the dishwasher afterwards
+I want a glass of milk - I am lactose intolerant,simple_kitchen_vegan_coffee.txt,and (in oat_milk_cartoon0 refrigerator0) (liquid_in oat_milk0 coffee_cup0) (inhand coffee_cup0 human0) (closed oat_milk_cartoon0),I want to have a cup of vegan milk and you should close the milk carton and put it back into the fridge afterwards
+I want to watch TV and snack some peanuts,complex_kitchen_TV_snack.txt,and (inhand remote0 human0) (on bowl0 table0) (on bowl2 table0) (in peanuts0 bowl0),I want to have the bowl with the peanuts and an empty bowl and the remote
+Why is the milk still on the table?,simple_kitchen.txt,and (closed milk_cartoon0) (in milk_cartoon0 refrigerator0),Close the milk carton and put it into the refrigerator
+I feel dizzy i need water and fresh air,simple_kitchen_dizzy.txt,and (opened window0) (inhand plastic_cup0 human0) (liquid_in water0 plastic_cup0),Open the window and bring me a cup of water
+Why are the vegan milk and the normal milk still on the table?,simple_kitchen_vegan_coffee.txt,and (closed oat_milk_cartoon0) (in oat_milk_cartoon0 refrigerator0) (closed milk_cartoon0) (in milk_cartoon0 refrigerator0),Close the milk cartons and put them into the refrigerator
+I sloshed hot coffee all over my hand,simple_kitchen_spilled.txt,and (inhand sponge0 robot0) (wet sponge0) (inhand cool_pack0 human0),Bring a wet sponge and a cool pack for me
+I am freezing,simple_kitchen_open_window.txt,and (closed window0),Close the window

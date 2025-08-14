@@ -1,0 +1,29 @@
+SCENE-DESCRIPTION
+OBJECTS
+counter:2
+apple:0
+grapefruit_soda:0
+trash_can:0
+table:0
+coke:0
+water:0
+red_bull:0
+counter:1
+robot:0
+human:0
+END-OBJECTS
+RELATIONS
+on coke:0 trash_can:0
+on grapefruit_soda:0 counter:1
+on water:0 table:0
+on apple:0 trash_can:0
+on red_bull:0 trash_can:0
+at robot:0 counter:1
+END-RELATIONS
+LOCATIONS
+human0 human:0
+trash_can0 apple:0 coke:0 trash_can:0 red_bull:0
+counter1 grapefruit_soda:0 robot:0 counter:1
+table0 table:0 water:0
+counter2 counter:2
+END-LOCATIONS

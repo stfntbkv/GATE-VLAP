@@ -1,0 +1,16 @@
+task,scene_file,desired_goal,min_costs
+pick up the coke can,saycan_a_nl_primitive/simple_kitchen.txt,and (and (or (inhand  coke0 robot0))),1
+put the coke can in your gripper,saycan_a_nl_primitive/simple_kitchen.txt,and (and (or (inhand  coke0 robot0))),1
+grasp the coke can,saycan_a_nl_primitive/simple_kitchen.txt,and (and (or (inhand  coke0 robot0))),1
+hold onto the coke can,saycan_a_nl_primitive/simple_kitchen.txt,and (and (or (inhand  coke0 robot0))),1
+lift and hold the coke can up,saycan_a_nl_primitive/simple_kitchen.txt,and (and (or (inhand  coke0 robot0))),1
+put the coke can down,saycan_a_nl_primitive/simple_kitchen_coke_in_hand.txt,or(and (and (or (on  coke0 table0) (on  coke0 counter1) (on  coke0 counter2))) (not (inhand robot0 coke0))),1
+place the coke can on the table,saycan_a_nl_primitive/simple_kitchen_coke_in_hand.txt,and (and (or (on  coke0 table0))),2
+let go of the coke can,saycan_a_nl_primitive/simple_kitchen_coke_in_hand.txt,or(and (and (or (on  coke0 table0) (on  coke0 counter1) (on  coke0 counter2))) (not (inhand robot0 coke0))),1
+release the coke can,saycan_a_nl_primitive/simple_kitchen_coke_in_hand.txt,or(and (and (or (on  coke0 table0) (on  coke0 counter1) (on  coke0 counter2))) (not (inhand robot0 coke0))),1
+place the coke can,saycan_a_nl_primitive/simple_kitchen_coke_in_hand.txt,or(and (and (or (on  coke0 table0) (on  coke0 counter1) (on  coke0 counter2))) (not (inhand robot0 coke0))),1
+move to the table,saycan_a_nl_primitive/simple_kitchen.txt,and (at  robot0 table0),1
+go to the table,saycan_a_nl_primitive/simple_kitchen.txt,and (at  robot0 table0),1
+park at the table,saycan_a_nl_primitive/simple_kitchen.txt,and (at  robot0 table0),1
+come to the table,saycan_a_nl_primitive/simple_kitchen.txt,and (at  robot0 table0),1
+navigate to the table,saycan_a_nl_primitive/simple_kitchen.txt,and (at  robot0 table0),1

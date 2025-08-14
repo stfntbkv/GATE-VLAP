@@ -1,0 +1,39 @@
+name,id,prompt,description
+0,grasp,Can a typical {} be grasped with one hand?,The object can be grasped in any way
+1,carry,Can a typical {} be carried by one average person without risk of injury?,The object can be picked up and moved
+2,assisted-carry,Can a typical {} be carried by multiple people together at the same time and is it typically not attached to the environment and it is practical to for multiple people to carry it together? Answer only with yes if both statements are true.,Two ore more people can carry the object cooperatively without being in each others way.
+3,cut,Can a typical {} be used to cut through objects?,The object can be used to cut other objects
+4,contain,Is a typical {} designed to put objects or liquids inside of it?,The object is designed to put either objects or liquids inside of it
+5,liquid-contain,Can a typical {} be directly filled with liquids and do those liquids stay inside it without further actions? Answer only with yes if statements are true. Do not answer with yes if the liquids have to be in another container.,The object is designed to put liquids inside of it
+6,enclosed-contain,Can a typical {} that is filled with liquid be closed so it can be in any pose without the liquid leaking out?,The object can be closed so the objects stored inside it do not fall or leak out when moving
+7,pour,Can a typical {} be used to pour liquids?,The object can be used to pour liquids
+8,precise-pour,Can a typical {} be used to reliably pour liquids in a cup?,The object can be used to precisely pour liquids into small containers like glasses
+9,drink,Is a typical {} designed to drink from?,The object is designed to drink from.
+10,constrained-move,Is a {} typically permanently mounted to another object which only lets it move in certain ways?,The object can only be moved with restrictions as it is mounted to another object like a door.
+11,rotate,Can a typical {} be rotated or turned?,The object can be turned
+12,axis-roll,Can most {}s be easily rolled?,The object can be rolled around an axis
+13,free-roll,Is a {} approximately the shape of a sphere and can be rolled?,The object can be rolled freely in any direction as it is approximately sphere shaped
+14,push,Can a typical {} be pushed? Pushing means to move the object further away from oneself by using ones hands., The object can be pushed away from oneself
+15,pull,Can a typical {} be pulled? Pulling means to move the object closer to oneself using ones hands.,The object can be pulled towards oneself
+16,open,Can most {} be opened?,The object can be opened
+17,close,Can most {} be closed?,The object can be be closed
+18,support,Does a typical {} provide support for objects standing on it?,The object provides good support for other objects standing on it
+19,stack,Is it easy to stack multiple {}s on top of each other?,The object can be stacked on objects of the same type
+20,sturdy-support,Is a {} suitable to cut or pound objects on top of it?,The object support other objects on it and it allows to cut objects on top of it
+21,vertical-support,Can I safely lean against the side of a typical {} with my entire body weight of 70kg?,The object can be leaned against safely
+22,scoop,Is a {} suitable to scoop material or liquid with?,The object can be used to scoop or shove material like powder or objects
+23,stir,Can a typical {} be used to stir? Do not answer with yes if the stirring can be performed in or on it.,The object can be used as a tool to stir
+24,distance-connect,Can a typical {} be used to physically connect objects without the objects touching each other?,The object physically connects other objects without the connected objects needing to be in contact
+25,contact-connect,Can a typical {} be used to make the surfaces of two objects stick together?,The object connects objects together
+26,pierce,Can a typical {} be used to pierce through other objects?,The object can be used to pierce through other objects
+27,pick,Can a typical {} pierce through an object to pick it up?,The object can be used to pierce other objects to pick them up
+28,hit,Should a {} be used to hit other objects with?, The object can be used to hit other objects with
+29,pound,Is a {} useful to pound some objects?,The object can be swung to pound other objects
+30,swing,Should a {} be used to swing at a moving object like a ball?,The object can be swung to hit other objects with
+31,dry-swipe,Should a typical {} be used to swipe dust or rubble efficiently?,The object can be used to swipe dust or rubble efficiently
+32,wet-swipe,Is a {} be able to absorb water and swipe a surface efficiently?,The object can be used to swipe other objects with water
+33,heat,Can a typical {} produce heat to make other objects or liquids warmer?,The object can be used to make other objects or liquids warmer
+34,heat-resistance,Should I expose most {}s to heat up to 100 degrees Celsius?,The object can be safely exposed to temperatures over 100 degrees celcius
+35,liquid,Is {} a liquid?,The object is a liquid
+36,drinkable,Is {} a liquid that is safely drinkable by a human?,The object can be safely drunk by a human
+37,consumable,Can a {} be consumed by a human?,The object can be safely consumed by a human

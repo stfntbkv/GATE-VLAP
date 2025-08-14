@@ -1,0 +1,31 @@
+task,scene_file,desired_goal,min_costs
+Help me prepare a salad with tomatoes,simple_kitchen.txt,and (chopped tomato0) (chopped salad0) (in salad0 bowl0) (in tomato0 bowl0),17
+I want to have cornflakes with milk for breakfast,simple_kitchen.txt,and (liquid_in milk0 bowl0) (in cornflakes0 bowl0) (on bowl0 table0),7
+I want to have breakfast with cut banana and apple,simple_kitchen.txt,and (in apple0 bowl0) (in banana0 bowl0) (chopped apple0) (chopped banana0),14
+I spilled my drink. Give me something to clean it up,kitchen_clean.txt,or (inhand paper_towel0 human0) (inhand cloth0 human0),4
+I need something to cut the apple,simple_kitchen.txt,and (inhand kitchen_knife0 human0),4
+Pour away the water down the drain,simple_kitchen.txt,and (liquid_in water0 sink0),4
+I am building a cupboard and need tools for that,complex_kitchen1.txt,and (inhand screwdriver0 human0) (inhand screw0 human0),8
+Give me something to fix the broken chair,complex_kitchen1.txt,and (inhand hammer0 human0) (inhand nail0 human0),8
+Put all tools in the box,complex_kitchen1.txt,and (in hammer0 box0) (in screwdriver0 box0) (in stapler0 box0),9
+The screw of the cupboard is loose - Give me something to fix it,complex_kitchen1.txt,and (inhand screwdriver0 human0),4
+Put the kitchen knife as high as possible so the kids cannot reach it,simple_kitchen.txt,and (on kitchen_knife0 refrigerator0),4
+Throw away the used cloth,used_cloth.txt,and (in cloth0 basket0),4
+Give me something to stop my nosebleed,complex_kitchen4.txt,or (inhand tissue0 human0) (inhand paper_towel0 human0) (inhand cloth0 human0),3
+Give me something but a tissue to stop my nosebleed,complex_kitchen4.txt,or (inhand paper_towel0 human0) (inhand cloth0 human0),3
+Give me something to swipe dust and crumbles from the floor,complex_kitchen4.txt,and (inhand broom0 human0),3
+Give me something to wipe the floor,complex_kitchen4.txt,and (inhand mop0 human0),3
+Store all books in the box on the table and all silverware in the box on the counter,silver_books.txt,and (in book0 box1) (in book0 box1) (in spoon0 box0) (in spoon1 box0) (in fork0 box0),12
+Give me something ready to clean the table,complex_kitchen5.txt,and (wet sponge0) (inhand sponge0 human0),7
+The sink is leaking. Give me something to clean up the water and fix the leaking,complex_kitchen4.txt,and (or (inhand paper_towel0 human0) (inhand cloth0 human0)) (inhand tape0 human0),7
+Give me something to water the plant filled with water,complex_kitchen4.txt,and (inhand watering_can0 human0) (liquid_in water0 watering_can0),8
+Give me something that keeps the documents together,complex_kitchen4.txt,and (inhand stapler0 human0),4
+Give me something to wipe the dust from the keyboard,complex_kitchen4.txt,and (inhand cloth0 human0),3
+Prepare the stove for cooking pasta,complex_kitchen4.txt,and (on pot0 stove0) (liquid_in water0 pot0),8
+Prepare the stove for cooking a steak,complex_kitchen4.txt,and (on pan0 stove0),3
+Give me something to dust off the dining room table,complex_kitchen4.txt,and (inhand cloth0 human0),3
+Give me something to switch on the TV,complex_kitchen4.txt,and (inhand remote0 human0),4
+I want to read something on the bench,complex_kitchen4.txt,or (on book0 bench0) (inhand book0 human0),4
+Put everything that needs to be cooled in the refrigerator,complex_kitchen4.txt,and (in milk_cartoon0 refrigerator0) (in cucumber0 refrigerator0) (in salad0 refrigerator0),13
+Give me something to open the bottle,complex_kitchen4.txt,and (inhand bottle_opener0 human0),3
+I want to sit down on the chair,complex_kitchen4.txt,and (free chair0),2

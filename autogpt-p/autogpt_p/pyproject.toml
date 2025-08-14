@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "autogpt_p"
+version = "0.1.0"
+description = "An autonomous planning agent that uses the benefits of classical logic planning and the creativity and flexibility of gpt4"
+packages = [{include = "autogpt_p"}]
+authors = ["Hidden F. Review"]
+readme = "README.md"
+keywords = ["robotics", "humanoid robots", "toolbox"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Robot Framework "
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.0"
+scipy = "*"
+matplotlib = "*"
+openai = "*"
+sympy = "1.12"
+#pyswip = { git = "https://github.com/yuce/pyswip.git"}
+pandas = ">=2.0.0"
+object_detection = {path = "../object_detection", develop = true}
+object_affordance_mapping = {path = "../object_affordance_mapping", develop = true}
+chat_gpt_oam = {path = "../chat_gpt_oam", develop = true}
+planning_memory = {path = "../planning_memory", develop = true}
+pddl = {path = "../pddl", develop = true}
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+Sphinx = "^4.5.0"
+sphinx-rtd-theme = "^0.5.2"
+toml = "^0.10.2"
+
+[tool.poetry.extras]
+docs = ["sphinx"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

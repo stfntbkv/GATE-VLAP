@@ -1,0 +1,59 @@
+SCENE-DESCRIPTION
+OBJECTS
+table:0
+salad:0
+basket:0
+apple:0
+bowl:0
+box:0
+cucumber:0
+refrigerator:0
+counter:0
+cutting_board:0
+banana:0
+banana:1
+tape:0
+plate:0
+plate:1
+fork:0
+fork:1
+dinner_knife:0
+dinner_knife:1
+desk:0
+monitor:0
+keyboard:0
+cloth:0
+bottle:0
+human:0
+END-OBJECTS
+RELATIONS
+in cucumber:0 refrigerator:0
+in salad:0 refrigerator:0
+on box:0 counter:0
+on fork:0 counter:0
+on fork:1 counter:0
+on dinner_knife:0 counter:0
+on dinner_knife:1 counter:0
+on plate:0 desk:0
+on monitor:0 desk:0
+on keyboard:0 table:0
+on cloth:0 desk:0
+on bowl:0 desk:0
+on bottle:0 desk:0
+on plate:1 counter:0
+on bowl:0 table:0
+in apple:0 bowl:0
+in banana:1 bowl:0
+opened refrigerator:0
+on plastic_cup:1 table:0
+on coffee_cup:0 table:0
+at human:0 desk:0
+at robot:0 counter:0
+END-RELATIONS
+LOCATIONS
+counter0 counter:0 box:0 tape:0 plate:1 fork:0 fork:1 dinner_knife:0 dinner_knife:1
+table0 table:0 bowl:0 apple:0 banana:1 keyboard:0
+basket0 basket:0
+refrigerator0 refrigerator:0 cucumber:0 salad:0
+desk0 desk:0 monitor:0 plate:0 cloth:0 bowl:0 bottle:0
+END-LOCATIONS

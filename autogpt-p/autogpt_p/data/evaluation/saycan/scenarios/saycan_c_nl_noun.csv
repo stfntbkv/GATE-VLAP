@@ -1,0 +1,16 @@
+task,scene_file,desired_goal,min_costs
+bring me lime drink,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  7up0 human0) (inhand  sprite0 human0) (inhand  grapefruit_soda0 human0))),3
+bring me something to clean the kitchen with,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  sponge0 human0))),3
+bring me something to eat,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  apple0 human0) (inhand  jalapeno_chips0 human0) (inhand  rice_chips0 human0) (inhand  energy_bar0 human0))),4
+put the grapefruit drink on the first counter,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (on  grapefruit_soda0 counter1))),4
+move the sugary drink to the second counter,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (on  7up0 counter2) (on  coke0 counter2) (on  sprite0 counter2) (on  red_bull0 counter2))),3
+move something with caffeine from the counter to the table,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (on  coke0 table0))),3
+bring me an energy bar,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  energy_bar0 human0))),4
+bring me something to quench my thirst,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  water0 human0) (inhand  7up0 human0) (inhand  coke0 human0) (inhand  sprite0 human0) (inhand  red_bull0 human0) (inhand  grapefruit_soda0 human0))),3
+bring me a fruit,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  apple0 human0))),4
+bring me a fruit from the second counter,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  apple0 human0))),4
+bring me something that is not a fruit from the second counter,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  7up0 human0) (inhand  jalapeno_chips0 human0))),4
+bring me a soda from the table,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  sprite0 human0) (inhand  red_bull0 human0))),4
+bring me a soda,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  grapefruit_soda0 human0) (inhand  7up0 human0) (inhand  sprite0 human0))),3
+bring me a bag of chips from the second counter,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  jalapeno_chips0 human0))),4
+bring me a snack,saycan_c_nl_noun/simple_kitchen.txt,and (and (or (inhand  energy_bar0 human0) (inhand  jalapeno_chips0 human0) (inhand  rice_chips0 human0) (inhand  apple0 human0))),4

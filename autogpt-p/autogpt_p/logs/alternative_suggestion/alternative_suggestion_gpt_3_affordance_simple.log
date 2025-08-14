@@ -1,0 +1,891 @@
+Q:Out of the following affordances for a apple, which ones does the user need for the request "I want an apple"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+axis-roll: The object can be rolled around an axis
+free-roll: The object can be rolled freely in any direction as it is approximately sphere shaped
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want an apple":
+
+- grasp
+- carry
+- consumable
+
+["grasp", "carry", "consumable"]
+-----------------------------------------
+
+Q:Which of these objects can replace a apple for the affordance consumable the best. The object(s) are: banana,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace an apple for the affordance "consumable" the best is a banana.
+
+OBJECT: banana
+-----------------------------------------
+
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Out of the following affordances for a apple, which ones does the user need for the request "I want to have an apple"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+axis-roll: The object can be rolled around an axis
+free-roll: The object can be rolled freely in any direction as it is approximately sphere shaped
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to have an apple":
+
+- grasp
+- carry
+- consumable
+
+The affordances as strings in a python list format would be:
+
+['grasp', 'carry', 'consumable']
+-----------------------------------------
+
+Q:Which of these objects can replace a apple for the affordance consumable the best. The object(s) are: banana,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace an apple for the affordance "consumable" the best is a banana.
+
+OBJECT: banana
+-----------------------------------------
+
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Out of the following affordances for a apple, which ones does the user need for the request "I want dine an apple"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+axis-roll: The object can be rolled around an axis
+free-roll: The object can be rolled freely in any direction as it is approximately sphere shaped
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to dine an apple":
+
+- grasp
+- carry
+- rotate
+- consumable
+
+The affordances as strings in a Python list format would be:
+
+['grasp', 'carry', 'rotate', 'consumable']
+-----------------------------------------
+
+Q:Which of these objects can replace a apple for the affordance consumable the best. The object(s) are: banana,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace an apple for the affordance "consumable" the best is a banana.
+
+OBJECT: banana
+-----------------------------------------
+
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Out of the following affordances for a apple, which ones does the user need for the request "I want an orange"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+axis-roll: The object can be rolled around an axis
+free-roll: The object can be rolled freely in any direction as it is approximately sphere shaped
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the affordances "grasp", "carry", "rotate", "push", "pull", and "consumable" for the request "I want an orange".
+
+["grasp", "carry", "rotate", "push", "pull", "consumable"]
+-----------------------------------------
+
+Q:Which of these objects can replace a apple for the affordance consumable the best. The object(s) are: banana,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace an apple for the affordance "consumable" the best is a banana.
+
+OBJECT: banana
+-----------------------------------------
+
+Missing: apple - Substitution: banana - Desired: ['banana', 'orange', 'tomato']
+Q:Out of the following affordances for a banana, which ones does the user need for the request "Give me a banana"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Give me a banana":
+
+- grasp
+- carry
+- consumable
+
+The affordances as strings in a Python list format would be:
+['grasp', 'carry', 'consumable']
+-----------------------------------------
+
+Q:Which of these objects can replace a banana for the affordance consumable the best. The object(s) are: apple,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a banana for the affordance "consumable" the best is an apple.
+
+OBJECT: apple
+-----------------------------------------
+
+Missing: banana - Substitution: apple - Desired: ['apple', 'orange', 'tomato']
+Q:Out of the following affordances for a plastic_cup, which ones does the user need for the request "Pour me a cup of water"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+precise-pour: The object can be used to precisely pour liquids into small containers like glasses
+drink: The object is designed to drink from.
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+scoop: The object can be used to scoop or shove material like powder or objects
+stack: The object can be stacked on objects of the same type
+axis-roll: The object can be rolled around an axis
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Pour me a cup of water":
+
+- grasp
+- carry
+- contain
+- liquid-contain
+- pour
+- precise-pour
+- drink
+
+The affordances as strings in a python list format would be:
+
+["grasp", "carry", "contain", "liquid-contain", "pour", "precise-pour", "drink"]
+-----------------------------------------
+
+Q:Which of these objects can replace a plastic_cup for the affordance drink the best. The object(s) are: glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a plastic_cup for the affordance "drink" the best is a glass.
+
+OBJECT: glass
+-----------------------------------------
+
+Missing: plastic_cup - Substitution: glass - Desired: ['glass', 'wine_glass']
+Q:Out of the following affordances for a water, which ones does the user need for the request "Pour me a cup of water"? The affordances are:
+liquid: The object is a liquid
+drinkable: The object can be safely drunk by a human
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Pour me a cup of water":
+
+- liquid
+- drinkable
+
+["liquid", "drinkable"]
+-----------------------------------------
+
+Q:Which of these objects can replace a water for the affordance liquid the best. The object(s) are: milk 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace water for the affordance "liquid" the best is milk.
+
+OBJECT:milk
+-----------------------------------------
+
+Missing: water - Substitution: milk - Desired: ['milk']
+Q:Out of the following affordances for a water, which ones does the user need for the request "I want a glass of water"? The affordances are:
+liquid: The object is a liquid
+drinkable: The object can be safely drunk by a human
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want a glass of water":
+
+- liquid
+- drinkable
+
+The affordances as strings in a Python list format would be:
+
+['liquid', 'drinkable']
+-----------------------------------------
+
+Q:Which of these objects can replace a water for the affordance liquid the best. The object(s) are: milk 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace water for the affordance "liquid" the best is milk.
+
+OBJECT:milk
+-----------------------------------------
+
+Missing: water - Substitution: milk - Desired: ['milk']
+Q:Out of the following affordances for a milk, which ones does the user need for the request "I want to drink a glass of milk"? The affordances are:
+liquid: The object is a liquid
+drinkable: The object can be safely drunk by a human
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to drink a glass of milk":
+
+- liquid
+- drinkable
+
+The affordances as strings in a Python list format would be:
+
+['liquid', 'drinkable']
+-----------------------------------------
+
+Q:Which of these objects can replace a milk for the affordance liquid the best. The object(s) are: water 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace milk for the affordance "liquid" the best is water.
+
+OBJECT: water
+-----------------------------------------
+
+Missing: milk - Substitution: water - Desired: ['water']
+Q:Out of the following affordances for a glass, which ones does the user need for the request "I want to drink a glass of milk"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+precise-pour: The object can be used to precisely pour liquids into small containers like glasses
+drink: The object is designed to drink from.
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+scoop: The object can be used to scoop or shove material like powder or objects
+stack: The object can be stacked on objects of the same type
+axis-roll: The object can be rolled around an axis
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to drink a glass of milk":
+
+- grasp
+- carry
+- contain
+- liquid-contain
+- pour
+- drink
+
+The affordances as strings in a python list format would be:
+
+["grasp", "carry", "contain", "liquid-contain", "pour", "drink"]
+-----------------------------------------
+
+Q:Which of these objects can replace a glass for the affordance contain the best. The object(s) are: coffee_cup,plastic_cup 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a glass for the affordance "contain" the best is the plastic_cup.
+
+OBJECT: plastic_cup
+-----------------------------------------
+
+Missing: glass - Substitution: plastic_cup - Desired: ['coffee_cup', 'plastic_cup', 'wine_glass']
+Q:Out of the following affordances for a cucumber, which ones does the user need for the request "I want to eat a salad with cucumber and salad"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+axis-roll: The object can be rolled around an axis
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to eat a salad with cucumber and salad":
+
+- grasp
+- carry
+- rotate
+- consumable
+
+The affordances as strings in a python list format would be:
+
+['grasp', 'carry', 'rotate', 'consumable']
+-----------------------------------------
+
+Q:Which of these objects can replace a cucumber for the affordance consumable the best. The object(s) are: tomato,apple,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a cucumber for the affordance "consumable" the best is tomato.
+
+OBJECT: tomato
+-----------------------------------------
+
+Missing: cucumber - Substitution: tomato - Desired: ['tomato']
+Q:Out of the following affordances for a tomato, which ones does the user need for the request "I want to eat a salad with tomato and salad"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+consumable: The object can be safely consumed by a human
+axis-roll: The object can be rolled around an axis
+free-roll: The object can be rolled freely in any direction as it is approximately sphere shaped
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to eat a salad with tomato and salad":
+
+- grasp
+- carry
+- rotate
+- consumable
+
+["grasp", "carry", "rotate", "consumable"]
+-----------------------------------------
+
+Q:Which of these objects can replace a tomato for the affordance consumable the best. The object(s) are: cucumber,apple,salad 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a tomato for the affordance "consumable" the best is cucumber.
+
+OBJECT:cucumber
+-----------------------------------------
+
+Missing: tomato - Substitution: cucumber - Desired: ['cucumber']
+Q:Out of the following affordances for a kitchen_knife, which ones does the user need for the request "Bring me a kitchen knife for cutting vegetables"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+cut: The object can be used to cut other objects
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+stir: The object can be used as a tool to stir
+pierce: The object can be used to pierce through other objects
+pick: The object can be used to pierce other objects to pick them up
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Bring me a kitchen knife for cutting vegetables":
+
+- grasp
+- carry
+- cut
+
+The affordances as strings in a python list format would be:
+
+["grasp", "carry", "cut"]
+-----------------------------------------
+
+Q:Which of these objects can replace a kitchen_knife for the affordance cut the best. The object(s) are: bread_knife 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a kitchen knife for the affordance "cut" the best is a bread knife.
+
+OBJECT:bread_knife
+-----------------------------------------
+
+Missing: kitchen_knife - Substitution: bread_knife - Desired: ['bread_knife']
+Q:Out of the following affordances for a scissors, which ones does the user need for the request "Bring me scissors to open the package"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+cut: The object can be used to cut other objects
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+stir: The object can be used as a tool to stir
+pierce: The object can be used to pierce through other objects
+pick: The object can be used to pierce other objects to pick them up
+ End your answer with listing the affordances as strings in a python list format
+A: The affordances needed for the request "Bring me scissors to open the package" are:
+
+- grasp
+- carry
+- cut
+
+The affordances as strings in a python list format would be:
+
+["grasp", "carry", "cut"]
+-----------------------------------------
+
+Q:Which of these objects can replace a scissors for the affordance cut the best. The object(s) are: kitchen_knife 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a scissors for the affordance "cut" the best is a kitchen knife.
+
+OBJECT:kitchen_knife
+-----------------------------------------
+
+Missing: scissors - Substitution: kitchen_knife - Desired: ['kitchen_knife']
+Q:Out of the following affordances for a cloth, which ones does the user need for the request "Bring me a cloth to clean the table"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+dry-swipe: The object can be used to swipe dust or rubble efficiently
+wet-swipe: The object can be used to wet clean other objects or surfaces
+stack: The object can be stacked on objects of the same type
+axis-roll: The object can be rolled around an axis
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Bring me a cloth to clean the table":
+
+- grasp
+- carry
+- dry-swipe
+- wet-swipe
+
+["grasp", "carry", "dry-swipe", "wet-swipe"]
+-----------------------------------------
+
+Q:Which of these objects can replace a cloth the best for the following task stated by the user.
+Bring me a cloth to clean the table
+The object(s) are: bucket,paper_towel,sponge,water,table 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: paper_towel
+Missing: cloth - Substitution: paper_towel - Desired: ['sponge']
+Q:Out of the following affordances for a sponge, which ones does the user need for the request "Clean the table with the sponge"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+stack: The object can be stacked on objects of the same type
+wet-swipe: The object can be used to wet clean other objects or surfaces
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Clean the table with the sponge":
+
+1. grasp
+2. carry
+3. wet-swipe
+
+Python list format: ['grasp', 'carry', 'wet-swipe']
+-----------------------------------------
+
+Q:Which of these objects can replace a sponge for the affordance wet-swipe the best. The object(s) are: paper_towel,cloth 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a sponge for the affordance "wet-swipe" the best is cloth.
+
+OBJECT: cloth
+-----------------------------------------
+
+Missing: sponge - Substitution: cloth - Desired: ['cloth']
+Q:Out of the following affordances for a mop, which ones does the user need for the request "Bring me a mop to clean the floor"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+wet-swipe: The object can be used to wet clean other objects or surfaces
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Bring me a mop to clean the floor":
+
+- grasp
+- carry
+- wet-swipe
+
+The affordances as strings in a Python list format would be:
+
+['grasp', 'carry', 'wet-swipe']
+-----------------------------------------
+
+Q:Which of these objects can replace a mop for the affordance wet-swipe the best. The object(s) are: sponge,cloth 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a mop for the affordance "wet-swipe" the best is a cloth.
+
+OBJECT: cloth
+-----------------------------------------
+
+Missing: mop - Substitution: cloth - Desired: ['cloth', 'sponge']
+Q:Out of the following affordances for a pot, which ones does the user need for the request "Cook the vegetables in the pot"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+heat-resistance: The object can be safely exposed to temperatures over 100 degrees celcius
+open: The object can be opened
+close: The object can be be closed
+stack: The object can be stacked on objects of the same type
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Cook the vegetables in the pot":
+
+- grasp
+- carry
+- contain
+- liquid-contain
+- pour
+- heat-resistance
+
+["grasp", "carry", "contain", "liquid-contain", "pour", "heat-resistance"]
+-----------------------------------------
+
+Q:Which of these objects can replace a pot the best for the following task stated by the user.
+Cook the vegetables in the pot
+The object(s) are: pan,stove,apple,salad,tomato 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: pan
+Missing: pot - Substitution: pan - Desired: ['pan']
+Q:Out of the following affordances for a oven, which ones does the user need for the request "Heat the lasagne in the oven"? The affordances are:
+assisted-carry: Two ore more people can carry the object cooperatively without being in each others way.
+contain: The object is designed to put either objects or liquids inside of it
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+open: The object can be opened
+close: The object can be be closed
+support: The object provides good support for other objects standing on it
+heat: The object can be used to make other objects or liquids warmer
+heat-resistance: The object can be safely exposed to temperatures over 100 degrees celcius
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Heat the lasagne in the oven":
+
+- contain
+- heat
+- heat-resistance
+
+The affordances as strings in a python list format would be:
+
+['contain', 'heat', 'heat-resistance']
+-----------------------------------------
+
+Q:Which of these objects can replace a oven the best for the following task stated by the user.
+Heat the lasagne in the oven
+The object(s) are: pot,pan,stove,tomato,microwave 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: microwave
+Missing: oven - Substitution: microwave - Desired: ['stove', 'microwave']
+Q:Out of the following affordances for a coffee_cup, which ones does the user need for the request "Bring me a coffee cup to put salt into"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+precise-pour: The object can be used to precisely pour liquids into small containers like glasses
+drink: The object is designed to drink from.
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+scoop: The object can be used to scoop or shove material like powder or objects
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Bring me a coffee cup to put salt into":
+
+- grasp
+- carry
+- contain
+- pour
+- scoop
+
+['grasp', 'carry', 'contain', 'pour', 'scoop']
+-----------------------------------------
+
+Q:Which of these objects can replace a coffee_cup for the affordance scoop the best. The object(s) are: wine_glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The wine_glass can replace a coffee_cup for the affordance "scoop" the best.
+
+OBJECT:wine_glass
+-----------------------------------------
+
+Missing: coffee_cup - Substitution: wine_glass - Desired: ['plastic_cup', 'glass', 'wine_glass']
+Q:Out of the following affordances for a coffee_cup, which ones does the user need for the request "Bring me a coffee cup to put salt into"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+precise-pour: The object can be used to precisely pour liquids into small containers like glasses
+drink: The object is designed to drink from.
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+scoop: The object can be used to scoop or shove material like powder or objects
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Bring me a coffee cup to put salt into":
+
+- grasp
+- carry
+- contain
+- pour
+- scoop
+
+['grasp', 'carry', 'contain', 'pour', 'scoop']
+-----------------------------------------
+
+Q:Which of these objects can replace a coffee_cup for the affordance scoop the best. The object(s) are: bowl 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a coffee_cup for the affordance "scoop" the best is a bowl.
+
+OBJECT:bowl
+-----------------------------------------
+
+Missing: coffee_cup - Substitution: bowl - Desired: ['bowl']
+Q:Out of the following affordances for a chair, which ones does the user need for the request "Move a chair to the table so I can sit on it"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+assisted-carry: Two ore more people can carry the object cooperatively without being in each others way.
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+support: The object provides good support for other objects standing on it
+stack: The object can be stacked on objects of the same type
+vertical-support: The object can be leaned against safely
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Move a chair to the table so I can sit on it":
+
+- grasp
+- carry
+- rotate
+- push
+- pull
+
+["grasp", "carry", "rotate", "push", "pull"]
+-----------------------------------------
+
+Q:Which of these objects can replace a chair for the affordance grasp the best. The object(s) are: stool 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a chair for the affordance "grasp" the best is a stool.
+
+OBJECT: stool
+-----------------------------------------
+
+Missing: chair - Substitution: stool - Desired: ['stool']
+Q:Out of the following affordances for a watering_can, which ones does the user need for the request "I want to water the plant with a watering can"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+precise-pour: The object can be used to precisely pour liquids into small containers like glasses
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to water the plant with a watering can":
+
+- grasp
+- carry
+- contain
+- liquid-contain
+- pour
+
+The affordances as strings in a python list format would be:
+
+['grasp', 'carry', 'contain', 'liquid-contain', 'pour']
+-----------------------------------------
+
+Q:Which of these objects can replace a watering_can for the affordance contain the best. The object(s) are: plastic_cup,glass 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a watering_can for the affordance "contain" the best is a plastic_cup.
+
+OBJECT: plastic_cup
+-----------------------------------------
+
+Missing: watering_can - Substitution: plastic_cup - Desired: ['glass', 'wine_glass', 'coffe_cup', 'plastic_cup']
+Q:Out of the following affordances for a bowl, which ones does the user need for the request "I want breakfast with cornflakes and milk"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+rotate: The object can be turned
+axis-roll: The object can be rolled around an axis
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+stack: The object can be stacked on objects of the same type
+scoop: The object can be used to scoop or shove material like powder or objects
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want breakfast with cornflakes and milk":
+
+- contain
+- liquid-contain
+- pour
+- scoop
+
+The affordances as strings in a python list format would be:
+
+['contain', 'liquid-contain', 'pour', 'scoop']
+-----------------------------------------
+
+Q:Which of these objects can replace a bowl for the affordance scoop the best. The object(s) are: plastic_cup 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a bowl for the affordance "scoop" the best is a plastic_cup.
+
+OBJECT:plastic_cup
+-----------------------------------------
+
+Missing: bowl - Substitution: plastic_cup - Desired: ['pot']
+Q:Out of the following affordances for a cutting_board, which ones does the user need for the request "Cut the vegetables on the cutting board"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+support: The object provides good support for other objects standing on it
+stack: The object can be stacked on objects of the same type
+sturdy-support: The object support other objects on it and it allows to cut objects on top of it
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Cut the vegetables on the cutting board":
+
+- grasp
+- carry
+- support
+- sturdy-support
+
+["grasp", "carry", "support", "sturdy-support"]
+-----------------------------------------
+
+Q:Which of these objects can replace a cutting_board for the affordance sturdy-support the best. The object(s) are: tablet 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: None of the objects mentioned can replace a cutting board for the affordance sturdy-support. 
+
+OBJECT: None
+-----------------------------------------
+
+Q:The object None is not within the given list. Please chose an object from the given list:
+tablet
+A: Apologies for the confusion. Among the given objects, the one that can best replace a cutting board for the affordance sturdy-support is:
+
+OBJECT: cutting_board
+-----------------------------------------
+
+Q:The object cutting_board is not within the given list. Please chose an object from the given list:
+tablet
+A: Apologies for the confusion. Among the given objects, the one that can best replace a cutting board for the affordance sturdy-support is:
+
+OBJECT: None
+-----------------------------------------
+
+Q:The object None is not within the given list. Please chose an object from the given list:
+tablet
+A: Apologies for the confusion. Among the given objects, the one that can best replace a cutting board for the affordance sturdy-support is:
+
+OBJECT: None
+-----------------------------------------
+
+Missing: cutting_board - Substitution: None - Desired: ['tablet']
+Q:Out of the following affordances for a bowl, which ones does the user need for the request "I want to eat salad out of the bowl"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+rotate: The object can be turned
+axis-roll: The object can be rolled around an axis
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+stack: The object can be stacked on objects of the same type
+scoop: The object can be used to scoop or shove material like powder or objects
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to eat salad out of the bowl":
+
+- grasp
+- carry
+- contain
+
+['grasp', 'carry', 'contain']
+-----------------------------------------
+
+Q:Which of these objects can replace a bowl for the affordance contain the best. The object(s) are: pan 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a bowl for the affordance "contain" the best is a pan.
+
+OBJECT: pan
+-----------------------------------------
+
+Missing: bowl - Substitution: pan - Desired: ['pot', 'plate']
+Q:Out of the following affordances for a fork, which ones does the user need for the request "I want to eat noodles with a fork"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+scoop: The object can be used to scoop or shove material like powder or objects
+stir: The object can be used as a tool to stir
+pierce: The object can be used to pierce through other objects
+pick: The object can be used to pierce other objects to pick them up
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for a fork to eat noodles:
+
+- grasp
+- carry
+- scoop
+- pierce
+
+["grasp", "carry", "scoop", "pierce"]
+-----------------------------------------
+
+Q:Which of these objects can replace a fork the best for the following task stated by the user.
+I want to eat noodles with a fork
+The object(s) are: plate,pot,spoon,kitchen_knife,apple 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT: spoon
+Missing: fork - Substitution: spoon - Desired: ['spoon']
+Q:Out of the following affordances for a box, which ones does the user need for the request "Store all items from the table in a box and put the box in the living room"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+assisted-carry: Two ore more people can carry the object cooperatively without being in each others way.
+contain: The object is designed to put either objects or liquids inside of it
+enclosed-contain: The object can be closed so the objects stored inside it do not fall or leak out when moving
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+open: The object can be opened
+close: The object can be be closed
+stack: The object can be stacked on objects of the same type
+support: The object provides good support for other objects standing on it
+vertical-support: The object can be leaned against safely
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Store all items from the table in a box and put the box in the living room":
+
+- grasp
+- carry
+- contain
+- enclosed-contain
+- open
+- close
+- stack
+
+['grasp', 'carry', 'contain', 'enclosed-contain', 'open', 'close', 'stack']
+-----------------------------------------
+
+Q:Which of these objects can replace a box the best for the following task stated by the user.
+Store all items from the table in a box and put the box in the living room
+The object(s) are: refrigerator,bucket,apple,basket,microwave 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: OBJECT:basket
+Missing: box - Substitution: basket - Desired: ['basket']
+Q:Out of the following affordances for a broom, which ones does the user need for the request "Wipe the broken glass on the floor with the broom"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+dry-swipe: The object can be used to swipe dust or rubble efficiently
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "Wipe the broken glass on the floor with the broom":
+
+1. grasp
+2. carry
+3. push
+4. pull
+5. dry-swipe
+
+Python list format: 
+
+['grasp', 'carry', 'push', 'pull', 'dry-swipe']
+-----------------------------------------
+
+Q:Which of these objects can replace a broom for the affordance dry-swipe the best. The object(s) are: hand_brush 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a broom for the affordance dry-swipe the best is a hand brush.
+
+OBJECT: hand_brush
+-----------------------------------------
+
+Missing: broom - Substitution: hand_brush - Desired: ['hand_brush']
+Q:Out of the following affordances for a tea_pot, which ones does the user need for the request "I want to heat the tea in the tea pot"? The affordances are:
+grasp: The object can be grasped in any way
+carry: The object can be picked up and moved
+contain: The object is designed to put either objects or liquids inside of it
+liquid-contain: The object is designed to put liquids inside of it
+pour: The object can be used to pour liquids
+precise-pour: The object can be used to precisely pour liquids into small containers like glasses
+rotate: The object can be turned
+push:  The object can be pushed away from oneself
+pull: The object can be pulled towards oneself
+open: The object can be opened
+close: The object can be be closed
+heat-resistance: The object can be safely exposed to temperatures over 100 degrees celcius
+ End your answer with listing the affordances as strings in a python list format
+A: The user needs the following affordances for the request "I want to heat the tea in the tea pot":
+
+- contain
+- liquid-contain
+- heat-resistance
+
+["contain", "liquid-contain", "heat-resistance"]
+-----------------------------------------
+
+Q:Which of these objects can replace a tea_pot for the affordance heat-resistance the best. The object(s) are: pot,pan 
+ Finish your answer by naming exactly one object with OBJECT:<object>
+A: The object that can replace a tea_pot for the affordance heat-resistance the best is:
+
+OBJECT: pot
+-----------------------------------------
+
+Missing: tea_pot - Substitution: pot - Desired: ['pot']

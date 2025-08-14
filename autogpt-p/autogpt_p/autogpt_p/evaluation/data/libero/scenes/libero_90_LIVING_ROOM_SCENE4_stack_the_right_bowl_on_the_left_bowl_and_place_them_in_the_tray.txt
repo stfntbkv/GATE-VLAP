@@ -1,0 +1,23 @@
+SCENE-DESCRIPTION
+OBJECTS
+human:0
+robot:0
+akita_black_bowl:0
+akita_black_bowl:1
+new_salad_dressing:0
+chocolate_pudding:0
+wooden_tray:0
+table:0
+END-OBJECTS
+RELATIONS
+on chocolate_pudding:0 table:0
+on akita_black_bowl:0 table:0
+on akita_black_bowl:1 table:0
+on new_salad_dressing:0 table:0
+on wooden_tray:0 table:0
+at robot:0 table:0
+at human:0 table:0
+END-RELATIONS
+LOCATIONS
+table0 table:0 akita_black_bowl:0 akita_black_bowl:1 new_salad_dressing:0 chocolate_pudding:0 wooden_tray:0
+END-LOCATIONS

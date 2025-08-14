@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "chat_gpt_oam"
+version = "0.1.0"
+description = "Automatic geneartion of mapping between object classes and affordance types by using ChatGPT"
+authors = ["Hidded F. Review"]
+packages = [{include = "chat_gpt_oam"}, {include = "tools"}]
+
+readme = "README.md"
+keywords = ["robotics", "humanoid robots", "toolbox"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Robot Framework "
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.0"
+openai = ">=0.27.2"
+object_affordance_mapping = {path = "../object_affordance_mapping/", develop = true}
+scipy = "*"
+matplotlib = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+Sphinx = "^4.5.0"
+sphinx-rtd-theme = "^0.5.2"
+toml = "^0.10.2"
+
+[tool.poetry.extras]
+docs = ["sphinx"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

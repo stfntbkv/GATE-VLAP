@@ -1,0 +1,33 @@
+SCENE-DESCRIPTION
+OBJECTS
+table:0
+apple:0
+bowl:0
+box:0
+counter:0
+sponge:0
+hammer:0
+cutting_board:0
+banana:0
+banana:1
+cloth:0
+human:0
+END-OBJECTS
+RELATIONS
+on box:0 counter:0
+on cutting_board:0 counter:0
+on banana:0 counter:0
+on sponge:0 counter:0
+on hammer:0 counter:0
+on bowl:0 table:0
+on bowl:0 table:0
+on apple:0 table:0
+on banana:1 table:0
+on cloth:0 table:0
+at human:0 table:0
+at robot:0 counter:0
+END-RELATIONS
+LOCATIONS
+counter0 counter:0 box:0 cutting_board:0 banana:0 sponge:0 hammer:0
+table0 table:0 bowl:0 apple:0 banana:1 cloth:0
+END-LOCATIONS

@@ -1,0 +1,168 @@
+[
+  {
+    "name": "grasp",
+    "parameters": [
+      {"name": "object", "type": "carry", "skill_parameter": ""},
+      {"name": "from", "type": "support", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (not (hand_occupied ?actor)) (free ?object) (on ?object ?from) (reachable ?from ?at ?actor)",
+    "effects": "and (inhand ?object ?actor) (hand_occupied ?actor) (not (on ?object ?from))",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "place",
+    "parameters": [
+      {"name": "object", "type": "carry", "skill_parameter": ""},
+      {"name": "on", "type": "support", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (inhand ?object ?actor) (reachable ?on ?at ?actor)",
+    "effects": "and (on ?object ?on) (not (inhand ?object ?actor)) (not (hand_occupied ?actor))",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "take_out",
+    "parameters": [
+      {"name": "object", "type": "carry", "skill_parameter": ""},
+      {"name": "from", "type": "contain", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (not (hand_occupied ?actor)) (free ?object) (in ?object ?from) (not (closed ?from)) (reachable ?from ?at ?actor)",
+    "effects": "and (inhand ?object ?actor) (hand_occupied ?actor) (not (in ?object ?from))",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "putin",
+    "parameters": [
+      {"name": "object", "type": "carry", "skill_parameter": ""},
+      {"name": "in", "type": "contain", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (inhand ?object ?actor) (not (closed ?in)) (reachable ?in ?at ?actor)",
+    "effects": "and (in ?object ?in) (not (inhand ?object ?actor)) (not (hand_occupied ?actor))",
+    "skill": "DefaultSkill"
+  },
+    {
+    "name": "handover",
+    "parameters": [
+      {"name": "recipient", "type": "actor", "skill_parameter": ""},
+      {"name": "object", "type": "carry", "skill_parameter": ""}
+    ],
+    "preconditions": "and (inhand ?object ?actor) (at  ?actor ?recipient) (not (= ?recipient ?actor))",
+    "effects": "and (not (inhand ?object ?actor)) (not (hand_occupied ?actor)) (inhand ?object ?recipient))",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "receive_object",
+    "parameters": [
+      {"name": "giver", "type": "actor", "skill_parameter": ""},
+      {"name": "object", "type": "carry", "skill_parameter": ""}
+    ],
+    "preconditions": "and (inhand ?object ?giver) (at  ?actor ?giver) (not (hand_occupied ?actor))",
+    "effects": "and (not (inhand ?object ?giver)) (not (hand_occupied ?giver)) (inhand ?object ?actor))",
+    "skill": "DefaultSkill"
+  },
+    {
+    "name": "move",
+    "parameters": [
+      {"name": "start", "type": "location", "skill_parameter": ""},
+      {"name": "end", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (at  ?actor ?start)",
+    "effects": "and (not (at  ?actor ?start)) (not (at  ?start ?actor)) (at  ?actor ?end) (visited ?start) (visited ?end)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "pour",
+    "parameters": [
+      {"name": "source", "type": "pour", "skill_parameter": ""},
+      {"name": "poured_object", "type": "carry", "skill_parameter": ""},
+      {"name": "target", "type": "contain", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (in ?poured_object ?source) (inhand ?source ?actor) (reachable ?target ?at ?actor) (not (closed ?target))",
+    "effects": "and (in ?poured_object ?target)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "fill",
+    "parameters": [
+      {"name": "source", "type": "liquid-contain", "skill_parameter": ""},
+      {"name": "poured_liquid", "type": "liquid", "skill_parameter": ""},
+      {"name": "target", "type": "liquid-contain", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (liquid_in ?poured_liquid ?source) (inhand ?source ?actor) (reachable ?target ?at ?actor) (not (closed ?source)) (not (closed ?target))",
+    "effects": "and (liquid_in ?poured_liquid ?target) (not (liquid_in ?poured_liquid ?source))",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "open",
+    "parameters": [
+      {"name": "object", "type": "open", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (closed ?object) (reachable ?object ?at ?actor) (not (hand_occupied ?actor))",
+    "effects": "and (not (closed ?object)) (opened ?object)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "close",
+    "parameters": [
+      {"name": "object", "type": "close", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (opened ?object) (reachable ?object ?at ?actor) (not (hand_occupied ?actor))",
+    "effects": "and (not (opened ?object)) (closed ?object)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "chop",
+    "parameters": [
+      {"name": "tool", "type": "cut", "skill_parameter": ""},
+      {"name": "target", "type": "consumable", "skill_parameter": ""},
+      {"name": "on", "type": "sturdy-support", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (inhand ?tool ?actor) (reachable ?target ?at ?actor) (on ?target ?on)",
+    "effects": "and (chopped ?target)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "heat_liquid",
+    "parameters": [
+      {"name": "container", "type": "liquid-contain", "skill_parameter": ""},
+      {"name": "heated", "type": "heat-resistance", "skill_parameter": ""},
+      {"name": "liquid", "type": "liquid", "skill_parameter": ""},
+      {"name": "heater", "type": "heat", "skill_parameter": ""},
+      {"name": "on", "type": "support", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (reachable ?heater ?at ?actor) (or (and (liquid_in ?liquid ?container) (= ?container ?heated) (on ?container ?on) (= ?on ?heater)) (and (liquid_in ?liquid ?container) (= ?container ?heater)) (and (liquid_in ?liquid ?container) (in ?container ?heater) (= ?container ?heated)))",
+    "effects": "and (liquid_warm ?liquid)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "wet_swipe",
+    "parameters": [
+      {"name": "tool", "type": "wet-swipe", "skill_parameter": ""},
+      {"name": "target", "type": "carry", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (wet ?tool) (inhand ?tool ?actor) (reachable ?target ?at ?actor)",
+    "effects": "and (clean ?target)",
+    "skill": "DefaultSkill"
+  },
+  {
+    "name": "stack",
+    "parameters": [
+      {"name": "top", "type": "stack", "skill_parameter": ""},
+      {"name": "bottom", "type": "stack", "skill_parameter": ""},
+      {"name": "at", "type": "location", "skill_parameter": ""}
+    ],
+    "preconditions": "and (reachable ?bottom ?at ?actor) (inhand ?top ?actor)",
+    "effects": "and (on ?top ?bottom) (not (inhand ?top ?actor)) (not (hand_occupied ?actor))",
+    "skill": "DefaultSkill"
+  }
+]

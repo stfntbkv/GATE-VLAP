@@ -1,0 +1,31 @@
+task,scene_file,desired_goal,min_costs
+Why is the door still open?,simple_kitchen_opened.txt,and (closed door0),2
+I want to watch TV,complex_kitchen4.txt,and (inhand remote0 human0),4
+Get rid of the old water,simple_kitchen.txt,and (liquid_in water0 sink0),4
+Prepare the dining room table for two,dining_room_prep.txt,and (on plate0 table0) (on plate1 table0) (on fork0 table0) (on fork1 table0) (on dinner_knife0 table0) (on dinner_knife0 table0),19
+My nose is bleeding,complex_kitchen4.txt,or (inhand tissue0 human0) (inhand paper_towel0 human0) (inhand cloth0 human0),3
+I spilled my drink,kitchen_clean.txt,or (inhand paper_towel0 human0) (inhand cloth0 human0),4
+I am thirsty,simple_kitchen.txt,or (liquid_in water0 plastic_cup0) (inhand bottle0 human0) (inhand milk_cartoon0 human0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2) (liquid_in milk0 plastic_cup0) (liquid_in milk0 plastic_cup1) (liquid_in milk0 plastic_cup2),2
+I want to see what is in the refrigerator,simple_kitchen.txt,and (opened refrigerator0),2
+I want to ventilate the room with a draught,simple_kitchen.txt,and (opened door0) (opened window0),4
+The floor is dirty and I want to wet-clean it,clean_floor.txt,and (inhand mop0 human0) (liquid_in water0 bucket0),7
+The cucumber and the salad will get bad if it is not cooled,cooling.txt,and (in cucumber0 refrigerator0) (in salad0 refrigerator0),10
+Only vegetables belong in the bowl,bowl.txt,and (in banana0 bowl0) (in banana1 bowl0) (in apple0 bowl0) (not (in screw0 bowl0)) (not (in hammer0 bowl0)) (not (in remote0 bowl0)),6
+How should I eat the cucumber like this,steak.txt,and (or (inhand fork0 human0) (on fork0 table0)) (or (inhand dinner_knife0 human0) (on dinner_knife0 table0)),7
+I am missing something to eat my soup,soup.txt,and (or (inhand spoon0 human0) (on spoon0 table0)),3
+I want to eat my salad,salad.txt,and (or (inhand fork0 human0) (on fork0 table0)),3
+I want to drink something cooled,cooled.txt,and (inhand bottle2 human0),4
+The plant has not been watered for a week,watering.txt,and (liquid_in water0 vase0),3
+Why is the coffee cup still on the coffee table,coffee_cup.txt,and (in coffee_cup1 dishwasher0),6
+Get out of the way,simple_kitchen_counter.txt,and (not (at robot0 counter0)),1
+Do not let dangerous objects lay on the kitchen table the kids are around,dangerous.txt,and (not (on kitchen_knife0 table0)) (not (on scissors0 table0)),4
+Why is the counter not cleaned yet?,simple_kitchen.txt,and (clean counter0),8
+The milk should not just stand on the counter like that it will go bad,simple_kitchen.txt,and(in milk_cartoon0 refrigerator0),6
+There is too much stuff on the desk - I cannot work like this,desk_cleaning.txt,and (on monitor0 desk0) (on keyboard0 desk0) (not (on plate0 desk0)) (not (on cloth0 desk0)) (not (on bowl0 desk0))(not (on bottle0 desk0)),8
+I do not want to drink cold milk,milk.txt,and (on coffee_cup0 table0) (liquid_in milk0 coffee_cup0) (liquid_warm milk0),10
+Where is my book?,complex_kitchen4.txt,or (inhand book0 human0) (and (inhand book0 robot0) (at robot0 human0)),3
+I do not want to eat anymore,eating.txt,and (in plate0 dishwasher0) (in apple0 basket0),10
+I want to use my new keyboard,keyboard.txt,and (on keyboard0 desk0),4
+Where have I put my hammer?,simple_kitchen.txt,or (inhand hammer0 human0) (and (inhand hammer0 robot0) (at robot0 human0)),3
+The sponge needs to be washed,dirty.txt,and (in sponge0 bucket0) (liquid_in water0 bucket0),6
+I need to put something under the chair to stop it from wobbling,chair.txt,or (inhand book0 human0) (and (inhand book0 robot0) (at book0 human0)),3

@@ -1,0 +1,31 @@
+task,scene_file,explored,substitutions_file,desired_goal,min_tool_calls,min_costs
+Heat the milk in the oven,complex_kitchen6.txt,counter0,oven.csv,and (liquid_warm milk0) (liquid_in milk0 pot0) (in pot0 microwave0),5,9
+I want an apple,simple_kitchen_no_apple.txt,table0,apple.csv,or (inhand banana0 human0) (inhand tomato0 human0),5,3
+I want to have an apple,simple_kitchen_no_apple.txt,table0,apple.csv,or (inhand banana0 human0) (inhand tomato0 human0),5,3
+I want dine an apple,simple_kitchen_no_apple.txt,table0,apple.csv,or (inhand banana0 human0) (inhand tomato0 human0),5,3
+I want an orange,simple_kitchen.txt,table0,orange.csv,or (inhand banana0 human0) (inhand apple0 human0) (inhand tomato0 human0),5,3
+Give me a banana,simple_kitchen_no_banana.txt,table0,banana.csv,or (inhand apple0 human0) (inhand tomato0 human0),5,3
+Pour me a plastic_cup of water,simple_kitchen_no_cup.txt,table0,plastic_cup.csv,and (liquid_in water0 glass0),5,3
+Pour me a plastic_cup of water,simple_kitchen_no_water.txt,table0,water_milk.csv,or (liquid_in milk0 plastic_cup0) (liquid_in milk0 plastic_cup1) (liquid_in milk0 plastic_cup2),5,2
+I want a glass of water,simple_kitchen.txt,table0,glass.csv,or (liquid_in water0 plastic_cup0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2),5,3
+I want to drink a glass of milk,simple_kitchen.txt,table0,glass.csv,or (liquid_in milk0 plastic_cup0) (liquid_in milk0 plastic_cup1) (liquid_in milk0 plastic_cup2),5,2
+I want to drink a glass of milk,simple_kitchen_no_milk.txt,table0,milk_water_glass.csv,or (liquid_in water0 plastic_cup0) (liquid_in water0 plastic_cup1) (liquid_in water0 plastic_cup2),5,3
+I want to eat a salad with cucumber and salad,simple_kitchen_no_cucumber.txt,table0,cucumber.csv,and (in salad0 bowl0) (in tomato0 bowl0),5,5
+I want to eat a salad with tomato and salad,simple_kitchen_no_tomato.txt,table0,tomato.csv,and (in salad0 bowl0) (in cucumber0 bowl0),5,9
+Give me a kitchen knife for cutting vegetables,simple_kitchen_no_knife.txt,table0,kitchen_knife.csv,and (inhand dinner_knife0 human0),5,4
+Give me scissors to open the package,simple_kitchen.txt,table0,scissors.csv,and (inhand kitchen_knife0 human0),5,4
+Give me a cloth to clean the table,simple_kitchen.txt,table0,cloth.csv,and (inhand sponge0 human0),5,4
+I want to clean the table with the sponge,simple_kitchen_no_sponge.txt,counter0,sponge.csv,and (inhand cloth0 human0),5,4
+Give me a mop to clean the floor,table_counter_cleaning.txt,counter0,mop.csv,or (inhand cloth0 human0) (inhand sponge0 human0),3,3
+Put the vegetables in the pot for cooking,complex_kitchen4_no_pot.txt,counter0,pot.csv,and (in apple0 pan0) (in apple1 pan0) (in tomato0 pan0),8,12
+I want to water the plant with a watering_can,complex_kitchen5_no_watering_can.txt,counter0,watering_can.csv,and (inhand tea_pot0 human0),8,4
+I want breakfast with cornflakes and milk in a bowl,complex_kitchen4.txt,counter0,bowl1.csv,and (in cornflakes0 pot0) (liquid_in milk0 pot0),8,6
+Cut the vegetables on the cutting_board,simple_kitchen_no_board.txt,all,cutting_board.csv,and (chopped salad0) (chopped cucumber0) (on salad0 tablet0) (on cucumber0 tablet0),5,14
+I want to eat salad from the bowl,simple_kitchen_no_bowl.txt,counter0,bowl2.csv,and (on salad0 plate0),5,5
+Give me a fork to eat noodles,complex_kitchen1_no_fork.txt,table1,fork.csv,or (inhand spoon0 human0) (inhand spoon1 human0),4,4
+Store all items from the table in a box and put the box on the counter,complex_kitchen3_no_box.txt,counter0,box.csv,and (on basket0 counter0) (in bowl0 basket0) (in plastic_cup1 basket0) (in coffee_cup0 basket0) (or (in apple0 bowl0) (in apple0 basket0)) (or (in banana1 bowl0) (in banana1 basket0)),5,14
+I want to wipe the broken glass on the floor with the broom,complex_kitchen5_no_broom.txt,counter0,broom.csv,and (inhand hand_brush0 human0),8,3
+I want to heat the water in the tea_pot,complex_kitchen5.txt,counter0,tea_pot.csv,and (liquid_warm water0) (liquid_in water0 pot0),8,12
+I want to eat at the table,desk_cleaning_alt.txt,counter0,table.csv,and (on plate0 desk0) (on apple0 plate0),3,7
+I want to drink water from a plastic_cup,simple_kitchen_no_cup_glass.txt,table0,bottle.csv,and (inhand bottle0 human0),5,3
+Cut the apple with the kitchen_knife on the cutting_board so I can eat it,simple_kitchen_no_apple_knife_board.txt,table0,apple_knife_board.csv,and (on banana0 tablet0) (chopped banana0),5,6
