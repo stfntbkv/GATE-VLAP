@@ -217,7 +217,9 @@ def write_results(filename, results):
 if __name__ == "__main__":
 
     # My predefined paths
-    BASE_PATH = "/Users/stefantabakov/Desktop/autogpt-p"  # Replace with your desired path
+    # Use relative path from this file's directory
+    script_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    BASE_PATH = script_dir
     PLANNING_LOGS_DIR = os.path.join(BASE_PATH, "my_logs")
     PLANNING_RESULTS_DIR = os.path.join(BASE_PATH, "results")
 

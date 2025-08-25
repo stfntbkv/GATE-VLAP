@@ -1,6 +1,7 @@
 
 from typing import List
 import signal
+import os
 
 from object_affordance_mapping.object_affordance_mapping import ObjectAffordanceMappingDatabase
 from object_detection.detection_memory_segment import DetectedObject, ObjectRelation
@@ -155,8 +156,13 @@ class AutoGPTPlanner:
                 if self.save_pddl_files:
                     import datetime
                     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-                    domain_file = f"/Users/stefantabakov/Desktop/autogpt-p/debug_domain_{timestamp}.pddl"
-                    problem_file = f"/Users/stefantabakov/Desktop/autogpt-p/debug_problem_{timestamp}.pddl"
+                    # Use relative path for debug files
+                    script_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+                    domain_file = os.path.join(script_dir, f"pddl_debug_files/debug_domain_{timestamp}.pddl")
+                    problem_file = os.path.join(script_dir, f"pddl_debug_files/debug_problem_{timestamp}.pddl")
+                    
+                    # Ensure debug directory exists
+                    os.makedirs(os.path.dirname(domain_file), exist_ok=True)
                     
                     with open(domain_file, 'w') as f:
                         f.write(str(self.domain))
@@ -265,8 +271,13 @@ class AutoGPTPlanner:
                 if self.save_pddl_files:
                     import datetime
                     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-                    domain_file = f"/Users/stefantabakov/Desktop/autogpt-p/debug_domain_{timestamp}.pddl"
-                    problem_file = f"/Users/stefantabakov/Desktop/autogpt-p/debug_problem_{timestamp}.pddl"
+                    # Use relative path for debug files
+                    script_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+                    domain_file = os.path.join(script_dir, f"pddl_debug_files/debug_domain_{timestamp}.pddl")
+                    problem_file = os.path.join(script_dir, f"pddl_debug_files/debug_problem_{timestamp}.pddl")
+                    
+                    # Ensure debug directory exists
+                    os.makedirs(os.path.dirname(domain_file), exist_ok=True)
                     
                     with open(domain_file, 'w') as f:
                         f.write(str(self.domain))

@@ -7,17 +7,19 @@ import os
 import sys
 
 # Add the AutoGPT+P evaluation directory to the path
-sys.path.append('/Users/stefantabakov/Desktop/autogpt-p/autogpt_p')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(script_dir, 'autogpt_p'))
 
 from autogpt_p.evaluation.libero_bddl_converter import BDDLConverter
 
 def test_libero_90_conversion():
     """Test the LIBERO_90 BDDL to AutoGPT+P conversion"""
     
-    # Paths
-    libero_bddl_dir = "/Users/stefantabakov/Desktop/autogpt-p/LIBERO/libero/libero/bddl_files"
-    output_scenes_dir = "/Users/stefantabakov/Desktop/autogpt-p/autogpt_p/autogpt_p/evaluation/data/libero/scenes"
-    output_scenarios_dir = "/Users/stefantabakov/Desktop/autogpt-p/autogpt_p/autogpt_p/evaluation/data/libero/scenarios"
+    # Paths (relative to script directory)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    libero_bddl_dir = os.path.join(script_dir, "LIBERO/libero/libero/bddl_files")
+    output_scenes_dir = os.path.join(script_dir, "autogpt_p/autogpt_p/evaluation/data/libero/scenes")
+    output_scenarios_dir = os.path.join(script_dir, "autogpt_p/autogpt_p/evaluation/data/libero/scenarios")
     
     print("🚀 Starting LIBERO_90 BDDL Conversion Test")
     print(f"LIBERO BDDL Directory: {libero_bddl_dir}")
@@ -90,7 +92,8 @@ def check_libero_90_dependencies():
     
     try:
         # Check if LIBERO directory exists
-        libero_dir = "/Users/stefantabakov/Desktop/autogpt-p/LIBERO"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        libero_dir = os.path.join(script_dir, "LIBERO")
         if not os.path.exists(libero_dir):
             print(f"❌ LIBERO directory not found: {libero_dir}")
             return False
@@ -107,8 +110,8 @@ def check_libero_90_dependencies():
         
         # Check output directories exist
         output_dirs = [
-            "/Users/stefantabakov/Desktop/autogpt-p/autogpt_p/autogpt_p/evaluation/data/libero/scenes",
-            "/Users/stefantabakov/Desktop/autogpt-p/autogpt_p/autogpt_p/evaluation/data/libero/scenarios"
+            os.path.join(script_dir, "autogpt_p/autogpt_p/evaluation/data/libero/scenes"),
+            os.path.join(script_dir, "autogpt_p/autogpt_p/evaluation/data/libero/scenarios")
         ]
         
         for output_dir in output_dirs:

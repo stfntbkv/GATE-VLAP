@@ -64,8 +64,8 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    input_directory = args.dataset_path
-    output_directory = args.output_path
+    input_directory =  args.source or args.dataset_path 
+    output_directory = args.target or args.output_path 
     
     print(f"Input Directory: {input_directory}")
     print(f"Output Directory: {output_directory}")

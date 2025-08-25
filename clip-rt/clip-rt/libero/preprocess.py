@@ -25,17 +25,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Preprocess Raw Data to Tar files")
     parser.add_argument("--source", "--dataset_path", required=True, help="Path to the root directory of raw data")
     parser.add_argument("--target", "--output_path", required=True, help="Path to save the converted dataset")
-    parser.add_argument("--dname", "--dataset_name", required=True, choices=['goal', 'object', '10', 'spatial'], help="The name of LIBERO task suite")
+    # parser.add_argument("--dname", "--dataset_name", required=True, choices=['goal', 'object', '10', 'spatial'], help="The name of LIBERO task suite")
     
     args = parser.parse_args()
     
-    raw_data_root = args.dataset_path
-    dataset_name = args.dataset_name
-    save_data_path = args.output_path
+    raw_data_root = args.source
+    # dataset_name = args.dataset_name
+    save_data_path = args.target
  
     if not os.path.exists(save_data_path):
         os.makedirs(save_data_path, exist_ok=True)
-    print(dataset_name + ' processing doing ...')
+    print('primitive tasks processing doing ...')
 
     # the dimension of each action is 7, and the size of action chunk is 8
     idx = 0

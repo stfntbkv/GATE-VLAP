@@ -251,7 +251,9 @@ class LiberoPlannerEvaluation:
         print(f"Looking for capabilities at: {capabilities_path}")
         if not os.path.exists(capabilities_path):
             print(f"Capabilities file not found, trying fallback path...")
-            capabilities_path = "/Users/stefantabakov/Desktop/autogpt-p/planning_memory/data/capabilities/all_capabilities.json"
+            # Use relative path from this file's directory
+            script_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            capabilities_path = os.path.join(script_dir, "planning_memory/data/capabilities/all_capabilities.json")
         capabilities = StaticCapabilityProvider(capabilities_path)
         capabilities.process_skills()
         actor_provider = DynamicActorProvider("robot0", "robot_profile", "robot", capabilities)
@@ -325,7 +327,9 @@ if __name__ == "__main__":
         sys.exit(1)
     
     # Configuration
-    BASE_PATH = "/Users/stefantabakov/Desktop/autogpt-p"
+    # Use relative path from this file's directory  
+    script_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    BASE_PATH = script_dir
     LIBERO_LOGS_DIR = os.path.join(BASE_PATH, "libero_logs")
     LIBERO_RESULTS_DIR = os.path.join(BASE_PATH, "libero_results")
     
