@@ -274,10 +274,70 @@ def main(args):
         model.lock_image_tower(
             unlocked_groups=args.lock_image_unlocked_groups,
             freeze_bn_stats=args.lock_image_freeze_bn_stats)
+
+    # ---- FREEZE TEXT TOWER (fallback if model has no lock_text_tower) ----
     if args.lock_text:
-        model.lock_text_tower(
-            unlocked_layers=args.lock_text_unlocked_layers,
-            freeze_layer_norm=args.lock_text_freeze_layer_norm)
+        if hasattr(model, "lock_text_tower"):
+            model.lock_text_tower(
+                unlocked_layers=args.lock_text_unlocked_layers,
+                freeze_layer_norm=args.lock_text_freeze_layer_norm)
+        else:
+            print("[INFO] Freezing CLIP text tower (fallback; no lock_text_tower()).")
+            # Freeze the ORIGINAL CLIP text tower. Keep decoder-side modules (*2) trainable.
+            if hasattr(model, "text"):
+                for p in model.text.parameters():
+                    p.requires_grad = False
+            if hasattr(model, "token_embedding"):
+                for p in model.token_embedding.parameters():
+                    p.requires_grad = False
+            if hasattr(model, "ln_final"):
+                for p in model.ln_final.parameters():
+                    p.requires_grad = False
+
+            # Optional: if you want to unfreeze the last N layers of the original text tower
+            # when args.lock_text_unlocked_layers > 0, do it here.
+            # Example (only if model.text has .transformer.resblocks):
+            try:
+                n_unlocked = int(getattr(args, "lock_text_unlocked_layers", 0))
+                if n_unlocked > 0 and hasattr(model, "text"):
+                    blocks = getattr(getattr(model.text, "transformer", None), "resblocks", None)
+                    if blocks is not None:
+                        for b in list(blocks)[-n_unlocked:]:
+                            for p in b.parameters():
+                                p.requires_grad = True
+                        print(f"[INFO] Unlocked last {n_unlocked} text blocks.")
+            except Exception:
+                pass
+
+    # Sanity: print how much will actually train
+    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    total = sum(p.numel() for p in model.parameters())
+    print(f"[INFO] Trainable params: {trainable:,} / {total:,}")
+
+    # Add this section to freeze vision and text encoders completely when training action decoder
+    if hasattr(args, 'freeze_vision_text') and args.freeze_vision_text and args.use_action_decoder:
+        logging.info("Freezing vision and text encoders, only training action decoder")
+        # Freeze visual encoder
+        if hasattr(model, 'visual'):
+            for param in model.visual.parameters():
+                param.requires_grad = False
+        # Freeze text encoder
+        if hasattr(model, 'transformer'):
+            for param in model.transformer.parameters():
+                param.requires_grad = False
+        # Freeze text projection
+        if hasattr(model, 'text_projection'):
+            model.text_projection.requires_grad = False
+        # Freeze positional embeddings
+        if hasattr(model, 'positional_embedding'):
+            model.positional_embedding.requires_grad = False
+        # Freeze token embedding
+        if hasattr(model, 'token_embedding'):
+            for param in model.token_embedding.parameters():
+                param.requires_grad = False
+        # Freeze logit scale
+        if hasattr(model, 'logit_scale'):
+            model.logit_scale.requires_grad = False
 
     if args.grad_checkpointing:
         model.set_grad_checkpointing()
@@ -313,22 +373,38 @@ def main(args):
     if args.train_data or args.dataset_type == "synthetic":
         assert not args.trace, 'Cannot train with traced model'
 
-        exclude = lambda n, p: p.ndim < 2 or "bn" in n or "ln" in n or "bias" in n or 'logit_scale' in n
-        include = lambda n, p: not exclude(n, p)
+        # Modified optimizer creation to only include trainable parameters
+        if hasattr(args, 'freeze_vision_text') and args.freeze_vision_text and args.use_action_decoder:
+            # Only optimize action decoder parameters
+            trainable_params = [p for n, p in model.named_parameters() if p.requires_grad]
+            logging.info(f"Training {len(trainable_params)} parameters (action decoder only)")
+            
+            optimizer = optim.AdamW(
+                trainable_params,
+                lr=args.lr,
+                betas=(args.beta1, args.beta2),
+                eps=args.eps,
+                weight_decay=args.wd,
+            )
+        else:
+            # Original optimizer creation
+            exclude = lambda n, p: p.ndim < 2 or "bn" in n or "ln" in n or "bias" in n or 'logit_scale' in n
+            include = lambda n, p: not exclude(n, p)
 
-        named_parameters = list(model.named_parameters())
-        gain_or_bias_params = [p for n, p in named_parameters if exclude(n, p) and p.requires_grad]
-        rest_params = [p for n, p in named_parameters if include(n, p) and p.requires_grad]
+            named_parameters = list(model.named_parameters())
+            gain_or_bias_params = [p for n, p in named_parameters if exclude(n, p) and p.requires_grad]
+            rest_params = [p for n, p in named_parameters if include(n, p) and p.requires_grad]
 
-        optimizer = optim.AdamW(
-            [
-                {"params": gain_or_bias_params, "weight_decay": 0.},
-                {"params": rest_params, "weight_decay": args.wd},
-            ],
-            lr=args.lr,
-            betas=(args.beta1, args.beta2),
-            eps=args.eps,
-        )
+            optimizer = optim.AdamW(
+                [
+                    {"params": gain_or_bias_params, "weight_decay": 0.},
+                    {"params": rest_params, "weight_decay": args.wd},
+                ],
+                lr=args.lr,
+                betas=(args.beta1, args.beta2),
+                eps=args.eps,
+            )
+
         if args.horovod:
             optimizer = hvd.DistributedOptimizer(optimizer, named_parameters=model.named_parameters())
             hvd.broadcast_parameters(model.state_dict(), root_rank=0)

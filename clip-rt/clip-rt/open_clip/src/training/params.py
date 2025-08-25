@@ -470,6 +470,12 @@ def parse_args(args):
         action="store_true",
         help='Use action decoder for continuous action prediction.'
     )
+    parser.add_argument(
+        "--freeze-vision-text",
+        action="store_true",
+        default=False,
+        help="Freeze vision and text encoders when using action decoder (only train action decoder)"
+    )
 
     args = parser.parse_args(args)
 

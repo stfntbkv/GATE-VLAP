@@ -40,10 +40,3 @@ cd ..
 uv pip install -r libero_requirements.txt --system --upgrade
 
 uv pip install -U numpy==1.26.4
-
-
-
-
-
-
-

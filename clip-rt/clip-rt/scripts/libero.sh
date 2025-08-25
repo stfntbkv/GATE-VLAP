@@ -1,14 +1,14 @@
 #!/bin/bash
 
-export CUDA_VISIBLE_DEVICES=0,1,2,3
+export CUDA_VISIBLE_DEVICES=0
 
-torchrun --nproc_per_node 4 --rdzv-backend=c10d --rdzv-endpoint=localhost:29500 -m training.main \
+torchrun --nproc_per_node 1 --rdzv-backend=c10d --rdzv-endpoint=localhost:29500 -m training.main \
     --batch-size 32 \
     --precision amp \
-    --workers 4 \
+    --workers 1 \
     --save-frequency 1 \
-    --train-data="./libero_object_tar/{000000..000067}.tar" \ # should specify the path of tar files         
-    --train-num-samples 67000 \                               # if the tar file ends with 000067.tar, write 67*1000 
+    --train-data="/home/dimitar/Robotics/Robotic-Simulation-GATE/VLABench/VLABench/downloads/VLA_dataset/modified_raw_files/000000.tar" \ # should specify the path of tar files         
+    --train-num-samples 2000 \                               # if the tar file ends with 000067.tar, write 67*1000 
     --dataset-type webdataset \
     --csv-separator="," \
     --csv-img-key filepath \
@@ -22,4 +22,4 @@ torchrun --nproc_per_node 4 --rdzv-backend=c10d --rdzv-endpoint=localhost:29500 
     --gather-with-grad \
     --use-action-decoder \
     --model="ViT-H-14-378-quickgelu" \
-    --pretrained="./cliprt-oxe-pretrained.pt"
+    --pretrained="./weights/clip-rt-finetuned-libero-object/weights/cliprt_libero_object.pt"
